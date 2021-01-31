@@ -1,0 +1,91 @@
+body {
+    background-color: #ffdbbd;
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#background {
+    position: fixed;
+    margin: -16% 0% 0% 0%;
+    width: 100%;
+    height: 100%;
+    /* background-color: thistle; */
+    z-index: -1;
+}
+
+#background div {
+    display: inline-block;
+    width: 33.3%;
+    height: auto;
+    margin: -2px;
+    overflow: hidden;
+}
+
+#background div img {
+    height: auto;
+    width: 100%;
+}
+
+#background #mac img {
+    width: 112.2%;
+}
+
+#text h1 {
+    filter: drop-shadow(3px 3px 0px #d4c6bc);
+}
+
+h1 {
+    font-family: 'Allura', Helvetica;
+    font-size: 180px;
+    text-transform: lowercase;
+    font-weight: normal;
+    line-height: 0.7em;
+    margin-top: 16%;
+    margin-bottom: 0px;
+    color: #fff;
+    /* filter: drop-shadow(3px 3px 0px #d4c6bc); */
+    z-index: 1;
+}
+
+nav {
+    display: block;
+    width: 500px;
+    margin: auto;
+    margin-top: 0px;
+    /* background-color: darkorange; */
+    text-align: center;
+    z-index: 10;
+}
+
+nav a {
+    display: inline-block;
+    width: auto;
+    /* background-color: darkviolet; */
+    color: #fff;
+    padding: 5px 0px 2px 0px;
+    margin: 0px 25px;
+    font-size: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 5px;
+    filter: drop-shadow(2px 1px 0px #d4c6bc);
+    transition: border-bottom .5s ease-in-out;
+    border-bottom: solid transparent 2px;
+}
+
+nav a:last-child {
+    text-align: right;
+}
+
+nav a:first-child {
+    text-align: left;
+}
+
+nav a:hover {
+    transition: border-bottom .5s ease-in-out;
+    border-color: #fff;
+}
