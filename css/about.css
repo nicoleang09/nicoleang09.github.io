@@ -1,0 +1,17 @@
+#text {
+    width: 55%;
+    position: relative;
+    float: left;
+    /* border: black 5px solid; */
+    /* margin-top: 50px; */
+}
+
+#profilepic {
+    height: 300px;
+    width: auto;
+    float: right;
+    position: relative;
+    margin-right: 20%;
+    margin-top: 150px;
+    border: #cab095 10px solid;
+}
