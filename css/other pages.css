@@ -143,6 +143,7 @@ footer {
 /* style scrollbar */
 body::-webkit-scrollbar {
     width: 5px;
+    height: 6px;
 }
 
 body::-webkit-scrollbar-track {
