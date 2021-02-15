@@ -1,3 +1,9 @@
+:root {
+    --text-color: #444;
+    --content-text-color: #5c5c5c;
+    --main-accent: #9a7f65;
+}
+
 body {
     /* background-color: #ffdbbd; */
     margin: 0%;
@@ -7,6 +13,11 @@ body {
     background-color: #fff9f2;
     /* text-align: center; */
     font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: var(--text-color--);
+    text-decoration: none;
 }
 
 nav {
@@ -50,7 +61,7 @@ nav {
 
 .navlink:hover {
     transition: border-bottom .5s ease-in-out, letter-spacing .5s ease-in-out;
-    border-bottom: #9a7f65 2.7px solid;
+    border-bottom: var(--main-accent) 2.7px solid;
     letter-spacing: 1px;
 }
 
@@ -67,23 +78,20 @@ nav {
 
 
 .navlink a:hover {
-    color: #9a7f65;
+    color: var(--main-accent);
     transition: color .5s ease-in-out;
 }
 
 #pagebody {
     display: block;
-    position: absolute;
+    height: 100%;
+    min-height: 100%;
+    /* position: relative; */
     /* width: 90%; */
     /* margin-left: -5%; */
     padding: 0% 5%;
     margin-top: 1px;
-}
-
-#content {
-    text-align: justify;
-    color: #444;
-    margin-top: 30px;
+    padding-bottom: 40px;
 }
 
 h1 {
@@ -91,5 +99,57 @@ h1 {
     font-size: 80px;
     line-height: 0.5em;
     text-transform: lowercase;
-    color: #444;
+    color: var(--text-color);
 }
+
+.content {
+    text-align: justify;
+    color: var(--content-text-color);
+    margin-top: 30px;
+}
+
+.content h3 {
+    color: var(--text-color);
+}
+
+.content a {
+    color: var(--content-text-color);
+    transition: color .5s ease-in-out;
+}
+
+.content a:hover {
+    color: var(--main-accent);
+    transition: color .5s ease-in-out;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    display: block;
+    position: relative;
+    margin-bottom: 0px;
+    /* margin-top: 100%; */
+    text-align: center;
+    clear: both;
+    color: var(--main-accent);
+    border: 2px solid black;
+}
+
+
+/* style scrollbar */
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--main-accent);
+}
+  
+  /* Handle on hover */
+  /* ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  } */
