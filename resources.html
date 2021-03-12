@@ -10,6 +10,32 @@
         <link rel="stylesheet" href="css/resources.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+        <script>
+            function searchResources() {
+                // var keyword = document.getElementById('searchbar').value 
+                var keyword = document.getElementById('searchbar').value;
+                keyword = keyword.toLowerCase();
+                console.log(keyword);
+                var elements = [];
+                var links = document.getElementById("pagebody").getElementsByTagName("a");
+                console.log(links);
+                for (i = 0; i < links.length; i++) {
+                    console.log("links[" + i + "]: " + links[i].innerText)
+                    if (links[i].innerText.toLowerCase().includes(keyword)) {
+                        console.log("added: " + links[i].innerText);
+                        elements.push(links[i]);
+                    }
+                }
+                console.log(elements);
+
+                for (i = 0; i < elements.length; i++) {
+                    document.getElementById("searchresults").appendChild(elements[i]);
+                    // document.write(elements[i]);
+                    console.log(elements[i]);
+                }
+            }
+        </script>
     </head>
     <body>
         <nav>
@@ -26,9 +52,12 @@
             <div id="text">
                 <h1>My Resources...</h1>
         
-                <div class="search">search bar goes here...</div>
+                <!-- <div class="search">
+                    <input id="searchbar" onkeyup="searchResources()" type="text" name="search" placeholder="Search..."> 
+                    <div id="searchresults"></div>
+                </div> -->
                 <div class="content">
-                    <h3>Cheatsheets</h3>
+                    <h3>Notes & Cheatsheets</h3>
                     <br>
                     <h3>Printables</h3>
                     <table>
