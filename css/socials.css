@@ -1,0 +1,71 @@
+.content {
+    /* width: 100%; */
+    background-color: lawngreen;
+}
+
+#youtube {
+    width: 100%;
+    height: 300px;
+    background-color: #d4faca;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.description {
+    /* width: 55%; */
+    height: 100%;
+    /* display: block; */
+    background-color: #fadfca;
+    flex-grow: 1;
+    /* padding-right: 30px; */
+    padding: 10px 20px;
+    /* align-self: flex-start; */
+    /* float:left; */
+}
+
+.preview {
+    height: 100%;
+    width: auto;
+    flex-grow: 1;
+    /* align-self: flex-start; */
+    /* float: right; */
+    background-color: blanchedalmond;
+}
+
+.preview iframe {
+    width: 100%;
+}
+
+#channel-preview-box {
+    display: none;
+    background-color: lightpink;
+    top: 10%;
+    left: 25%;
+    position: fixed;
+    /* padding: 30px; */
+    width: 50%;
+    /* overflow: hidden; */
+    text-align: right;
+}
+
+#channel-preview-box #channel-preview-close {
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+#channel-preview-box .wrapper {
+    /* background-color: lightskyblue; */
+    height: auto;
+    border-bottom: 10px solid transparent;
+    overflow: hidden;
+}
+
+#channel-preview-box .wrapper .elfsight-app-80f45cc3-1ff8-4eea-a7cf-9391b850df47 {
+    /* display: none; */
+    width: auto;
+    height: auto;
+    margin: 15px 30px -40px 30px;
+    /* overflow: hidden; */
+}
