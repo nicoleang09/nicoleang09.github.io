@@ -136,6 +136,7 @@ button:hover {
 
 .content h2 {
     color: var(--text-color);
+    margin-top: 5px;
     /* color: #9f7d61; */
 }
 
