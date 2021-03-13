@@ -1,19 +1,21 @@
 body {
     background-color: #ffdbbd;
+    background-image: url("../images/index-bg.png");
+    background-size: 100%;
     margin: 0%;
     width: 100%;
     height: 100%;
     text-align: center;
 }
 
-#background {
+/* #background {
     position: fixed;
     margin: -16% 0% 0% 0%;
     width: 100%;
     height: 100%;
-    /* background-color: thistle; */
+    background-color: thistle;
     z-index: -1;
-}
+} */
 
 #background div {
     display: inline-block;
@@ -33,7 +35,8 @@ body {
 }
 
 #text h1 {
-    filter: drop-shadow(3px 3px 0px #d4c6bc);
+    /* filter: drop-shadow(3px 3px 0px #d4c6bc); */
+    filter: drop-shadow(3px 3px 0px #9f7d61);
 }
 
 h1 {
@@ -72,7 +75,8 @@ nav a {
     text-transform: lowercase;
     text-decoration: none;
     letter-spacing: 5px;
-    filter: drop-shadow(2px 1px 0px #d4c6bc);
+    /* filter: drop-shadow(2px 1px 0px #d4c6bc); */
+    filter: drop-shadow(2px 1px 0px #9f7d61);
     transition: border-bottom .5s ease-in-out;
     border-bottom: solid transparent 2px;
 }
