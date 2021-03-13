@@ -1,58 +1,70 @@
 .content {
     /* width: 100%; */
-    background-color: lawngreen;
+    /* background-color: lawngreen; */
 }
 
 #youtube {
     width: 100%;
     height: 300px;
-    background-color: #d4faca;
+    /* background-color: #d4faca; */
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     overflow: hidden;
+    border: #deb69d solid 2px;
+    background-color: #fff;
 }
 
 .description {
     /* width: 55%; */
     height: 100%;
-    /* display: block; */
-    background-color: #fadfca;
-    flex-grow: 1;
-    /* padding-right: 30px; */
+    /* background-color: #ffddc7; */
     padding: 10px 20px;
-    /* align-self: flex-start; */
-    /* float:left; */
+    text-align: justify;
 }
 
-.preview {
-    height: 100%;
-    width: auto;
-    flex-grow: 1;
-    /* align-self: flex-start; */
-    /* float: right; */
-    background-color: blanchedalmond;
+.description h2 {
+    margin-top: 5px;
 }
 
-.preview iframe {
-    width: 100%;
+#channel-preview {
+    margin-top: 10px;
 }
 
 #channel-preview-box {
     display: none;
-    background-color: lightpink;
-    top: 10%;
+    /* background-color: lightpink; */
+    top: 20%;
     left: 25%;
     position: fixed;
     /* padding: 30px; */
     width: 50%;
     /* overflow: hidden; */
     text-align: right;
+    /* background-color: #ffe8b9; */
+    background-color: #fff;
+    border: #fa966b solid 2px;
+    border-radius: 5px;
 }
 
 #channel-preview-box #channel-preview-close {
-    margin-right: 30px;
-    margin-top: 30px;
+    position: absolute;
+    /* margin-right: 30px; */
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+    background-color: #fa966b;
+    color: #fff;
+    border-color: transparent;
+    padding: 5px 10px;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border 0.5s ease-in-out;
+}
+
+#channel-preview-box #channel-preview-close:hover {
+    background-color: #fff;
+    color: #fa966b;
+    border: #fa966b solid 2px;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border 0.5s ease-in-out;
 }
 
 #channel-preview-box .wrapper {
@@ -60,12 +72,15 @@
     height: auto;
     border-bottom: 10px solid transparent;
     overflow: hidden;
+    /* border: #b8b6b6 solid 1px; */
+    border-radius: 5px;
+    /* margin: 15px 30px 30px 30px; */
 }
 
 #channel-preview-box .wrapper .elfsight-app-80f45cc3-1ff8-4eea-a7cf-9391b850df47 {
     /* display: none; */
     width: auto;
     height: auto;
-    margin: 15px 30px -40px 30px;
+    margin-bottom: -40px;
     /* overflow: hidden; */
 }
