@@ -54,8 +54,16 @@ td {
     border: #deb69d solid 2px;
     padding: 20px;
     margin-bottom: 20px;
+    /* width: 100%; */
+}
+
+.container-title {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .container-content {
-    /* display: none; */
+    display: none;
 }
