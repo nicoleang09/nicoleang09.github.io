@@ -44,6 +44,7 @@
     <script src="https://kit.fontawesome.com/0ad9fdb134.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/foundation.css">
     <link rel="stylesheet" href="css/other pages.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 
@@ -51,7 +52,7 @@
         // function startup() {
         //     var height = window.innerHeight - document.getElementsByClassName("button")[0].offsetHeight;
         //     document.getElementsByClassName("dropdown-pane")[0].setAttribute("height", height + "px");
-            
+
         //     console.log("document height: " + window.innerHeight);
         //     console.log("button height: " + document.getElementsByClassName("button")[0].offsetHeight);
         //     console.log("height: " + document.getElementsByClassName("dropdown-pane")[0].getAttribute("height"));
@@ -70,12 +71,12 @@
             console.log("icon class: " + icon.getAttribute("class"));
         }
 
-        $(function() {
+        $(function () {
             // this will get the full URL at the address bar
             var url = window.location.href;
 
             // passes on every "a" tag
-            $(".dropdown-pane a").each(function() {
+            $(".dropdown-pane a").each(function () {
                 // checks if its the same on the address bar
                 console.log("url: " + url + ", href: " + this.href);
                 if (url === (this.href)) {
@@ -87,19 +88,22 @@
             });
         });
     </script>
-    
+
 </head>
 
 <body>
 
-    <button onclick="changeButton()" class="button" type="button" data-toggle="example-dropdown"><i class="fa fa-bars" style="color:black; font-size: 2em;"></i></button>
-    <div class="dropdown-pane" id="example-dropdown" data-dropdown>
-        <ul class="nav-pane">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <div id="nav-header">
+        <button onclick="changeButton()" class="button" type="button" data-toggle="example-dropdown"><i
+                class="fa fa-bars" style="color:black; font-size: 1.7em;"></i></button>
+        <div class="dropdown-pane" id="example-dropdown" data-dropdown>
+            <ul class="nav-pane">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </div>
 
     <!-- <div class="row">
@@ -111,10 +115,18 @@
         <div class="medium-6 large-8 columns">12/6/8 columns</div>
     </div> -->
 
-    <div id="header"><img src="images/yt_header_resized_2021_typed.png"/></div>
+    <div id="header"><img src="images/nicole’s nook 2021.png" /></div>
     <div class="content">
-        <div class="profile-img"></div>
-        <div class="content-text"></div>
+        <div class="profile-pic"><img src="images/2019-12-30 10.47.30 1.jpg" /></div>
+        <div class="content-text">
+            <h1>Welcome!</h1>
+            <p>I’m Nicole, a second year Computer Science student at the National University of Singapore. I built this
+                website in my free time because I decided to finally put my interest in web design to good use.
+
+                There isn't much on this website, but I did include some printables and cheatsheets that I created in
+                the 'Resources' page. You can access these via the 'Resources' tab at the top of the page. Hope you find
+                them useful!</p>
+        </div>
     </div>
 
 

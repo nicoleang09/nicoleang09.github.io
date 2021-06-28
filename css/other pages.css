@@ -4,6 +4,10 @@
     --main-accent: #9a7f65;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     /* background-color: #ffdbbd; */
     margin: 0%;
@@ -18,7 +22,7 @@ body {
     /* text-align: center; */
     font-family: Calibri;
     /* font-family: 'Open Sans', Helvetica, Arial, sans-serif; */
-    font-size: 16px;
+    font-size: 18px;
 }
 
 a {
@@ -34,8 +38,8 @@ a:hover {
 
 h1 {
     font-family: 'Allura', Helvetica;
-    font-size: 80px;
-    line-height: 0.5em;
+    font-size: 64px;
+    line-height: 0.7em;
     text-transform: lowercase;
     color: var(--text-color);
 }
@@ -64,9 +68,20 @@ button:hover {
     transition: color 0.5s ease-in-out, border 0.5s ease-in-out;
 } */
 
+#nav-header {
+    display: flex;
+    position: fixed;
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    z-index: 3;
+    top: 0;
+}
+
 .button {
     margin-bottom: 0px;
     padding: 10px 15px 10px 30px;
+    text-align: left;
 }
 
 .nav-pane {
@@ -169,10 +184,13 @@ nav {
 }
 
 #header {
-    height: 326px;
+    display: block;
+    /* height: 326px; */
+    height: 40%;
     overflow: hidden;
     display: flex;
     align-items: center;
+    margin-top: 3%;
 }
 
 #header img {
@@ -195,7 +213,9 @@ nav {
 .content {
     text-align: justify;
     color: var(--content-text-color);
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    text-align: center;
+    padding: 10%;
 }
 
 footer {
