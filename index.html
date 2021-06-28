@@ -84,7 +84,7 @@
                     console.log("set");
                     //for making parent of submenu active
                     // $(this).closest("li").parent().parent().addClass("selected");
-                } else if ((this.href === "index.html") && (this.href).includes(url)) {
+                } else if ((this.href.includes("index.html")) && (this.href).includes(url)) {
                     $(this).closest("li").addClass("selected");
                     console.log("set");
                 }
