@@ -124,7 +124,7 @@ nav a:hover {
     width: 64%;
     background-color: #FFB89A;
     padding: 40px 25px 25px 25px;
-    text-align: left;
+    text-align: justify;
     color: #fff;
     z-index: 2;
     line-height: 0.5em;
