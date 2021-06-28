@@ -78,7 +78,9 @@
             // passes on every "a" tag
             $(".dropdown-pane a").each(function () {
                 // checks if its the same on the address bar
-                console.log("url: " + url + ", href: " + this.href);
+                // console.log("url: " + url + ", href: " + this.href);
+                console.log("is index.html? " + this.href.includes("index.html"))
+                console.log("contains url? " + (this.href).includes(url))
                 if (url === (this.href)) {
                     $(this).closest("li").addClass("selected");
                     console.log("set");
