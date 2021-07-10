@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝘯𝘪𝘤𝘰𝘭𝘦'𝘴 𝘯𝘰𝘰𝘬</title>
+    <link rel="icon" type="image/png" href="images/favicon round.png">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0ad9fdb134.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="css/other pages.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+    <script>
+        // function startup() {
+        //     var height = window.innerHeight - document.getElementsByClassName("button")[0].offsetHeight;
+        //     document.getElementsByClassName("dropdown-pane")[0].setAttribute("height", height + "px");
+
+        //     console.log("document height: " + window.innerHeight);
+        //     console.log("button height: " + document.getElementsByClassName("button")[0].offsetHeight);
+        //     console.log("height: " + document.getElementsByClassName("dropdown-pane")[0].getAttribute("height"));
+        // }
+
+        function changeButton() {
+            var icon = document.getElementsByTagName("i")[0];
+            console.log("icon: " + icon);
+            if (icon.getAttribute("class") == "fa fa-bars") {
+                // icon.class = "fa fa-xmark";
+                icon.setAttribute("class", "fa fa-times");
+            } else {
+                // icon.class = "fa fa-bars";
+                icon.setAttribute("class", "fa fa-bars");
+            }
+            console.log("icon class: " + icon.getAttribute("class"));
+        }
+
+        $(function () {
+            // this will get the full URL at the address bar
+            var url = window.location.href;
+
+            // passes on every "a" tag
+            $(".dropdown-pane a").each(function () {
+                // checks if its the same on the address bar
+                // console.log("url: " + url + ", href: " + this.href);
+                console.log("is index.html? " + this.href.includes("index.html"))
+                console.log("contains url? " + (this.href).includes(url))
+                if (url === (this.href)) {
+                    $(this).closest("li").addClass("selected");
+                    console.log("set");
+                    //for making parent of submenu active
+                    // $(this).closest("li").parent().parent().addClass("selected");
+                } else if ((this.href.includes("index.html")) && (this.href).includes(url)) {
+                    $(this).closest("li").addClass("selected");
+                    console.log("set");
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="nav-header">
+        <button onclick="changeButton()" class="button" type="button" data-toggle="example-dropdown"><i
+                class="fa fa-bars" style="color:black; font-size: 1.7em;"></i></button>
+        <div class="dropdown-pane" id="example-dropdown" data-dropdown>
+            <ul class="nav-pane">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div class="row">
+        <div class="small-6 columns">6 columns</div>
+        <div class="small-6 columns">6 columns</div>
+    </div>
+    <div class="row">
+        <div class="medium-6 large-4 columns">12/6/4 columns</div>
+        <div class="medium-6 large-8 columns">12/6/8 columns</div>
+    </div> -->
+
+    <div id="header"><img src="images/nicole’s nook 2021.png" /></div>
+    <div class="content">
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-4">
+              <img class="thumbnail" src="images/portfolio/parentpal icon.png" alt="ParentPal">
+            </div>
+            <div class="cell small-4">
+              <img class="thumbnail" src="images/portfolio/tabby icon.png" alt="Tabby the Task Bot">
+            </div>
+            <div class="cell small-4">
+              <img class="thumbnail" src="images/portfolio/website icon.png" alt="Personal Website">
+            </div>
+          </div>
+    </div>
+
+
+
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/foundation.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+
+</body>
+
+</html>
