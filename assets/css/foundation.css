@@ -5490,11 +5490,12 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 .thumbnail {
   display: inline-block;
   max-width: 100%;
-  margin-bottom: 1rem;
-  border: 4px solid #fefefe;
+  /* margin-bottom: 1rem; */
+  /* border: 4px solid #fefefe; */
+  /* border: 1px solid #929292; */
   border-radius: 0;
-  -webkit-box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
-  box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+  /* -webkit-box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+  box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2); */
   line-height: 0;
 }
 
@@ -5506,8 +5507,8 @@ a.thumbnail {
 }
 a.thumbnail:hover,
 a.thumbnail:focus {
-  -webkit-box-shadow: 0 0 6px 1px rgba(23, 121, 186, 0.5);
-  box-shadow: 0 0 6px 1px rgba(23, 121, 186, 0.5);
+  -webkit-box-shadow: 0 0 0px 0px rgba(23, 121, 186, 0);
+  box-shadow: 0 0 0px 0px rgba(23, 121, 186, 0);
 }
 a.thumbnail image {
   -webkit-box-shadow: none;
@@ -6907,7 +6908,7 @@ html.is-reveal-open.zf-has-scroll {
   overflow-y: scroll;
 }
 html.is-reveal-open body {
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 .reveal-overlay {

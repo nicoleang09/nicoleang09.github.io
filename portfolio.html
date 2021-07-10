@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/0ad9fdb134.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/foundation.css">
     <link rel="stylesheet" href="css/other pages.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/portfolio.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 
@@ -93,15 +93,33 @@
         <div class="grid-x grid-margin-x">
             <div class="cell small-4">
               <img class="thumbnail" src="images/portfolio/parentpal icon.png" alt="ParentPal">
+              <a class="overlay" data-open="exampleModal1"><p>ParentPal</p></a>
+              <!-- <a class="title">ParentPal</a> -->
             </div>
             <div class="cell small-4">
               <img class="thumbnail" src="images/portfolio/tabby icon.png" alt="Tabby the Task Bot">
+              <a class="overlay"><p>Tabby the Task Bot</p></a>
+              <!-- <a class="title">Tabby the Task Bot</a> -->
             </div>
             <div class="cell small-4">
               <img class="thumbnail" src="images/portfolio/website icon.png" alt="Personal Website">
+              <a class="overlay"><p>Personal Website</p></a>
+              <!-- <a class="title">Personal Website</a> -->
             </div>
           </div>
     </div>
+
+
+
+
+    <div class="reveal" id="exampleModal1" data-reveal>
+        <h1>Awesome. I Have It.</h1>
+        <p class="lead">Your couch. It is mine.</p>
+        <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
 
 
 
@@ -109,6 +127,7 @@
     <script src="assets/js/foundation.js"></script>
     <script>
         $(document).foundation();
+        $('.reveal').foundation('_enableScroll', scrollTop);
     </script>
 
 </body>

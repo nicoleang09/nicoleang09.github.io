@@ -1,0 +1,49 @@
+.cell {
+    /* background-color: lightcoral; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectImg {
+    position: relative;
+    z-index: -1;
+    /* top: 0; */
+}
+
+.overlay {
+    position: absolute;
+    width: 25.2%;
+    height: 51.5%;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 3;
+    /* top: 0; */
+    font-size: 30px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay:hover {
+    color: #fff;
+}
+
+.overlay:active {
+    color: #fff;
+}
+
+/* .title {
+    position: absolute;
+    z-index: 4;
+    font-size: 30px;
+    color: #fff;
+} */
