@@ -74,7 +74,7 @@ button:hover {
     height: auto;
     width: 100%;
     background-color: #fff;
-    z-index: 3;
+    z-index: 10;
     top: 0;
 }
 
@@ -216,6 +216,7 @@ nav {
     /* margin-top: 30px; */
     text-align: center;
     padding: 10%;
+    padding-top: 50px;
 }
 
 footer {

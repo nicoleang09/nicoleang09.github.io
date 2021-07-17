@@ -5,6 +5,7 @@
     align-items: center;
     text-align: center;
     overflow: hidden;
+    margin-bottom: 1rem;
 }
 
 .thumbnail {

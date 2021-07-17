@@ -5398,7 +5398,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 
 .tabs {
   margin: 0;
-  border: 1px solid #e6e6e6;
+  /* border: 1px solid #e6e6e6; */
   background: #fefefe;
   list-style-type: none;
 }
@@ -5448,25 +5448,27 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 .tabs-title > a {
   display: block;
   padding: 1.25rem 1.5rem;
-  font-size: 0.75rem;
+  /* font-size: 0.75rem; */
+  font-size: 24px;
+  font-weight: bold;
   line-height: 1;
-  color: #1779ba;
+  color: #000000;
 }
 [data-whatinput="mouse"] .tabs-title > a {
   outline: 0;
 }
 .tabs-title > a:hover {
   background: #fefefe;
-  color: #1468a0;
+  /* color: #1468a0; */
 }
-.tabs-title > a:focus,
+/* .tabs-title > a:focus,
 .tabs-title > a[aria-selected="true"] {
   background: #e6e6e6;
   color: #1779ba;
-}
+} */
 
 .tabs-content {
-  border: 1px solid #e6e6e6;
+  /* border: 1px solid #e6e6e6; */
   border-top: 0;
   background: #fefefe;
   color: #0a0a0a;
@@ -5481,7 +5483,9 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 
 .tabs-panel {
   display: none;
-  padding: 1rem;
+  /* padding: 1rem; */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .tabs-panel.is-active {
   display: block;

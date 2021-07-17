@@ -67,3 +67,20 @@ td {
 .container-content {
     display: none;
 }
+
+
+
+
+.tabs-title {
+    width: 25%;
+}
+
+.tabs-title > a:focus,
+.tabs-title > a[aria-selected="true"] {
+    border-bottom: 3px solid #FFB89A;
+    background-color: transparent;
+}
+
+.tabs-title > a:hover[aria-selected="true"] {
+    color: #000;
+}
