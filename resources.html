@@ -1,10 +1,8 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang = "en">
     <head>
         <meta charset="UTF-8">
-        <!-- <title>𝙣𝙞𝙘𝙤𝙡𝙚'𝙨</title> -->
         <title>𝘯𝘪𝘤𝘰𝘭𝘦'𝘴</title>
-        <!-- <title>nicole's</title> -->
         <link rel="icon" type="image/png" href="images/favicon round.png">
         <link rel="stylesheet" href="css/other pages.css">
         <link rel="stylesheet" href="css/resources.css">
@@ -74,13 +72,13 @@
 
         <div id="pagebody">
             <div id="text">
-                <h1>My Resources...</h1>
-        
-                <!-- <div class="search">
+                <h1>My Resources...</h1> -->
+
+<!-- <div class="search">
                     <input id="searchbar" onkeyup="searchResources()" type="text" name="search" placeholder="Search..."> 
                     <div id="searchresults"></div>
                 </div> -->
-                <div class="content">
+<!-- <div class="content">
                     <div class="dropdown-container">
                         <div class="container-title" onclick="openContainer(this)"><h2>Notes & Cheatsheets</h2><p>▼</p></div>
                         <div class="container-content">
@@ -131,10 +129,210 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <!-- <footer>
+<!-- <footer>
             <p>© Nicole Ang 2021</p>
         </footer> -->
-    </body>
+<!-- </body>
+</html> -->
+
+
+
+
+
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝘯𝘪𝘤𝘰𝘭𝘦'𝘴 𝘯𝘰𝘰𝘬</title>
+    <link rel="icon" type="image/png" href="images/favicon round.png">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0ad9fdb134.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="css/other pages.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/resources.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+    <script>
+        // function startup() {
+        //     var height = window.innerHeight - document.getElementsByClassName("button")[0].offsetHeight;
+        //     document.getElementsByClassName("dropdown-pane")[0].setAttribute("height", height + "px");
+
+        //     console.log("document height: " + window.innerHeight);
+        //     console.log("button height: " + document.getElementsByClassName("button")[0].offsetHeight);
+        //     console.log("height: " + document.getElementsByClassName("dropdown-pane")[0].getAttribute("height"));
+        // }
+
+        function changeButton() {
+            var icon = document.getElementsByTagName("i")[0];
+            console.log("icon: " + icon);
+            if (icon.getAttribute("class") == "fa fa-bars") {
+                // icon.class = "fa fa-xmark";
+                icon.setAttribute("class", "fa fa-times");
+            } else {
+                // icon.class = "fa fa-bars";
+                icon.setAttribute("class", "fa fa-bars");
+            }
+            console.log("icon class: " + icon.getAttribute("class"));
+        }
+
+        $(function () {
+            // this will get the full URL at the address bar
+            var url = window.location.href;
+
+            // passes on every "a" tag
+            $(".dropdown-pane a").each(function () {
+                // checks if its the same on the address bar
+                // console.log("url: " + url + ", href: " + this.href);
+                console.log("is index.html? " + this.href.includes("index.html"))
+                console.log("contains url? " + (this.href).includes(url))
+                if (url === (this.href)) {
+                    $(this).closest("li").addClass("selected");
+                    console.log("set");
+                    //for making parent of submenu active
+                    // $(this).closest("li").parent().parent().addClass("selected");
+                } else if ((this.href.includes("index.html")) && (this.href).includes(url)) {
+                    $(this).closest("li").addClass("selected");
+                    console.log("set");
+                }
+            });
+        });
+
+
+        filterResources("all")
+        function filterResources(option) {
+            var resources, i;
+            resources = document.getElementsByClassName("resource");
+            console.log("resources: " + resources.length);
+            if (option == "all") option = "";
+            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < resources.length; i++) {
+                w3RemoveClass(resources[i], "show");
+                if (resources[i].className.indexOf(option) > -1) w3AddClass(resources[i], "show");
+            }
+        }
+
+        // Show filtered elements
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+            console.log("class name: " + element.className);
+        }
+
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+
+            console.log("class name: " + element.className);
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="nav-header">
+        <button onclick="changeButton()" class="button" type="button" data-toggle="example-dropdown"><i
+                class="fa fa-bars" style="color:black; font-size: 1.7em;"></i></button>
+        <div class="dropdown-pane" id="example-dropdown" data-dropdown>
+            <ul class="nav-pane">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="header"><img src="images/nicole’s nook 2021.png" /></div>
+    <div class="content">
+
+        <ul class="tabs" data-tabs id="example-tabs">
+            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true"
+                    onclick="filterResources('all')">All</a></li>
+            <li class="tabs-title"><a href="#panel2" onclick="filterResources('notes')">Notes & Cheatsheets</a></li>
+            <li class="tabs-title"><a href="#panel3" onclick="filterResources('printables')">Printables</a></li>
+            <li class="tabs-title"><a href="#panel4" onclick="filterResources('stickers')">Stickers</a></li>
+        </ul>
+
+        <div class="tabs-content" data-tabs-content="example-tabs">
+            <div class="tabs-panel is-active all" id="panel1">
+                <!-- <p>One</p>
+              <p>Check me out! I'm a super cool Tab panel with text content!</p> -->
+
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-4 resource printables">
+                        <img class="thumbnail" src="images/portfolio/parentpal icon.png" alt="ParentPal">
+                        <a class="overlay" data-open="exampleModal1">
+                            <p>ParentPal</p>
+                        </a>
+                        <!-- <a class="title">ParentPal</a> -->
+                    </div>
+                    <div class="cell small-4 resource stickers">
+                        <img class="thumbnail" src="images/portfolio/tabby icon.png" alt="Tabby the Task Bot">
+                        <a class="overlay">
+                            <p>Tabby the Task Bot</p>
+                        </a>
+                        <!-- <a class="title">Tabby the Task Bot</a> -->
+                    </div>
+                    <div class="cell small-4 resource notes">
+                        <img class="thumbnail" src="images/portfolio/website icon.png" alt="Personal Website">
+                        <a class="overlay">
+                            <p>Personal Website</p>
+                        </a>
+                        <!-- <a class="title">Personal Website</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="tabs-panel notes" id="panel2">
+                <!-- <p>Two</p>
+              <img class="thumbnail" src="assets/img/generic/rectangle-7.jpg" alt=""> -->
+            </div>
+            <div class="tabs-panel printables" id="panel3">
+                <!-- <p>Three</p>
+              <p>Check me out! I'm a super cool Tab panel with text content!</p> -->
+            </div>
+            <div class="tabs-panel stickers" id="panel4">
+                <!-- <p>Four</p>
+              <img class="thumbnail" src="assets/img/generic/rectangle-2.jpg" alt=""> -->
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/foundation.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+
+</body>
+
 </html>
