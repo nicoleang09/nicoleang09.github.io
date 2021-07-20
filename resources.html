@@ -209,8 +209,11 @@
 
 
         // filter resources for each tab
-        filterResources("all")
-        function filterResources(option) {
+        filterResources("all", "panel1")
+        function filterResources(option, tab) {
+            var tabElement = document.getElementById(tab);
+            var tabInnerDiv = tabElement.querySelector(".grid-x");
+
             var resources, i;
             resources = document.getElementsByClassName("resource");
             console.log("resources: " + resources.length);
@@ -218,7 +221,15 @@
             // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
             for (i = 0; i < resources.length; i++) {
                 w3RemoveClass(resources[i], "show");
-                if (resources[i].className.indexOf(option) > -1) w3AddClass(resources[i], "show");
+                if (option == "") {
+                    w3AddClass(resources[i], "show");
+                    tabInnerDiv.appendChild(resources[i])
+                    console.log("class name: " + resources[i].className);
+                } else if (resources[i].className.indexOf(option) > -1) {
+                    w3AddClass(resources[i], "show");
+                    tabInnerDiv.appendChild(resources[i]);
+                    console.log("class name: " + resources[i].className);
+                };
             }
         }
 
@@ -232,7 +243,7 @@
                     element.className += " " + arr2[i];
                 }
             }
-            console.log("class name: " + element.className);
+            // console.log("class name show: " + element.className);
         }
 
         // Hide elements that are not selected
@@ -247,7 +258,7 @@
             }
             element.className = arr1.join(" ");
 
-            console.log("class name: " + element.className);
+            // console.log("class name hide: " + element.className);
         }
 
     </script>
@@ -274,17 +285,22 @@
     <div class="content">
 
         <ul class="tabs" data-tabs id="example-tabs">
-            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true"
-                    onclick="filterResources('all')">All</a></li>
-            <li class="tabs-title"><a href="#panel2" onclick="filterResources('notes')">Notes & Cheatsheets</a></li>
-            <li class="tabs-title"><a href="#panel3" onclick="filterResources('printables')">Printables</a></li>
-            <li class="tabs-title"><a href="#panel4" onclick="filterResources('stickers')">Stickers</a></li>
+            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">All</a></li>
+            <li class="tabs-title"><a href="#panel2">Notes & Cheatsheets</a></li>
+            <li class="tabs-title"><a href="#panel3">Printables</a></li>
+            <li class="tabs-title"><a href="#panel4">Stickers</a></li>
+
+            <!-- <li class="tabs-title is-active"><a href="#panel1" aria-selected="true"
+                    onclick="filterResources('all', 'panel1')">All</a></li>
+            <li class="tabs-title"><a href="#panel2" onclick="filterResources('notes', 'panel2')">Notes &
+                    Cheatsheets</a></li>
+            <li class="tabs-title"><a href="#panel3" onclick="filterResources('printables', 'panel3')">Printables</a>
+            </li>
+            <li class="tabs-title"><a href="#panel4" onclick="filterResources('stickers', 'panel4')">Stickers</a></li> -->
         </ul>
 
         <div class="tabs-content" data-tabs-content="example-tabs">
             <div class="tabs-panel is-active all" id="panel1">
-                <!-- <p>One</p>
-              <p>Check me out! I'm a super cool Tab panel with text content!</p> -->
 
                 <div class="grid-x grid-margin-x">
 
@@ -352,14 +368,15 @@
                     </div>
 
                     <div class="cell small-3 overlay-box resource stickers">
-                        <img class="thumbnail" src="images/resources/plant stickers.jpg" alt="Plant Stickers">
+                        <img class="thumbnail" src="images/resources/plant stickers icon.jpg" alt="Plant Stickers">
                         <a class="overlay">
                             <p>Plant Stickers</p>
                         </a>
                     </div>
 
                     <div class="cell small-3 overlay-box resource stickers">
-                        <img class="thumbnail" src="images/resources/halloween stickers icon.jpg" alt="Halloween Stickers">
+                        <img class="thumbnail" src="images/resources/halloween stickers icon.jpg"
+                            alt="Halloween Stickers">
                         <a class="overlay">
                             <p>Halloween Stickers</p>
                         </a>
@@ -367,19 +384,202 @@
 
                 </div>
             </div>
+
             <div class="tabs-panel notes" id="panel2">
-                <!-- <p>Two</p>
-              <img class="thumbnail" src="assets/img/generic/rectangle-7.jpg" alt=""> -->
+                <div class="grid-x grid-margin-x">
+
+                    <div class="cell small-3 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="CS2100 Summary">
+                        <a class="overlay" data-open="exampleModal1">
+                            <p>CS2100 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="CS2105 Summary">
+                        <a class="overlay">
+                            <p>CS2105 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="CS2106 Summary">
+                        <a class="overlay">
+                            <p>CS2106 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="MA1101R Summary">
+                        <a class="overlay">
+                            <p>MA1101R Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="EC1301 Summary">
+                        <a class="overlay">
+                            <p>EC1301 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="EC2101 Summary">
+                        <a class="overlay">
+                            <p>EC2101 Summary</p>
+                        </a>
+                    </div>
+                </div>
             </div>
+
             <div class="tabs-panel printables" id="panel3">
-                <!-- <p>Three</p>
-              <p>Check me out! I'm a super cool Tab panel with text content!</p> -->
+                <div class="grid-x grid-margin-x">
+
+                    <div class="cell small-3 overlay-box resource printables">
+                        <img class="thumbnail" src="images/resources/2021 calendar icon.jpg" alt="2021 Calendar">
+                        <a class="overlay">
+                            <p>2021 Calendar</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource printables">
+                        <img class="thumbnail" src="images/resources/todo icon.jpg" alt="To-do List">
+                        <a class="overlay">
+                            <p>To-do List</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource printables">
+                        <img class="thumbnail" src="images/resources/daily log icon.jpg" alt="Daily Log">
+                        <a class="overlay">
+                            <p>Daily Log</p>
+                        </a>
+                    </div>
+                </div>
             </div>
+
             <div class="tabs-panel stickers" id="panel4">
-                <!-- <p>Four</p>
-              <img class="thumbnail" src="assets/img/generic/rectangle-2.jpg" alt=""> -->
+                <div class="grid-x grid-margin-x">
+
+                    <div class="cell small-3 overlay-box resource stickers">
+                        <img class="thumbnail" src="images/resources/plant stickers icon.jpg" alt="Plant Stickers">
+                        <a class="overlay">
+                            <p>Plant Stickers</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource stickers">
+                        <img class="thumbnail" src="images/resources/halloween stickers icon.jpg"
+                            alt="Halloween Stickers">
+                        <a class="overlay">
+                            <p>Halloween Stickers</p>
+                        </a>
+                    </div>
+
+                </div>
             </div>
+
         </div>
+
+        <!-- <div class="tabs-content" data-tabs-content="example-tabs">
+            <div class="tabs-panel is-active all" id="panel1">
+
+                <div class="grid-x grid-margin-x">
+
+                    <div class="cell small-3 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="CS2100 Summary">
+                        <a class="overlay" data-open="exampleModal1">
+                            <p>CS2100 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="CS2105 Summary">
+                        <a class="overlay">
+                            <p>CS2105 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="CS2106 Summary">
+                        <a class="overlay">
+                            <p>CS2106 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="MA1101R Summary">
+                        <a class="overlay">
+                            <p>MA1101R Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="EC1301 Summary">
+                        <a class="overlay">
+                            <p>EC1301 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="EC2101 Summary">
+                        <a class="overlay">
+                            <p>EC2101 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource printables">
+                        <img class="thumbnail" src="images/resources/2021 calendar icon.jpg" alt="2021 Calendar">
+                        <a class="overlay">
+                            <p>2021 Calendar</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource printables">
+                        <img class="thumbnail" src="images/resources/todo icon.jpg" alt="To-do List">
+                        <a class="overlay">
+                            <p>To-do List</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource printables">
+                        <img class="thumbnail" src="images/resources/daily log icon.jpg" alt="Daily Log">
+                        <a class="overlay">
+                            <p>Daily Log</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource stickers">
+                        <img class="thumbnail" src="images/resources/plant stickers icon.jpg" alt="Plant Stickers">
+                        <a class="overlay">
+                            <p>Plant Stickers</p>
+                        </a>
+                    </div>
+
+                    <div class="cell small-3 overlay-box resource stickers">
+                        <img class="thumbnail" src="images/resources/halloween stickers icon.jpg"
+                            alt="Halloween Stickers">
+                        <a class="overlay">
+                            <p>Halloween Stickers</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tabs-panel notes" id="panel2">
+                <div class="grid-x grid-margin-x"></div>
+            </div>
+
+            <div class="tabs-panel printables" id="panel3">
+                <div class="grid-x grid-margin-x"></div>
+            </div>
+
+            <div class="tabs-panel stickers" id="panel4">
+                <div class="grid-x grid-margin-x"></div>
+            </div>
+
+        </div> -->
 
     </div>
 
