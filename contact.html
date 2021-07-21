@@ -138,22 +138,22 @@
     <div id="header"><img src="images/nicole’s nook 2021.png" /></div>
     <div class="content">
 
-        <form>
+        <form action="mailto:nicoleang@u.nus.edu" method="post" enctype="text/plain">
             <label>
-                <input type="text" placeholder="Your Name" aria-describedby="exampleHelpText">
+                <input type="text" placeholder="Your Name" name="name" aria-describedby="exampleHelpText">
             </label>
 
             <label>
-                <input type="text" placeholder="Email" aria-describedby="exampleHelpText">
+                <input type="text" placeholder="Email" name="sender email" aria-describedby="exampleHelpText">
             </label>
 
             <label>
-                <textarea placeholder="Message"></textarea>
+                <textarea placeholder="Message" name="message"></textarea>
             </label>
 
-            <div class="input-group-button">
+            <label>
                 <input type="submit" class="button" value="Submit">
-            </div>
+            </label>
 
         </form>
 
