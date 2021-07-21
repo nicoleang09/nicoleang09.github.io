@@ -1,48 +1,50 @@
 td {
-    width: 250px;
-    /* width: 25%; */
-    height: 270px;
-    padding: 5px;
-    text-align: center;
-    /* border: 1px solid black; */
+  width: 250px;
+  /* width: 25%; */
+  height: 270px;
+  padding: 5px;
+  text-align: center;
+  /* border: 1px solid black; */
 }
 
 .preview {
-    width: 250px;
-    height: 250px;
-    overflow-y: scroll;
-    margin-bottom: 10px;
-    border: #cab095 solid 1px;
-    transition: border 0.5s ease-in-out;
+  width: 250px;
+  height: 250px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  border: #cab095 solid 1px;
+  transition: border 0.5s ease-in-out;
 }
 
 .preview:hover {
-    border: #9f7d61 solid 1px;
-    transition: border 0.5s ease-in-out;
+  border: #9f7d61 solid 1px;
+  transition: border 0.5s ease-in-out;
 }
 
 .preview img {
-    width: 100%;
+  width: 100%;
 }
 
 .preview::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
 
-.preview::-webkit-scrollbar, .preview::-webkit-scrollbar-track, .preview::-webkit-scrollbar-thumb {
-    /* visibility: hidden; */
-    background-color: transparent;
-    transition: background-color .5s ease-in-out;
+.preview::-webkit-scrollbar,
+.preview::-webkit-scrollbar-track,
+.preview::-webkit-scrollbar-thumb {
+  /* visibility: hidden; */
+  background-color: transparent;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .preview:hover::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-    transition: background-color .5s ease-in-out;
+  background-color: #f1f1f1;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .preview:hover::-webkit-scrollbar-thumb {
-    background-color: #9a7f65;
-    transition: background-color .5s ease-in-out;
+  background-color: #9a7f65;
+  transition: background-color 0.5s ease-in-out;
 }
 
 /* .description {
@@ -50,37 +52,34 @@ td {
 } */
 
 .dropdown-container {
-    background-color: #fff;
-    border: #deb69d solid 2px;
-    padding: 20px;
-    margin-bottom: 20px;
-    /* width: 100%; */
+  background-color: #fff;
+  border: #deb69d solid 2px;
+  padding: 20px;
+  margin-bottom: 20px;
+  /* width: 100%; */
 }
 
 .container-title {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .container-content {
-    display: none;
+  display: none;
 }
 
-
-
-
 .tabs-title {
-    width: 25%;
+  width: 25%;
 }
 
 .tabs-title > a:focus,
 .tabs-title > a[aria-selected="true"] {
-    border-bottom: 3px solid #FFB89A;
-    background-color: transparent;
+  border-bottom: 3px solid #ffb89a;
+  background-color: transparent;
 }
 
 .tabs-title > a:hover[aria-selected="true"] {
-    color: #000;
+  color: #000;
 }
