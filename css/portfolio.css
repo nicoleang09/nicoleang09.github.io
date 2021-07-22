@@ -64,13 +64,21 @@
     color: #fff;
 } */
 
+.reveal {
+    /* width: 70%;
+    height: 55%; */
+    padding: 2.5rem;
+    background-color: #FFE8B9;
+    border: none;
+}
+
 @media print, screen and (min-width: 40em) {
     .reveal {
         width: 70%;
         height: 55%;
-        padding: 2.5rem;
+        /* padding: 2.5rem;
         background-color: #FFE8B9;
-        border: none;
+        border: none; */
     }
 }
 
@@ -89,7 +97,7 @@
 
 .action-link {
     position: absolute;
-    width: 20%;
+    /* width: 20%; */
     background-color: #fff;
     border: 2px #FFB89A solid;
     text-align: center;
@@ -112,5 +120,5 @@
     width: 100%;
     height: 100%;
     color: #FFB89A;
-    padding: 0.8rem;
+    padding: 0.8rem 3rem;
 }
