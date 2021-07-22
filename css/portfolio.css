@@ -64,12 +64,14 @@
     color: #fff;
 } */
 
-.reveal {
-    width: 70%;
-    height: 55%;
-    padding: 2.5rem;
-    background-color: #FFE8B9;
-    border: none;
+@media print, screen and (min-width: 40em) {
+    .reveal {
+        width: 70%;
+        height: 55%;
+        padding: 2.5rem;
+        background-color: #FFE8B9;
+        border: none;
+    }
 }
 
 .reveal h1 {
