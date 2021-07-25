@@ -36,6 +36,10 @@ a:hover {
     transition: color .5s ease-in-out;
 }
 
+a:focus {
+    color: var(--main-accent);
+}
+
 h1 {
     font-family: 'Allura', Helvetica;
     font-size: 64px;
