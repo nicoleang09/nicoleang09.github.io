@@ -23,7 +23,7 @@ input[type="text"]:focus {
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(0, 0, 0, 0.5);
-  font-size: 24px;
+  font-size: 1.5rem;
   /*opacity: 1;*/ /* Firefox */
 }
 

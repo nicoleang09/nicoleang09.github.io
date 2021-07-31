@@ -74,6 +74,10 @@ td {
   width: 25%;
 }
 
+.tabs-title a {
+  font-size: 1.5rem;
+}
+
 .tabs-title > a:focus,
 .tabs-title > a[aria-selected="true"] {
   border-bottom: 3px solid #ffb89a;

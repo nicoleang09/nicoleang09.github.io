@@ -18,22 +18,28 @@ body {
     /* background-color: #fff9f2; */
     /* background-image: url(../images/bg-white.png); */
     background-size: 20%;
-    
+
     /* text-align: center; */
     font-family: Calibri;
     /* font-family: 'Open Sans', Helvetica, Arial, sans-serif; */
     font-size: 17.6px;
 }
 
+@media screen and (max-width: 40em) {
+    html {
+        font-size: 12px;
+    }
+}
+
 a {
     color: #cab095;
-    transition: color .5s ease-in-out;
+    transition: color 0.5s ease-in-out;
     text-decoration: none;
 }
 
 a:hover {
     color: var(--main-accent);
-    transition: color .5s ease-in-out;
+    transition: color 0.5s ease-in-out;
 }
 
 a:focus {
@@ -41,7 +47,7 @@ a:focus {
 }
 
 h1 {
-    font-family: 'Allura', Helvetica;
+    font-family: "Allura", Helvetica;
     font-size: 64px;
     line-height: 2.7rem;
     text-transform: lowercase;
@@ -94,7 +100,7 @@ button:hover {
 
 .nav-pane a {
     color: #000;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 3.2rem;
     text-decoration: underline transparent;
     text-underline-offset: 4px;
@@ -155,7 +161,7 @@ nav {
     /* width: 125px; */
     margin: 0px -2px;
     /* padding: 0px 50px 0px 5px; */
-    transition: border-bottom .5s ease-in-out;
+    transition: border-bottom 0.5s ease-in-out;
     /* transition: border-bottom .5s ease-in-out, letter-spacing .5s ease-in-out; */
     border-bottom: #cab095 2.7px solid;
     letter-spacing: 0px;
@@ -163,28 +169,27 @@ nav {
 }
 
 .navlink:hover {
-    transition: border-bottom .5s ease-in-out;
+    transition: border-bottom 0.5s ease-in-out;
     /* transition: border-bottom .5s ease-in-out, letter-spacing .5s ease-in-out; */
     border-bottom: var(--main-accent) 2.7px solid;
     /* letter-spacing: 1px; */
 }
 
- .navlink a {
+.navlink a {
     display: inline-block;
     /* width: 125px; */
     font-size: 0.875rem;
     font-family: Helvetica, Arial, sans-serif;
     color: #cab095;
-    transition: color .5s ease-in-out;
+    transition: color 0.5s ease-in-out;
     text-decoration: none;
     text-transform: lowercase;
     padding: 0px 50px 0px 5px;
 }
 
-
 .navlink a:hover {
     color: var(--main-accent);
-    transition: color .5s ease-in-out;
+    transition: color 0.5s ease-in-out;
 }
 
 #header {
@@ -236,7 +241,6 @@ footer {
     border: 2px solid black;
 }
 
-
 /* style scrollbar */
 body::-webkit-scrollbar {
     width: 5px;
@@ -250,13 +254,13 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background: var(--main-accent);
 }
-  
-  /* Handle on hover */
-  /* ::-webkit-scrollbar-thumb:hover {
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
     background: #555;
   } */
 
 html {
-    overflow: -moz-scrollbars-vertical; 
+    overflow: -moz-scrollbars-vertical;
     overflow-y: scroll;
 }
