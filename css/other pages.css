@@ -23,6 +23,8 @@ body {
     font-family: Calibri;
     /* font-family: 'Open Sans', Helvetica, Arial, sans-serif; */
     font-size: 17.6px;
+
+    hyphens: auto;
 }
 
 @media screen and (max-width: 40em) {
