@@ -9,7 +9,7 @@ input[type="text"] {
   padding-right: 1rem;
   border: 1px #3d3d3d solid;
   border-radius: 10px;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 input[type="text"]:focus {
@@ -30,13 +30,13 @@ input[type="text"]:focus {
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: rgba(0, 0, 0, 0.5);
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: rgba(0, 0, 0, 0.5);
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 textarea {
@@ -51,7 +51,7 @@ textarea {
   margin-bottom: 1rem; */
   border: 1px #3d3d3d solid;
   border-radius: 10px;
-  font-size: 24px;
+  font-size: 1.5rem;
   resize: none;
 }
 
@@ -70,7 +70,7 @@ label .button {
   color: #fff;
   background-color: #ffb89a;
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   border-radius: 10px;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -83,7 +83,7 @@ label .button:hover {
   color: #ffb89a;
   background-color: #fff;
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   /* border: 2px #FFB89A solid; */
   border-radius: 10px;
   padding-top: 1rem;
@@ -100,7 +100,7 @@ label .button:hover {
 }
 
 .socials-name {
-  font-size: 24px;
+  font-size: 1.5rem;
   text-align: left;
   padding-left: 1.5rem;
   color: #3d3d3d;

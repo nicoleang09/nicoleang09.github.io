@@ -22,7 +22,7 @@ body {
     /* text-align: center; */
     font-family: Calibri;
     /* font-family: 'Open Sans', Helvetica, Arial, sans-serif; */
-    font-size: 1.1em;
+    font-size: 17.6px;
 }
 
 a {
@@ -43,7 +43,7 @@ a:focus {
 h1 {
     font-family: 'Allura', Helvetica;
     font-size: 64px;
-    line-height: 0.7em;
+    line-height: 2.7rem;
     text-transform: lowercase;
     color: var(--text-color);
 }
@@ -95,7 +95,7 @@ button:hover {
 .nav-pane a {
     color: #000;
     font-size: 20px;
-    line-height: 2.5em;
+    line-height: 3.2rem;
     text-decoration: underline transparent;
     text-underline-offset: 4px;
     -webkit-transition: text-decoration 0.5s ease;
@@ -172,7 +172,7 @@ nav {
  .navlink a {
     display: inline-block;
     /* width: 125px; */
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: Helvetica, Arial, sans-serif;
     color: #cab095;
     transition: color .5s ease-in-out;

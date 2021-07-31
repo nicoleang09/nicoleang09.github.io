@@ -28,8 +28,8 @@
     background-color: rgba(0,0,0,0.2);
     z-index: 3;
     /* top: 0; */
-    font-size: 30px;
-    text-shadow: 1.5px 1.5px 1.5px rgba(0,0,0,0.75);
+    font-size: 1.875rem;
+    text-shadow: 0.094rem 0.094rem 0.094rem rgba(0,0,0,0.75);
     color: #fff;
     display: flex;
     justify-content: center;
@@ -85,10 +85,10 @@
 }
 
 .reveal h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
     font-family: Calibri;
-    line-height: 1em;
+    line-height: 1.65rem;
     text-transform: none;
     color: #3d3d3d;
     flex: 0 1 auto;

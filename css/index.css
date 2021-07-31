@@ -128,7 +128,7 @@ nav a:hover {
     text-align: justify;
     color: #fff;
     z-index: 2;
-    line-height: 0.5em;
+    line-height: 0.5rem;
 }
 
 .content-text h1 {
