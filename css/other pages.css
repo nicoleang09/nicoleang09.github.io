@@ -197,7 +197,7 @@ nav {
 #header {
     display: block;
     /* height: 250px; */
-    height: 40%;
+    height: 38%;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -210,6 +210,10 @@ nav {
 }
 
 @media screen and (max-width: 40em) {    
+    #header {
+        height: 28%;
+    }
+    
     #header img {
         content:url("../images/nicole’s nook 2021 small.png");
     }
