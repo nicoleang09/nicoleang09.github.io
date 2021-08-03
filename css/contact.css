@@ -91,7 +91,7 @@ label .button:hover {
 }
 
 .socials {
-  padding-left: 10rem;
+  margin-left: 10rem;
 }
 
 .socials-link {
@@ -108,4 +108,31 @@ label .button:hover {
 
 .socials-name:hover {
   color: #9a7f65;
+}
+
+@media screen and (max-width: 64em) {
+  .socials {
+    /* margin-left: 0; */
+    /* width: 25%; */
+    margin-top: 3rem;
+    margin-left: 0.001rem;
+  }
+
+  .socials-link {
+    display: inline-block;
+    width: 22%;
+    /* border: black 1px solid; */
+  }
+
+  .socials-name {
+    padding-left: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .socials-link {
+    display: inline-block;
+    width: 48%;
+    /* border: black 1px solid; */
+  }
 }
