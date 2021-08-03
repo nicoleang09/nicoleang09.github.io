@@ -134,3 +134,31 @@ nav a:hover {
 .content-text h1 {
     color: #fff;
 }
+
+@media screen and (max-width: 40em) {
+    .content {
+        /* position: relative; */
+        flex-direction: row;
+        /* height: auto; */
+        width: 100%;
+        vertical-align: middle;
+        /* justify-content: center; */
+        padding-top: 10%;
+    }
+
+    .profile-pic {
+        position: absolute;
+        z-index: 3;
+        /* align-self: auto; */
+        border-radius: 100%;
+        width: 40%;
+    }
+
+    .content-text {
+        /* position: absolute; */
+        width: 100%;
+        margin-top: 25%;
+        padding-top: 33%;
+        text-align: center;
+    }
+}
