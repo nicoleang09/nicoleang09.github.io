@@ -88,3 +88,29 @@ td {
 .tabs-title > a:hover[aria-selected="true"] {
   color: #000;
 }
+
+@media screen and (max-width: 40em) {
+  .tabs-title {
+    width: 50%;
+    border: #ffb89a 1px solid;
+    transition: background-color ease-in-out 0.5s;
+  }
+
+  .tabs-title > a:focus,
+  .tabs-title > a[aria-selected="true"] {
+    border-bottom: none;
+    background-color: #ffb89a;
+    color: #ffffff;
+  }
+
+  .tabs-title > a:hover[aria-selected="true"] {
+    color: #ffffff;
+  }
+
+  .tabs-title > a:hover[aria-selected="false"] {
+    /* color: #000; */
+    background-color: #ffb89a;
+    color: #ffffff;
+    transition: background-color ease-in-out 0.5s;
+  }
+}
