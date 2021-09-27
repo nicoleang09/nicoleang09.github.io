@@ -22,7 +22,9 @@ body {
     color: var(--content-text-color);
     background-size: 20%;
 
-    font-family: Calibri, sans-serif;
+    font-family: Calibri, 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: none;
     font-size: 17.6px;
 
     hyphens: auto;
@@ -44,7 +46,7 @@ a:focus {
 }
 
 h1 {
-    font-family: "Allura", Helvetica;
+    font-family: 'Allura', Helvetica;
     font-size: 64px;
     line-height: 2.7rem;
     text-transform: lowercase;
