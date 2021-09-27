@@ -83,6 +83,7 @@ td {
 .tabs-title > a[aria-selected="true"] {
   border-bottom: 3px solid #ffb89a;
   background-color: transparent;
+  color: #000;
 }
 
 .tabs-title > a:hover[aria-selected="true"] {
