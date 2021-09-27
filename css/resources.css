@@ -92,7 +92,7 @@ td {
 
 @media screen and (max-width: 40em) {
   .tabs-title {
-    width: 50%;
+    width: 100%;
     border: #ffb89a 1px solid;
     transition: background-color ease-in-out 0.5s;
   }
