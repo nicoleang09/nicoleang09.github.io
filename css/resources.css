@@ -115,3 +115,13 @@ td {
     transition: background-color ease-in-out 0.5s;
   }
 }
+
+.cell {
+  /* background-color: lightcoral; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}

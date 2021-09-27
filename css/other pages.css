@@ -47,6 +47,8 @@ a:focus {
 
 h1 {
     font-family: 'Allura', Helvetica;
+    font-weight: normal;
+    font-style: none;
     font-size: 64px;
     line-height: 2.7rem;
     text-transform: lowercase;
@@ -249,16 +251,6 @@ body::-webkit-scrollbar-thumb {
 
 
 /* thumbnail styling */
-.cell {
-    /* background-color: lightcoral; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-    margin-bottom: 1rem;
-}
-
 .thumbnail {
     display: flex;
     justify-content: center;
