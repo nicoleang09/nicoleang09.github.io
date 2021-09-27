@@ -348,7 +348,21 @@ body::-webkit-scrollbar-thumb {
     overflow-y: scroll;
     flex: 1 1 auto;
     margin-bottom: 3rem;
-    /* padding-right: 0.5rem; */
+    padding-right: 1rem;
+    text-align: justify;
+}
+
+.reveal p::-webkit-scrollbar {
+    width: 5px;
+    height: 6px;
+}
+
+.reveal p::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.reveal p::-webkit-scrollbar-thumb {
+    background: var(--main-accent);
 }
 
 .reveal a {
