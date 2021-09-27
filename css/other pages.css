@@ -22,7 +22,7 @@ body {
     color: var(--content-text-color);
     background-size: 20%;
 
-    font-family: Calibri;
+    font-family: Calibri, sans-serif;
     font-size: 17.6px;
 
     hyphens: auto;
