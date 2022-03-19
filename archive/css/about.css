@@ -1,0 +1,41 @@
+#text {
+    width: 55%;
+    position: relative;
+    float: left;
+    /* border: black 5px solid; */
+    /* margin-top: 50px; */
+}
+
+#profilepic {
+    height: 300px;
+    width: auto;
+    float: left;
+    /* position: relative; */
+    position: absolute;
+    /* margin-left: 220px; */
+    left: 275px;
+    margin-top: 90px;
+    /* margin-right: 20%; */
+    /* margin-top: 150px; */
+    /* border: #cab095 10px solid; */
+
+    /* border: #fff 10px solid; */
+    border: #fa966b 10px solid;
+}
+
+#text {
+    background-color: #fadfca;
+    float: right;
+    /* position: relative; */
+    position: absolute;
+    width: 500px;
+    padding: 20px;
+    padding-left: 80px;
+    right: 275px;
+    /* margin-left: 410px; */
+    margin-top: 130px;
+}
+
+#text h1 {
+    display: none;
+}
