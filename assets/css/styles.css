@@ -12,13 +12,20 @@
     --pale-coral: #fa966bbf;
 }
 
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
     color: var(--text-grey);
+    background-color: var(--background-brown);
+    /* text-align: center; */
     /* background-color: #aa9393; */
 }
-
 h1 {
     font-size: 2.4rem;
     line-height: 2.4rem;
@@ -44,6 +51,8 @@ p {
     line-height: 1rem;
 }
 
+
+/* --------------- REUSABLE ELEMENTS --------------- */
 .fancy-heading {
     font-family: 'Sacramento', cursive, sans-serif;
     font-size: 3.5rem;
@@ -282,4 +291,62 @@ input::placeholder, textarea::placeholder {
 .reveal .close-button {
     margin-right: 16px;
     margin-top: 16px;
+}
+
+
+/* --------------- CUSTOM ELEMENTS --------------- */
+#home-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 100%;
+    margin-left: 12.5%;
+}
+
+#home-img {
+    width: 30%;
+    float: left;
+    align-self: flex-start;
+    position: absolute;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#home-img img {
+    border-radius: 50%;
+}
+
+#home-desc {
+    display: block;
+    position: relative;
+    float: right;
+    align-self: flex-end;
+    width: 70%;
+    background-color: var(--white);
+    padding: 52px 36px 52px 15%;
+    text-align: justify;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+#scroll-down-btn {
+    position: absolute;
+    display: flex;
+    height: 36px;
+    flex-direction: row;
+    align-items: center;
+    bottom: 24px;
+    margin: 0px auto;
+    cursor: pointer;
+}
+
+#scroll-down-anim {
+    height: 100%;
+}
+
+#scroll-down-text {
+    height: 1rem;
+    align-self: center;
 }

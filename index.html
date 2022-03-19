@@ -15,35 +15,44 @@
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="assets/css/styles.css">
   </head>
-<body>
 
-    <div class="top-bar">
+  <body>
+    <div class="top-bar" id="nav" style="display: none;">
         <div class="top-bar-left">
-            <ul class="dropdown menu" data-dropdown-menu>
-                <li><a href="#">Home</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Experiences">Experiences</a></li>
-                <li><a href="#Contact">Contact</a></li>
+            <ul class="menu">
+                <li><a class="button clear" href="#">Home</a></li>
+                <li><a class="button clear" href="#Projects">Projects</a></li>
+                <li><a class="button clear" href="#Experiences">Experiences</a></li>
+                <li><a class="button clear" href="#Contact">Contact</a></li>
             </ul>
         </div>
-    </div>    
+    </div>
 
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h3><b>Heading 3 Bold</b></h3>
-    <h4>Heading 4</h4>
-    <p>Paragraph</p>
-    <p class="fancy-heading">Fancy heading</p>
+    <div id="home-top">
+      <div id="home-img">
+        <img src="images/placeholder profile pic.png"/>
+      </div>
+      <div id="home-desc">
+        <p class="fancy-heading" style="color: var(--dark-brown);">welcome!</p>
+        <p>
+          I’m Nicole, a third year Computer Science student at the National University of Singapore. I built this website in my free time because I decided to finally put my interest in web design to good use. Here, you can check out some of the projects I have done, as well as work experience I have had.
+        </p>
+      </div>
 
-    <button class="button primary">Primary Button</button>
-    <button class="button secondary">Secondary Button</button>
-    <button class="button clear">Clear Button</button>
-    <button class="button clear selected">Clear Button Selected</button>
+      <div id="scroll-down-btn">
+        <div id="scroll-down-anim"></div>
+        <div id="scroll-down-text"><p>scroll down</p></div>
+      </div>
+    </div>
 
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.1/lottie.min.js" integrity="sha512-CWKGqmXoxo+9RjazbVIaiFcD+bYEIcUbBHwEzPlT0FilQq3TCUac+/uxZ5KDmvYiXJvp32O8rcgchkYw6J6zOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/js/vendor/jquery.js"></script>
     <script src="assets/js/vendor/what-input.js"></script>
     <script src="assets/js/vendor/foundation.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+
   </body>
 </html>
