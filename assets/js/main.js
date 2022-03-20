@@ -24,11 +24,11 @@ window.onload = window.onscroll = function () {
     var contactLink = document.getElementById("nav-contact");
 
     if (currentScrollPos > window.innerHeight - 120) {
-        document.getElementById("nav").style.display = "block";
-        document.getElementById("top-arrow-btn").style.display = "block";
+        $("#nav").fadeIn();
+        $("#top-arrow-btn").fadeIn();
     } else {
-        document.getElementById("nav").style.display = "none";
-        document.getElementById("top-arrow-btn").style.display = "none";
+        $("#nav").fadeOut();
+        $("#top-arrow-btn").fadeOut();
     }
 
     // set selected in nav bar
@@ -69,11 +69,11 @@ window.onscroll = function () {
     var contactLink = document.getElementById("nav-contact");
 
     if (currentScrollPos > window.innerHeight - 120) {
-        document.getElementById("nav").style.display = "block";
-        document.getElementById("top-arrow-btn").style.display = "block";
+        $("#nav").fadeIn();
+        $("#top-arrow-btn").fadeIn();
     } else {
-        document.getElementById("nav").style.display = "none";
-        document.getElementById("top-arrow-btn").style.display = "none";
+        $("#nav").fadeOut();
+        $("#top-arrow-btn").fadeOut();
     }
 
     // set selected in nav bar

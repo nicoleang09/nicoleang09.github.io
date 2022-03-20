@@ -112,6 +112,17 @@ p {
     transition: color 0.5s ease-in-out;
 }
 
+.button.clear:after{
+    content: " ";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: var(--coral);
+    border-radius: 10px;
+    margin-top: 4px;
+    transition: width 0.5s ease-in-out;
+}
+
 .button.clear.selected {
     padding: 12px;
     color: var(--coral);
@@ -121,7 +132,7 @@ p {
     text-underline-offset: 4px; */
 }
 
-.button.clear.button.clear.selected:after{
+.button.clear.selected:after{
     content: " ";
     display: block;
     width: 100%;
@@ -129,6 +140,7 @@ p {
     background-color: var(--coral);
     border-radius: 10px;
     margin-top: 4px;
+    transition: width 0.5s ease-in-out;
 }
 
 .top-bar {
