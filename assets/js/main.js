@@ -23,12 +23,12 @@ window.onload = window.onscroll = function () {
     var experiencesLink = document.getElementById("nav-experiences");
     var contactLink = document.getElementById("nav-contact");
 
-    // 20 is an arbitrary number here, just to make you think if you need the prevScrollpos variable:
     if (currentScrollPos > window.innerHeight - 120) {
-        // I am using 'display' instead of 'top':
         document.getElementById("nav").style.display = "block";
+        document.getElementById("top-arrow-btn").style.display = "block";
     } else {
         document.getElementById("nav").style.display = "none";
+        document.getElementById("top-arrow-btn").style.display = "none";
     }
 
     // set selected in nav bar
@@ -68,12 +68,12 @@ window.onscroll = function () {
     var experiencesLink = document.getElementById("nav-experiences");
     var contactLink = document.getElementById("nav-contact");
 
-    // 20 is an arbitrary number here, just to make you think if you need the prevScrollpos variable:
     if (currentScrollPos > window.innerHeight - 120) {
-        // I am using 'display' instead of 'top':
         document.getElementById("nav").style.display = "block";
+        document.getElementById("top-arrow-btn").style.display = "block";
     } else {
         document.getElementById("nav").style.display = "none";
+        document.getElementById("top-arrow-btn").style.display = "none";
     }
 
     // set selected in nav bar

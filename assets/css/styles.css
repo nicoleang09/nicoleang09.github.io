@@ -393,3 +393,11 @@ input::placeholder, textarea::placeholder {
     height: 1rem;
     align-self: center;
 }
+
+#top-arrow-btn {
+    height: 36px;
+    position: fixed;
+    bottom: 24px;
+    right: 48px;
+    filter: invert(67%) sepia(33%) saturate(837%) hue-rotate(327deg) brightness(100%) contrast(97%);
+}
