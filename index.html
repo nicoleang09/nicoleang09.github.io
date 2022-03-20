@@ -20,10 +20,10 @@
     <div class="top-bar" id="nav" style="display: none;">
         <div class="top-bar-left">
             <ul class="menu">
-                <li><a class="button clear" href="#">Home</a></li>
-                <li><a class="button clear" href="#Projects">Projects</a></li>
-                <li><a class="button clear" href="#Experiences">Experiences</a></li>
-                <li><a class="button clear" href="#Contact">Contact</a></li>
+                <li><a class="button clear" id="nav-home" href="#">Home</a></li>
+                <li><a class="button clear" id="nav-projects" onclick="scrollToSection('projects-top')">Projects</a></li>
+                <li><a class="button clear" id="nav-experiences" onclick="scrollToSection('experiences-top')">Experiences</a></li>
+                <li><a class="button clear" id="nav-contact" onclick="scrollToSection('contact-top')">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -39,14 +39,101 @@
         </p>
       </div>
 
-      <div id="scroll-down-btn">
+      <div id="scroll-down-btn" onclick="scrollToSection('projects-top')">
         <div id="scroll-down-anim"></div>
         <div id="scroll-down-text"><p>scroll down</p></div>
       </div>
     </div>
 
+    <div id="projects-top" class="section">
+      <div class="grid-container">
+        <div class="grid-x">
+          <div class="section-header">
+            <img src="images/icons/coding filled.png"/>
+            <p class="fancy-heading">Projects</p>
+          </div>
 
-    
+          <div class="cell card">
+            <div class="card-section icon">
+              <img src="images/portfolio/parentpal-logo.png">
+            </div>
+            <div class="card-section description">
+              <h3><b>ParentPal</b></h3>
+              <p>Feb 2021 - Apr 2021</p>
+            </div>
+          </div>
+
+          <div class="cell card">
+            <div class="card-section icon">
+              <img src="images/portfolio/tabby-logo.png">
+            </div>
+            <div class="card-section description">
+              <h3><b>Tabby the Task Bot</b></h3>
+              <p>Jan 2021 - Feb 2021</p>
+            </div>
+          </div>
+
+          <div class="cell card">
+            <div class="card-section icon">
+              <img src="images/portfolio/website icon.png">
+            </div>
+            <div class="card-section description">
+              <h3><b>Personal Website</b></h3>
+              <p>Ongoing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="experiences-top" class="section">
+      <div class="grid-container">
+        <div class="grid-x">
+          <div class="section-header">
+            <img src="images/icons/work filled.png"/>
+            <p class="fancy-heading">Experiences</p>
+          </div>
+
+          <div class="cell timeline">
+            <div class="container left">
+              <div class="content">
+                <h3><b>Frontend Development Intern</b></h3>
+                <h4>Aevice Health</h4>
+                <p>Jan 2022 - Current</p>
+              </div>
+            </div>
+            <div class="container right">
+              <div class="content">
+                <h3><b>Mobile Application Tester</b></h3>
+                <h4>Electrolux</h4>
+                <p>May 2021 - September 2021</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div id="contact-top" class="section">
+      <div class="grid-container">
+        <div class="grid-x">
+          <div class="section-header">
+            <img src="images/icons/send filled.png"/>
+            <p class="fancy-heading">Contact</p>
+          </div>
+
+          <div class="cell">
+            <input type="text" placeholder="Name"/>
+            <input type="email" placeholder="Email"/>
+            <textarea placeholder="Message"></textarea>
+            <button class="button primary" style="width: 100%; margin-top: 24px;">Submit</button>
+          </div>
+      </div>
+    </div>
+
+    <div></br></br></br></br></br></br></div>
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.1/lottie.min.js" integrity="sha512-CWKGqmXoxo+9RjazbVIaiFcD+bYEIcUbBHwEzPlT0FilQq3TCUac+/uxZ5KDmvYiXJvp32O8rcgchkYw6J6zOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/js/vendor/jquery.js"></script>
     <script src="assets/js/vendor/what-input.js"></script>
