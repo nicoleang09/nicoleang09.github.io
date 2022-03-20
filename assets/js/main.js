@@ -1,3 +1,4 @@
+var isModalOpen = false;
 var bodyRect = document.body.getBoundingClientRect();
 var homeOffset =
     document.getElementById("home-top").getBoundingClientRect().top -
@@ -23,7 +24,7 @@ window.onload = window.onscroll = function () {
     var experiencesLink = document.getElementById("nav-experiences");
     var contactLink = document.getElementById("nav-contact");
 
-    if (currentScrollPos > window.innerHeight - 120) {
+    if (currentScrollPos > window.innerHeight - 120 || isModalOpen) {
         $("#nav").fadeIn();
         $("#top-arrow-btn").fadeIn();
     } else {
@@ -32,6 +33,8 @@ window.onload = window.onscroll = function () {
     }
 
     // set selected in nav bar
+    if (isModalOpen) return;
+
     if (currentScrollPos >= homeOffset && currentScrollPos < projectOffset) {
         homeLink.classList.add("selected");
         projectsLink.classList.remove("selected");
@@ -68,7 +71,7 @@ window.onscroll = function () {
     var experiencesLink = document.getElementById("nav-experiences");
     var contactLink = document.getElementById("nav-contact");
 
-    if (currentScrollPos > window.innerHeight - 120) {
+    if (currentScrollPos > window.innerHeight - 120 || isModalOpen) {
         $("#nav").fadeIn();
         $("#top-arrow-btn").fadeIn();
     } else {
@@ -77,6 +80,8 @@ window.onscroll = function () {
     }
 
     // set selected in nav bar
+    if (isModalOpen) return;
+
     if (currentScrollPos >= homeOffset && currentScrollPos < projectOffset) {
         homeLink.classList.add("selected");
         projectsLink.classList.remove("selected");
@@ -128,3 +133,20 @@ function scrollToSection(section) {
 
     // document.getElementById(section).scrollIntoView({ behavior: "smooth" });
 }
+
+function showModal(modalId) {
+    $(modalId).foundation("open");
+    isModalOpen = true;
+}
+
+(function ($, window, undefined) {
+    "use strict";
+
+    $("[data-reveal]").on("closed.zf.reveal", function () {
+        var modal = $(this);
+        isModalOpen = false;
+        console.log("closed modal");
+    });
+
+    $(document).foundation();
+})(jQuery, this);
