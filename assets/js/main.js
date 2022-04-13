@@ -166,3 +166,25 @@ function closeMenu() {
     $("#menu-mobile").fadeOut();
     // $("#nav-bottom").fadeIn();
 }
+
+function submitForm() {
+    var name = document.getElementById("form-name").value;
+    var email = document.getElementById("form-email").value;
+    var message = document.getElementById("form-message").value;
+
+    if (name === "" || email === "" || message === "") return;
+
+    $.ajax({
+        method: "POST",
+        url: "https://formsubmit.co/ajax/e2d41fd1578165051b657e0b88151f3b",
+        dataType: "json",
+        accepts: "application/json",
+        data: {
+            name: name,
+            email: email,
+            message: message,
+        },
+        success: (data) => console.log(data),
+        error: (err) => console.log(err),
+    });
+}

@@ -125,12 +125,13 @@
           </div>
 
           <div class="cell">
-            <form action="https://formsubmit.co/nicoleang09@gmail.com" method="POST">
+            <!-- <form action="https://formsubmit.co/nicoleang09@gmail.com" method="POST"> -->
+            <form>
               <input type="hidden" name="_next" value="">
-              <input type="text" placeholder="Name"/>
-              <input type="email" placeholder="Email"/>
-              <textarea placeholder="Message"></textarea>
-              <button class="button primary" style="width: 100%; margin-top: 24px;">Submit</button>
+              <input type="text" id="form-name" placeholder="Name" name="name"/>
+              <input type="email" id="form-email" placeholder="Email" name="email"/>
+              <textarea id="form-message" placeholder="Message" name="message"></textarea>
+              <button class="button primary" style="width: 100%; margin-top: 24px;" onclick="submitForm()">Submit</button>
             </form>
           </div>
       </div>
@@ -179,9 +180,9 @@
           GitHub repository can also be found <a href="https://github.com/nicoleang09/tp" target="_BLANK">here</a>.
       </p>
 
-      <button class="button secondary">
-          <a href="https://ay2021s2-cs2103t-w13-3.github.io/tp/" target="_BLANK">Project Link</a>
-      </button>
+      <!-- <button class="button secondary"> -->
+          <a class="button secondary" href="https://ay2021s2-cs2103t-w13-3.github.io/tp/" target="_BLANK">Project Link</a>
+      <!-- </button> -->
       <button class="close-button" data-close aria-label="Close modal" type="button">
         <img src="images/icons/close.png"/>
       </button>
@@ -198,9 +199,9 @@
           GitHub repository can also be found <a href="https://github.com/nicoleang09/ip" target="_BLANK">here</a>.
       </p>
 
-      <button class="button secondary">
-          <a href="https://nicoleang09.github.io/ip/" target="_BLANK">Project Link</a>
-      </button>
+      <!-- <button class="button secondary"> -->
+          <a class="button secondary" href="https://nicoleang09.github.io/ip/" target="_BLANK">Project Link</a>
+      <!-- </button> -->
       <button class="close-button" data-close aria-label="Close modal" type="button">
         <img src="images/icons/close.png"/>
       </button>
@@ -214,9 +215,9 @@
           It will continue to be maintained and updated periodically.
       </p>
 
-      <button class="button secondary">
-          <a href="https://nicoleang09.github.io" target="_BLANK">Project Link</a>
-      </button>
+      <!-- <button class="button secondary"> -->
+          <a class="button secondary" href="https://nicoleang09.github.io" target="_BLANK">Project Link</a>
+      <!-- </button> -->
       <button class="close-button" data-close aria-label="Close modal" type="button">
         <img src="images/icons/close.png"/>
       </button>

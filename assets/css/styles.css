@@ -111,6 +111,13 @@ a:hover {
     transition: border 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
+.button.secondary:focus {
+    border: transparent 2px solid;
+    background-color: var(--coral);
+    color: var(--white);
+    transition: border 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
 .button.clear {
     padding: 12px;
     color: var(--text-grey);
