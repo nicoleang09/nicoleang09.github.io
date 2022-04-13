@@ -1,0 +1,521 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝘯𝘪𝘤𝘰𝘭𝘦'𝘴 𝘯𝘰𝘰𝘬</title>
+    <link rel="icon" type="image/png" href="images/favicon round.png">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0ad9fdb134.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="css/other pages.css">
+    <link rel="stylesheet" href="css/resources.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+    <script>
+        // function startup() {
+        //     var height = window.innerHeight - document.getElementsByClassName("button")[0].offsetHeight;
+        //     document.getElementsByClassName("dropdown-pane")[0].setAttribute("height", height + "px");
+
+        //     console.log("document height: " + window.innerHeight);
+        //     console.log("button height: " + document.getElementsByClassName("button")[0].offsetHeight);
+        //     console.log("height: " + document.getElementsByClassName("dropdown-pane")[0].getAttribute("height"));
+        // }
+
+        function changeButton() {
+            var icon = document.getElementsByTagName("i")[0];
+            console.log("icon: " + icon);
+            if (icon.getAttribute("class") == "fa fa-bars") {
+                // icon.class = "fa fa-xmark";
+                icon.setAttribute("class", "fa fa-times");
+            } else {
+                // icon.class = "fa fa-bars";
+                icon.setAttribute("class", "fa fa-bars");
+            }
+            console.log("icon class: " + icon.getAttribute("class"));
+        }
+
+        $(function () {
+            // this will get the full URL at the address bar
+            var url = window.location.href;
+
+            // passes on every "a" tag
+            $(".dropdown-pane a").each(function () {
+                // checks if its the same on the address bar
+                // console.log("url: " + url + ", href: " + this.href);
+                console.log("is index.html? " + this.href.includes("index.html"))
+                console.log("contains url? " + (this.href).includes(url))
+                if (url === (this.href)) {
+                    $(this).closest("li").addClass("selected");
+                    console.log("set");
+                    //for making parent of submenu active
+                    // $(this).closest("li").parent().parent().addClass("selected");
+                } else if ((this.href.includes("index.html")) && (this.href).includes(url)) {
+                    $(this).closest("li").addClass("selected");
+                    console.log("set");
+                }
+            });
+        });
+
+
+        // filter resources for each tab
+        filterResources("all", "panel1")
+        function filterResources(option, tab) {
+            var tabElement = document.getElementById(tab);
+            var tabInnerDiv = tabElement.querySelector(".grid-x");
+
+            var resources, i;
+            resources = document.getElementsByClassName("resource");
+            console.log("resources: " + resources.length);
+            if (option == "all") option = "";
+            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < resources.length; i++) {
+                w3RemoveClass(resources[i], "show");
+                if (option == "") {
+                    w3AddClass(resources[i], "show");
+                    tabInnerDiv.appendChild(resources[i])
+                    console.log("class name: " + resources[i].className);
+                } else if (resources[i].className.indexOf(option) > -1) {
+                    w3AddClass(resources[i], "show");
+                    tabInnerDiv.appendChild(resources[i]);
+                    console.log("class name: " + resources[i].className);
+                };
+            }
+        }
+
+        // Show filtered elements
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+            // console.log("class name show: " + element.className);
+        }
+
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+
+            // console.log("class name hide: " + element.className);
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="nav-header">
+        <button onclick="changeButton()" class="button" type="button" data-toggle="example-dropdown"><i
+                class="fa fa-bars" style="color:black; font-size: 1.7em;"></i></button>
+        <div class="dropdown-pane" id="example-dropdown" data-dropdown>
+            <ul class="nav-pane">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="header"><img src="images/nicole’s nook 2021.png" /></div>
+    <div class="content">
+
+        <ul class="tabs" data-tabs id="example-tabs">
+            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">All</a></li>
+            <li class="tabs-title"><a href="#panel2">Notes & Cheatsheets</a></li>
+            <li class="tabs-title"><a href="#panel3">Printables</a></li>
+            <li class="tabs-title"><a href="#panel4">Stickers</a></li>
+
+            <!-- <li class="tabs-title is-active"><a href="#panel1" aria-selected="true"
+                    onclick="filterResources('all', 'panel1')">All</a></li>
+            <li class="tabs-title"><a href="#panel2" onclick="filterResources('notes', 'panel2')">Notes &
+                    Cheatsheets</a></li>
+            <li class="tabs-title"><a href="#panel3" onclick="filterResources('printables', 'panel3')">Printables</a>
+            </li>
+            <li class="tabs-title"><a href="#panel4" onclick="filterResources('stickers', 'panel4')">Stickers</a></li> -->
+        </ul>
+
+        <div class="tabs-content" data-tabs-content="example-tabs">
+            <div class="tabs-panel is-active all" id="panel1">
+
+                <div class="grid-x grid-margin-x">
+                    <!-- Notebook icon from: -->
+                    <!-- <a href="https://www.freepik.com/vectors/business">Business vector created by rawpixel.com - www.freepik.com</a> -->
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="CS2100 Summary">
+                        <a class="overlay" data-open="cs2100Modal">
+                            <p>CS2100 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="MA1101R Summary">
+                        <a class="overlay" data-open="ma1101rModal">
+                            <p>MA1101R Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="EC1301 Summary">
+                        <a class="overlay" data-open="ec1301Modal">
+                            <p>EC1301 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="CS2105 Summary">
+                        <a class="overlay" data-open="cs2105Modal">
+                            <p>CS2105 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="CS2106 Summary">
+                        <a class="overlay" data-open="cs2106Modal">
+                            <p>CS2106 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="EC2101 Summary">
+                        <a class="overlay" data-open="ec2101Modal">
+                            <p>EC2101 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource printables">
+                        <img class="thumbnail" src="images/resources/2021 calendar icon.jpg" alt="2021 Calendar">
+                        <a class="overlay" data-open="calendar2021Modal">
+                            <p>2021 Calendar</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource printables">
+                        <img class="thumbnail" src="images/resources/todo icon.jpg" alt="To-do List">
+                        <a class="overlay" data-open="todoModal">
+                            <p>To-do List</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource printables">
+                        <img class="thumbnail" src="images/resources/daily log icon.jpg" alt="Daily Log">
+                        <a class="overlay" data-open="dailyLogModal">
+                            <p>Daily Log</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource stickers">
+                        <img class="thumbnail" src="images/resources/plant stickers icon.jpg" alt="Plant Stickers">
+                        <a class="overlay" data-open="plantStickersModal">
+                            <p>Plant Stickers</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource stickers">
+                        <img class="thumbnail" src="images/resources/halloween stickers icon.jpg"
+                            alt="Halloween Stickers">
+                        <a class="overlay" data-open="halloweenStickersModal">
+                            <p>Halloween Stickers</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tabs-panel notes" id="panel2">
+                <div class="grid-x grid-margin-x">
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="CS2100 Summary">
+                        <a class="overlay" data-open="cs2100Modal">
+                            <p>CS2100 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="MA1101R Summary">
+                        <a class="overlay" data-open="ma1101rModal">
+                            <p>MA1101R Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="EC1301 Summary">
+                        <a class="overlay" data-open="ec1301Modal">
+                            <p>EC1301 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="CS2105 Summary">
+                        <a class="overlay" data-open="cs2105Modal">
+                            <p>CS2105 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="CS2106 Summary">
+                        <a class="overlay" data-open="cs2106Modal">
+                            <p>CS2106 Summary</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource notes">
+                        <img class="thumbnail" src="images/resources/notes icon.jpg" alt="EC2101 Summary">
+                        <a class="overlay" data-open="ec2101Modal">
+                            <p>EC2101 Summary</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs-panel printables" id="panel3">
+                <div class="grid-x grid-margin-x">
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource printables">
+                        <img class="thumbnail" src="images/resources/2021 calendar icon.jpg" alt="2021 Calendar">
+                        <a class="overlay" data-open="calendar2021Modal">
+                            <p>2021 Calendar</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource printables">
+                        <img class="thumbnail" src="images/resources/todo icon.jpg" alt="To-do List">
+                        <a class="overlay" data-open="todoModal">
+                            <p>To-do List</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource printables">
+                        <img class="thumbnail" src="images/resources/daily log icon.jpg" alt="Daily Log">
+                        <a class="overlay" data-open="dailyLogModal">
+                            <p>Daily Log</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs-panel stickers" id="panel4">
+                <div class="grid-x grid-margin-x">
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource stickers">
+                        <img class="thumbnail" src="images/resources/plant stickers icon.jpg" alt="Plant Stickers">
+                        <a class="overlay" data-open="plantStickersModal">
+                            <p>Plant Stickers</p>
+                        </a>
+                    </div>
+
+                    <div class="cell large-3 medium-4 small-6 overlay-box resource stickers">
+                        <img class="thumbnail" src="images/resources/halloween stickers icon.jpg"
+                            alt="Halloween Stickers">
+                        <a class="overlay" data-open="halloweenStickersModal">
+                            <p>Halloween Stickers</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- modal contents -->
+    
+    <!-- module notes/summaries -->
+    <div class="reveal" id="cs2100Modal" data-reveal>
+        <h1>CS2100 Summary</h1>
+        <p>Summary of everyting taught in CS2100 condensed into 7 pages. This resource was made by me, so please do not reproduce.</br>
+            I took CS2100 in AY2020/2021 Sem 1. The first half of the module (before recess week) was manageable, but I struggled to grasp some of the concepts taught in the second half of the module. For the online midterm and final, we were allowed to bring in 10 sheets of cheatsheet. The exams consisted of MCQ, MRQ and short answer questions, and they mostly tested applications of concepts learnt.</br>
+            Overall, it was a good introduction to what goes on inside our computer, though the module is challenging at times.
+        </p>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        <button class="action-link" type="button">
+            <a href="https://drive.google.com/file/d/10WL_Zj16eOnP3B_7uUN0dO7v4K9W4w-x/view?usp=sharing" target="_BLANK">Download Link</a>
+        </button>
+    </div>
+
+    <div class="reveal" id="ma1101rModal" data-reveal>
+        <h1>MA1101R Summary</h1>
+        <p>Summary of the main concepts taught in MA1101R condensed into 3 pages. This resource was made by me, so please do not reproduce.</br>
+            I took MA1101R in AY2020/2021 Sem 1. It is one of the most challenging modules I have taken so far. Many theorems were taught and I often felt overwhelmed and lost while taken this module as I was unsure which theorem to apply to solve problems. The assingments were manageable. However, the final was challenging and I felt that insufficient time was given. The online final was open book, but you will probably not have enough time to search your notes if you do not already know what you are searching for. The exams consisted of about 5 questions that had multiple parts. There was no midterm the semester I took it.</br>
+            Overall, it is probably a useful module for certain higher level modules, but I felt like too much content was being taught within a short span of time. If the concepts taught in MA1101R are needed for modules I take in future, I will probably have to spend so time re-looking them.
+        </p>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        <button class="action-link" type="button">
+            <a href="https://drive.google.com/file/d/1YiNqXadvxCCmzbC9V0FKGLOty63mE3Jr/view?usp=sharing" target="_BLANK">Download Link</a>
+        </button>
+    </div>
+
+    <div class="reveal" id="ec1301Modal" data-reveal>
+        <h1>EC1301 (Micro) Summary</h1>
+        <p>Summary of microeconomics key points taught in EC1301 condensed into 2 pages. This summary is not comprehensive and highlights the main concepts taught. This resource was made by me, so please do not reproduce.</br>
+            I took EC1301 in AY2020/2021 Sem 1. The first half of the module focused on microeconomics while the second half focused on macroeconomics. The microeconomics portion of this module mostly taught concepts that I had already learnt while taking H2 Economics in JC. It provides a foundation for higher level modules such as EC2101. The online midterm and final were closed book and consisted of only MCQ questions. Most of the answers to the questions can be taken directly from the lectures or found through simple calculations. If you understand the concepts and can apply them well, both the midterm and final should be very manageable. The bell curve for this module is hence really steep.</br>
+            Overall, EC1301 teaches foundational economic concepts that will be very useful for higher level modules. The content is pretty similar to H2 Econs for the microeconomics portion, but the macroeconomics portion does introduce quite a few new ideas.
+        </p>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        <button class="action-link" type="button">
+            <a href="https://drive.google.com/file/d/1OCRq81X60PQuVjnO3GmTYwLPkRapuPUX/view?usp=sharing" target="_BLANK">Download Link</a>
+        </button>
+    </div>
+
+    <div class="reveal" id="cs2105Modal" data-reveal>
+        <h1>CS2105 Summary</h1>
+        <p>Summary of everyting taught in CS2105 condensed into 9 pages. This resource was made by me, so please do not reproduce.</br>
+            I took CS2105 in AY2020/2021 Sem 2. This is supposed to be a simple module, so the bell curve was really steep. Most people scored full marks, or close to that, on the assingments and exams. The online midterm and final were open book and consisted of MCQ, MRQ and fill in the blank questions. Some of the questions were tricky, but most questions are similar to what has been seen in tutorials.</br>
+            Overall, I felt that this module was dry and there was too much content. Every lecture simply dumped content onto us and I had to spend quite a lot of time looking through the concepts afterwards.
+        </p>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        <button class="action-link" type="button">
+            <a href="TO BE ADDED" target="_BLANK">Download Link</a>
+        </button>
+    </div>
+
+    <div class="reveal" id="cs2106Modal" data-reveal>
+        <h1>CS2106 Summary</h1>
+        <p>Summary of everyting taught in CS2106 condensed into 11 pages. This resource was made by me, so please do not reproduce.</br>
+            I took CS2106 in AY2020/2021 Sem 2. The module introduced many challenging concepts that took time to grasp. For the online midterm and final, we were allowed to bring in 10 sheets of cheatsheet. The exams consisted of MCQ, MRQ and short answer questions, and they mostly tested applications of concepts learnt.</br>
+            Overall, I feel that CS2106 introduces many useful concepts. However, as it was not an area I was very interested in, the module often felt tedious and difficult to study.
+        </p>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        <button class="action-link" type="button">
+            <a href="TO BE ADDED" target="_BLANK">Download Link</a>
+        </button>
+    </div>
+
+    <div class="reveal" id="ec2101Modal" data-reveal>
+        <h1>EC2101 Summary</h1>
+        <p>Summary of everyting taught in EC2101 condensed into 3 pages. This resource was made by me, so please do not reproduce.</br>
+            I took EC2101 in AY2020/2021 Sem 2. This module builds on EC1301 and introduces more advanced microeconomic concepts. The midterm and final were closed book. The exams consisted of MCQ, MRQ, fill in the blanks and short answer questions. The questions mostly tested applications of concepts learnt.</br>
+            Overall, I feel that EC2101 introduces many useful concepts. Some concepts require more effort to understand, but the module is still manageable.
+        </p>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        <button class="action-link" type="button">
+            <a href="TO BE ADDED" target="_BLANK">Download Link</a>
+        </button>
+    </div>
+
+
+    <!-- printables -->
+    <div class="reveal" id="calendar2021Modal" data-reveal>
+        <h1>2021 Calendar</h1>
+        <p>A yearly calendar for the year 2021. This resource was made by me, so please do not reproduce.</br>
+            The header was hand drawn with a pastel floral theme in mind. The holidays indicated in this calendar are Singapore's public holidays.
+        </p>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        <button class="action-link" type="button">
+            <a href="https://bit.ly/uhnmotivated-2021-calendar" target="_BLANK">Download Link</a>
+        </button>
+    </div>
+
+    <div class="reveal" id="todoModal" data-reveal>
+        <h1>To-do List</h1>
+        <p>A simple to do list where you can notes down and check off your tasks. This resource was made by me, so please do not reproduce.</br>
+            I went with a minimalistic black and white look for this printable to ensure that it is simple and not distracting.
+        </p>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        <button class="action-link" type="button">
+            <a href="https://bit.ly/uhnmotivated-to-do" target="_BLANK">Download Link</a>
+        </button>
+    </div>
+
+    <div class="reveal" id="dailyLogModal" data-reveal>
+        <h1>Daily Log</h1>
+        <p>A simple daily log that can be used to track your daily tasks and appointments. This resource was made by me, so please do not reproduce.</br>
+            This daily log was inspired by the Korean daily logs that were gaining popularity. Many students use such logs to track how they use their time and how many hours they study in a day. I went with a minimalistic black and white look for this printable to ensure that it is simple and not distracting.
+        </p>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        <button class="action-link" type="button">
+            <a href="https://bit.ly/uhnmotivated-daily-log" target="_BLANK">Download Link</a>
+        </button>
+    </div>
+
+    <!-- stickers -->
+    <div class="reveal" id="plantStickersModal" data-reveal>
+        <h1>Plant Stickers</h1>
+        <p>Stickers that can be used while digital journaling or writing digital notes. They can also be printed out to be used physically. This resource was made by me, so please do not reproduce.</br>
+            These black and white plant stickers can be used to balance out more busy backgrounds. The background of this is transparent and you can simple crop out the parts you want when using this.
+        </p>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        <button class="action-link" type="button">
+            <a href="https://bit.ly/uhnmotivated-plant-stickers" target="_BLANK">Download Link</a>
+        </button>
+    </div>
+
+    <div class="reveal" id="halloweenStickersModal" data-reveal>
+        <h1>Halloween Stickers</h1>
+        <p>Stickers that can be used while digital journaling or writing digital notes. They can also be printed out to be used physically. This resource was made by me, so please do not reproduce.</br>
+            This sticker sheet consists not only stickers that can be used exclusively during the Halloween season. There are also some basic stickers included that can be used during other times. The background of this is transparent and you can simple crop out the parts you want when using this.
+        </p>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        <button class="action-link" type="button">
+            <a href="https://bit.ly/uhnmotivated-halloween-stickers" target="_BLANK">Download Link</a>
+        </button>
+    </div>
+
+
+
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/foundation.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+
+</body>
+
+</html>
