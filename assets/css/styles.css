@@ -324,6 +324,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .reveal p {
+    text-align: justify;
     margin-top: 12px;
     line-height: 1.5rem;
 }
