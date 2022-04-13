@@ -65,6 +65,12 @@ a:hover {
     width: 50%;
 }
 
+@media only screen and (max-device-width: 480px) {
+    .grid-container {
+        width: 80%;
+    }
+}
+
 .fancy-heading {
     font-family: 'Sacramento', cursive, sans-serif;
     font-size: 3.5rem;
@@ -169,6 +175,13 @@ a:hover {
     margin-right: 16px;
 }
 
+@media only screen and (max-device-width: 480px) {
+    .top-bar {
+        visibility: hidden;
+        height: 0px;
+    }
+}
+
 .card {
     /* width: 720px; */
     flex-direction: row;
@@ -212,6 +225,31 @@ a:hover {
     color: var(--dark-grey);
     margin-top: 8px;
     /* bottom: 0px; */
+}
+
+@media only screen and (max-device-width: 480px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-section.icon img {
+        width: 56px;
+    }
+
+    .card-section.description {
+        width: 100%;
+        text-align: center;
+        margin: 4px 16px;
+    }
+
+    .card-section.description h3 {
+        font-size: 1.4rem;
+    }
+
+    .card-section.description p {
+        position: relative;
+    }
 }
 
 /* timeline */
@@ -288,6 +326,16 @@ a:hover {
     left: -8px;
 }
 
+@media only screen and (max-device-width: 480px) {
+    .left {
+        padding-right: 16px;
+    }
+    
+    .right {
+        padding-left: 16px;
+    }
+}
+
 /* timeline end */
 
 input[type=text], input[type=email] {
@@ -359,6 +407,19 @@ input::placeholder, textarea::placeholder {
     height: 32px;
 }
 
+@media only screen and (max-device-width: 480px) {
+    .reveal {
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+        padding: 10%;
+    }
+
+    .reveal .button.secondary {
+        width: 80%;
+    }
+}
+
 body.modal-open {
     overflow: visible;
   }
@@ -425,6 +486,23 @@ body.modal-open {
     z-index: 1;
 }
 
+@media only screen and (max-device-width: 480px) {
+    #home-img {
+        width: 50%;
+        float: none;
+        align-self: center;
+        position: relative;
+    }
+    
+    #home-desc {
+        float: none;
+        width: 100%;
+        padding: 30px 36px;
+        margin-top: 28px;
+        text-align: center;
+    }
+}
+
 #scroll-down-btn {
     position: absolute;
     display: flex;
@@ -451,6 +529,12 @@ body.modal-open {
     bottom: 24px;
     right: 48px;
     filter: invert(67%) sepia(33%) saturate(837%) hue-rotate(327deg) brightness(100%) contrast(97%);
+}
+
+@media only screen and (max-device-width: 480px) {
+    #top-arrow-btn {
+        visibility: hidden;
+    }
 }
 
 #attributions-btn {

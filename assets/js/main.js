@@ -18,6 +18,10 @@ contactOffset =
     150;
 
 window.onload = window.onscroll = function () {
+    var homeSection = document.getElementById("home-top");
+    var windowHeight = $(window).height();
+    homeSection.style.height = windowHeight + "px";
+
     var currentScrollPos = window.pageYOffset;
     var homeLink = document.getElementById("nav-home");
     var projectsLink = document.getElementById("nav-projects");
