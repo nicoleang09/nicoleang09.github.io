@@ -65,7 +65,7 @@ a:hover {
     width: 50%;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 768px) {
     .grid-container {
         width: 80%;
     }
@@ -118,6 +118,11 @@ a:hover {
     transition: color 0.5s ease-in-out;
 }
 
+.button.clear img {
+    filter: none;
+    transition: filter 0.5s ease-in-out;
+}
+
 .button.clear:hover {
     color: var(--coral);
     font-weight: bold;
@@ -155,31 +160,14 @@ a:hover {
     transition: width 0.5s ease-in-out;
 }
 
-.top-bar {
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    background-color: var(--white);
-    box-shadow: 0px 2px 5px 0px hsla(0, 0%, 0%, 0.25);
-    /* padding: 18px 48px; */
-    padding-left: 36px;
-    padding-right: 36px;
-    z-index: 100;
+.button.clear.selected-mobile {
+    color: var(--coral);
+    font-weight: bold;
 }
 
-.top-bar ul {
-    background-color: var(--white);
-}
-
-.top-bar a {
-    margin-right: 16px;
-}
-
-@media only screen and (max-device-width: 480px) {
-    .top-bar {
-        visibility: hidden;
-        height: 0px;
-    }
+.button.clear.selected-mobile img {
+    filter: invert(67%) sepia(33%) saturate(837%) hue-rotate(327deg) brightness(100%) contrast(97%);
+    transition: filter 0.5s ease-in-out;
 }
 
 .card {
@@ -227,7 +215,7 @@ a:hover {
     /* bottom: 0px; */
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 768px) {
     .card {
         flex-direction: column;
         align-items: center;
@@ -326,7 +314,7 @@ a:hover {
     left: -8px;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 768px) {
     .left {
         padding-right: 16px;
     }
@@ -407,10 +395,11 @@ input::placeholder, textarea::placeholder {
     height: 32px;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 768px) {
     .reveal {
         height: 100%;
         width: 100%;
+        margin-top: 0%;
         border-radius: 0px;
         padding: 10%;
     }
@@ -450,6 +439,103 @@ body.modal-open {
 
 
 /* --------------- CUSTOM ELEMENTS --------------- */
+#nav {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0px 2px 5px 0px hsla(0, 0%, 0%, 0.25);
+    /* padding: 18px 48px; */
+    padding-left: 36px;
+    padding-right: 36px;
+    z-index: 100;
+}
+
+#nav ul {
+    background-color: var(--white);
+}
+
+#nav a {
+    margin-right: 16px;
+}
+
+@media only screen and (max-device-width: 768px) {
+    #nav {
+        visibility: hidden;
+        height: 0px;
+    }
+}
+
+#nav-bottom {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0px 2px 5px 0px hsla(0, 0%, 0%, 0.25);
+    padding-left: 12px;
+    z-index: 100;
+    text-align: right;
+    display: none;
+}
+
+#nav-bottom img {
+    height: 24px;
+    margin-right: 12px;
+}
+
+#menu-icon {
+    float: left;
+}
+
+#menu-mobile {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: var(--white);
+    z-index: 100;
+    border-radius: 8px;
+    padding: 18px 12px 12px 12px;
+    display: none;
+}
+
+#menu-mobile li {
+    width: 50%;
+}
+
+#menu-mobile a {
+    display: inline-block;
+    height: 100%;
+    margin: 0px 12px;
+}
+
+#menu-mobile span {
+    margin-left: 12px;
+}
+
+#menu-mobile img {
+    height: 24px;
+}
+
+.menu-close-button {
+    margin-left: 12px;
+}
+
+.menu-close-button img {
+    height: 32px;
+}
+
+@media only screen and (min-device-width: 769px) {
+    #nav-bottom {
+        visibility: hidden;
+        height: 0px;
+    }
+
+    #menu-mobile {
+        visibility: hidden;
+        height: 0px;
+    }
+}
+
 #home-top {
     display: flex;
     flex-direction: column;
@@ -486,7 +572,7 @@ body.modal-open {
     z-index: 1;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 768px) {
     #home-img {
         width: 50%;
         float: none;
@@ -531,7 +617,7 @@ body.modal-open {
     filter: invert(67%) sepia(33%) saturate(837%) hue-rotate(327deg) brightness(100%) contrast(97%);
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 768px) {
     #top-arrow-btn {
         visibility: hidden;
     }

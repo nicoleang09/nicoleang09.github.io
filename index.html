@@ -137,11 +137,32 @@
     </div>
 
     <div id="attributions-btn">
-      <a href="/attributions" onmouseover="showTitle()" onmouseleave="hideTitle()"><img src="images/icons/heart pink.png"/></a>
+      <a href="attributions" onmouseover="showTitle()" onmouseleave="hideTitle()"><img src="images/icons/heart pink.png"/></a>
       <div id="attributions-title">Resource Credits</div>
     </div>
 
     <a onclick="scrollToTop()"><img id="top-arrow-btn" src="images/icons/top-arrow.png"/></a>
+
+    <div class="top-bar" id="nav-bottom">
+      <div class="top-bar-left">
+        <a id="menu-icon" onclick="openMenu()"><img src="images/icons/menu.png"></a>
+        <a href="https://github.com/nicoleang09" target="_BLANK"><img src="images/icons/github.png"></a>
+        <a onclick="scrollToTop()"><img src="images/icons/top-arrow.png"/></a>
+      </div>
+    </div>
+
+    <div id="menu-mobile">
+        <ul class="menu icons icon-left">
+            <li><a class="button clear" id="nav-home-mobile" onclick="scrollToSection('home-top')"><img src="images/icons/home.png"/><span>Home</span></a></li>
+            <li><a class="button clear" id="nav-projects-mobile" onclick="scrollToSection('projects-top')"><img src="images/icons/coding.png"/><span>Projects</span></a></li>
+            <li><a class="button clear" id="nav-experiences-mobile" onclick="scrollToSection('experiences-top')"><img src="images/icons/work.png"/><span>Experiences</span></a></li>
+            <li><a class="button clear" id="nav-contact-mobile" onclick="scrollToSection('contact-top')"><img src="images/icons/send.png"/><span>Contact</span></a></li>
+        </ul>
+
+        <button class="menu-close-button" type="button" onclick="closeMenu()">
+          <img src="images/icons/close.png"/>
+        </button>
+    </div>
 
 
 

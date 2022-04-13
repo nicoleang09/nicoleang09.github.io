@@ -17,102 +17,26 @@ contactOffset =
     bodyRect.top -
     150;
 
+var homeLink = document.getElementById("nav-home");
+var projectsLink = document.getElementById("nav-projects");
+var experiencesLink = document.getElementById("nav-experiences");
+var contactLink = document.getElementById("nav-contact");
+
+var homeLinkMobile = document.getElementById("nav-home-mobile");
+var projectsLinkMobile = document.getElementById("nav-projects-mobile");
+var experiencesLinkMobile = document.getElementById("nav-experiences-mobile");
+var contactLinkMobile = document.getElementById("nav-contact-mobile");
+
 window.onload = window.onscroll = function () {
-    var homeSection = document.getElementById("home-top");
-    var windowHeight = $(window).height();
-    homeSection.style.height = windowHeight + "px";
+    // var homeSection = document.getElementById("home-top");
+    // var windowHeight = $(window).height();
+    // homeSection.style.height = windowHeight + "px";
 
     var currentScrollPos = window.pageYOffset;
-    var homeLink = document.getElementById("nav-home");
-    var projectsLink = document.getElementById("nav-projects");
-    var experiencesLink = document.getElementById("nav-experiences");
-    var contactLink = document.getElementById("nav-contact");
 
-    if (currentScrollPos > window.innerHeight - 120 || isModalOpen) {
-        $("#nav").fadeIn();
-        $("#top-arrow-btn").fadeIn();
-    } else {
-        $("#nav").fadeOut();
-        $("#top-arrow-btn").fadeOut();
-    }
-
-    // set selected in nav bar
-    if (isModalOpen) return;
-
-    if (currentScrollPos >= homeOffset && currentScrollPos < projectOffset) {
-        homeLink.classList.add("selected");
-        projectsLink.classList.remove("selected");
-        experiencesLink.classList.remove("selected");
-        contactLink.classList.remove("selected");
-    } else if (
-        currentScrollPos >= projectOffset &&
-        currentScrollPos < experiencesOffset
-    ) {
-        homeLink.classList.remove("selected");
-        projectsLink.classList.add("selected");
-        experiencesLink.classList.remove("selected");
-        contactLink.classList.remove("selected");
-    } else if (
-        currentScrollPos >= experiencesOffset &&
-        currentScrollPos < contactOffset
-    ) {
-        homeLink.classList.remove("selected");
-        projectsLink.classList.remove("selected");
-        experiencesLink.classList.add("selected");
-        contactLink.classList.remove("selected");
-    } else if (currentScrollPos >= contactOffset) {
-        homeLink.classList.remove("selected");
-        projectsLink.classList.remove("selected");
-        experiencesLink.classList.remove("selected");
-        contactLink.classList.add("selected");
-    }
-};
-
-window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    var homeLink = document.getElementById("nav-home");
-    var projectsLink = document.getElementById("nav-projects");
-    var experiencesLink = document.getElementById("nav-experiences");
-    var contactLink = document.getElementById("nav-contact");
-
-    if (currentScrollPos > window.innerHeight - 120 || isModalOpen) {
-        $("#nav").fadeIn();
-        $("#top-arrow-btn").fadeIn();
-    } else {
-        $("#nav").fadeOut();
-        $("#top-arrow-btn").fadeOut();
-    }
-
-    // set selected in nav bar
-    if (isModalOpen) return;
-
-    if (currentScrollPos >= homeOffset && currentScrollPos < projectOffset) {
-        homeLink.classList.add("selected");
-        projectsLink.classList.remove("selected");
-        experiencesLink.classList.remove("selected");
-        contactLink.classList.remove("selected");
-    } else if (
-        currentScrollPos >= projectOffset &&
-        currentScrollPos < experiencesOffset
-    ) {
-        homeLink.classList.remove("selected");
-        projectsLink.classList.add("selected");
-        experiencesLink.classList.remove("selected");
-        contactLink.classList.remove("selected");
-    } else if (
-        currentScrollPos >= experiencesOffset &&
-        currentScrollPos < contactOffset
-    ) {
-        homeLink.classList.remove("selected");
-        projectsLink.classList.remove("selected");
-        experiencesLink.classList.add("selected");
-        contactLink.classList.remove("selected");
-    } else if (currentScrollPos >= contactOffset) {
-        homeLink.classList.remove("selected");
-        projectsLink.classList.remove("selected");
-        experiencesLink.classList.remove("selected");
-        contactLink.classList.add("selected");
-    }
+    closeMenu();
+    setVisibility(currentScrollPos);
+    setSelectedPage(currentScrollPos);
 };
 
 var scrollDownAnim = bodymovin.loadAnimation({
@@ -125,6 +49,70 @@ var scrollDownAnim = bodymovin.loadAnimation({
 
 scrollDownAnim.play();
 
+function setVisibility(currentScrollPos) {
+    if (currentScrollPos > window.innerHeight - 120 || isModalOpen) {
+        $("#nav").fadeIn();
+        $("#nav-bottom").fadeIn();
+        $("#top-arrow-btn").fadeIn();
+    } else {
+        $("#nav").fadeOut();
+        $("#nav-bottom").fadeOut();
+        $("#top-arrow-btn").fadeOut();
+    }
+}
+
+function setSelectedPage(currentScrollPos) {
+    if (isModalOpen) return;
+
+    if (currentScrollPos >= homeOffset && currentScrollPos < projectOffset) {
+        homeLink.classList.add("selected");
+        projectsLink.classList.remove("selected");
+        experiencesLink.classList.remove("selected");
+        contactLink.classList.remove("selected");
+
+        homeLinkMobile.classList.add("selected-mobile");
+        projectsLinkMobile.classList.remove("selected-mobile");
+        experiencesLinkMobile.classList.remove("selected-mobile");
+        contactLinkMobile.classList.remove("selected-mobile");
+    } else if (
+        currentScrollPos >= projectOffset &&
+        currentScrollPos < experiencesOffset
+    ) {
+        homeLink.classList.remove("selected");
+        projectsLink.classList.add("selected");
+        experiencesLink.classList.remove("selected");
+        contactLink.classList.remove("selected");
+
+        homeLinkMobile.classList.remove("selected-mobile");
+        projectsLinkMobile.classList.add("selected-mobile");
+        experiencesLinkMobile.classList.remove("selected-mobile");
+        contactLinkMobile.classList.remove("selected-mobile");
+    } else if (
+        currentScrollPos >= experiencesOffset &&
+        currentScrollPos < contactOffset
+    ) {
+        homeLink.classList.remove("selected");
+        projectsLink.classList.remove("selected");
+        experiencesLink.classList.add("selected");
+        contactLink.classList.remove("selected");
+
+        homeLinkMobile.classList.remove("selected-mobile");
+        projectsLinkMobile.classList.remove("selected-mobile");
+        experiencesLinkMobile.classList.add("selected-mobile");
+        contactLinkMobile.classList.remove("selected-mobile");
+    } else if (currentScrollPos >= contactOffset) {
+        homeLink.classList.remove("selected");
+        projectsLink.classList.remove("selected");
+        experiencesLink.classList.remove("selected");
+        contactLink.classList.add("selected");
+
+        homeLinkMobile.classList.remove("selected-mobile");
+        projectsLinkMobile.classList.remove("selected-mobile");
+        experiencesLinkMobile.classList.remove("selected-mobile");
+        contactLinkMobile.classList.add("selected-mobile");
+    }
+}
+
 function scrollToSection(section) {
     console.log(section);
 
@@ -134,8 +122,6 @@ function scrollToSection(section) {
         element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
     window.scrollTo({ top: y, behavior: "smooth" });
-
-    // document.getElementById(section).scrollIntoView({ behavior: "smooth" });
 }
 
 function scrollToTop() {
@@ -169,4 +155,14 @@ function hideTitle() {
     var homeLink = document.getElementById("attributions-title");
     // homeLink.style.visibility = "hidden";
     homeLink.style.opacity = "0%";
+}
+
+function openMenu() {
+    $("#menu-mobile").fadeIn();
+    // $("#nav-bottom").fadeOut();
+}
+
+function closeMenu() {
+    $("#menu-mobile").fadeOut();
+    // $("#nav-bottom").fadeIn();
 }
