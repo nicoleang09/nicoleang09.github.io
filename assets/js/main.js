@@ -167,6 +167,7 @@ function closeMenu() {
     // $("#nav-bottom").fadeIn();
 }
 
+// currently not used
 function submitForm() {
     var name = document.getElementById("form-name").value;
     var email = document.getElementById("form-email").value;
