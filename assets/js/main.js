@@ -134,6 +134,10 @@ function scrollToSection(section) {
     // document.getElementById(section).scrollIntoView({ behavior: "smooth" });
 }
 
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 function showModal(modalId) {
     $(modalId).foundation("open");
     isModalOpen = true;
