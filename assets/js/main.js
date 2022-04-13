@@ -154,3 +154,15 @@ function showModal(modalId) {
 
     $(document).foundation();
 })(jQuery, this);
+
+function showTitle() {
+    var homeLink = document.getElementById("attributions-title");
+    // homeLink.style.visibility = "visible";
+    homeLink.style.opacity = "100%";
+}
+
+function hideTitle() {
+    var homeLink = document.getElementById("attributions-title");
+    // homeLink.style.visibility = "hidden";
+    homeLink.style.opacity = "0%";
+}
