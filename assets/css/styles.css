@@ -20,26 +20,16 @@ body {
 }
 
 h1 {
-    font-size: 2.4rem;
-    line-height: 2.4rem;
-}
-
-h2 {
     font-size: 2rem;
     line-height: 2rem;
 }
 
-h3 {
-    font-size: 1.7rem;
-    line-height: 1.7rem;
-}
-
-h4 {
+h2 {
     font-size: 1.4rem;
     line-height: 1.4rem;
 }
 
-h5 {
+h3 {
     font-size: 1.2rem;
     line-height: 1.2rem;
 }
@@ -73,7 +63,7 @@ a:hover {
 
 .fancy-heading {
     font-family: 'Sacramento', cursive, sans-serif;
-    font-size: 3.5rem;
+    font-size: 4rem;
     line-height: 80%;
     text-transform: lowercase;
     color: var(--dark-brown);
@@ -429,7 +419,7 @@ body.modal-open {
     height: 40px;
     flex-direction: row;
     align-items: top;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     /* border: 1px black solid; */
 }
 
