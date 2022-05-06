@@ -453,6 +453,12 @@ body.modal-open {
     letter-spacing: 1rem;
 }
 
+@media only screen and (max-device-width: 768px) {
+    .section-header p {
+        letter-spacing: 0rem;
+    }
+}
+
 p.date-text {
     font-size: 1rem;
     line-height: 1rem;
