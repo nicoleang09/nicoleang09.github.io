@@ -64,7 +64,7 @@ function setVisibility(currentScrollPos) {
 function setSelectedPage(currentScrollPos) {
     if (isModalOpen) return;
 
-    if (currentScrollPos >= homeOffset && currentScrollPos < projectOffset) {
+    if (currentScrollPos >= homeOffset && currentScrollPos < experiencesOffset) {
         homeLink.classList.add("selected");
         projectsLink.classList.remove("selected");
         experiencesLink.classList.remove("selected");
@@ -75,21 +75,8 @@ function setSelectedPage(currentScrollPos) {
         experiencesLinkMobile.classList.remove("selected-mobile");
         contactLinkMobile.classList.remove("selected-mobile");
     } else if (
-        currentScrollPos >= projectOffset &&
-        currentScrollPos < experiencesOffset
-    ) {
-        homeLink.classList.remove("selected");
-        projectsLink.classList.add("selected");
-        experiencesLink.classList.remove("selected");
-        contactLink.classList.remove("selected");
-
-        homeLinkMobile.classList.remove("selected-mobile");
-        projectsLinkMobile.classList.add("selected-mobile");
-        experiencesLinkMobile.classList.remove("selected-mobile");
-        contactLinkMobile.classList.remove("selected-mobile");
-    } else if (
         currentScrollPos >= experiencesOffset &&
-        currentScrollPos < contactOffset
+        currentScrollPos < projectOffset
     ) {
         homeLink.classList.remove("selected");
         projectsLink.classList.remove("selected");
@@ -99,6 +86,19 @@ function setSelectedPage(currentScrollPos) {
         homeLinkMobile.classList.remove("selected-mobile");
         projectsLinkMobile.classList.remove("selected-mobile");
         experiencesLinkMobile.classList.add("selected-mobile");
+        contactLinkMobile.classList.remove("selected-mobile");
+    } else if (
+        currentScrollPos >= projectOffset &&
+        currentScrollPos < contactOffset
+    ) {
+        homeLink.classList.remove("selected");
+        projectsLink.classList.add("selected");
+        experiencesLink.classList.remove("selected");
+        contactLink.classList.remove("selected");
+
+        homeLinkMobile.classList.remove("selected-mobile");
+        projectsLinkMobile.classList.add("selected-mobile");
+        experiencesLinkMobile.classList.remove("selected-mobile");
         contactLinkMobile.classList.remove("selected-mobile");
     } else if (currentScrollPos >= contactOffset) {
         homeLink.classList.remove("selected");
