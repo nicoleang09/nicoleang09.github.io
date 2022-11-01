@@ -8,8 +8,8 @@ projectOffset =
     document.getElementById("projects-top").getBoundingClientRect().top -
     bodyRect.top -
     150;
-experiencesOffset =
-    document.getElementById("experiences-top").getBoundingClientRect().top -
+experienceOffset =
+    document.getElementById("experience-top").getBoundingClientRect().top -
     bodyRect.top -
     150;
 contactOffset =
@@ -19,12 +19,12 @@ contactOffset =
 
 var homeLink = document.getElementById("nav-home");
 var projectsLink = document.getElementById("nav-projects");
-var experiencesLink = document.getElementById("nav-experiences");
+var experienceLink = document.getElementById("nav-experience");
 var contactLink = document.getElementById("nav-contact");
 
 var homeLinkMobile = document.getElementById("nav-home-mobile");
 var projectsLinkMobile = document.getElementById("nav-projects-mobile");
-var experiencesLinkMobile = document.getElementById("nav-experiences-mobile");
+var experienceLinkMobile = document.getElementById("nav-experience-mobile");
 var contactLinkMobile = document.getElementById("nav-contact-mobile");
 
 window.onload = window.onscroll = function () {
@@ -64,28 +64,28 @@ function setVisibility(currentScrollPos) {
 function setSelectedPage(currentScrollPos) {
     if (isModalOpen) return;
 
-    if (currentScrollPos >= homeOffset && currentScrollPos < experiencesOffset) {
+    if (currentScrollPos >= homeOffset && currentScrollPos < experienceOffset) {
         homeLink.classList.add("selected");
         projectsLink.classList.remove("selected");
-        experiencesLink.classList.remove("selected");
+        experienceLink.classList.remove("selected");
         contactLink.classList.remove("selected");
 
         homeLinkMobile.classList.add("selected-mobile");
         projectsLinkMobile.classList.remove("selected-mobile");
-        experiencesLinkMobile.classList.remove("selected-mobile");
+        experienceLinkMobile.classList.remove("selected-mobile");
         contactLinkMobile.classList.remove("selected-mobile");
     } else if (
-        currentScrollPos >= experiencesOffset &&
+        currentScrollPos >= experienceOffset &&
         currentScrollPos < projectOffset
     ) {
         homeLink.classList.remove("selected");
         projectsLink.classList.remove("selected");
-        experiencesLink.classList.add("selected");
+        experienceLink.classList.add("selected");
         contactLink.classList.remove("selected");
 
         homeLinkMobile.classList.remove("selected-mobile");
         projectsLinkMobile.classList.remove("selected-mobile");
-        experiencesLinkMobile.classList.add("selected-mobile");
+        experienceLinkMobile.classList.add("selected-mobile");
         contactLinkMobile.classList.remove("selected-mobile");
     } else if (
         currentScrollPos >= projectOffset &&
@@ -93,22 +93,22 @@ function setSelectedPage(currentScrollPos) {
     ) {
         homeLink.classList.remove("selected");
         projectsLink.classList.add("selected");
-        experiencesLink.classList.remove("selected");
+        experienceLink.classList.remove("selected");
         contactLink.classList.remove("selected");
 
         homeLinkMobile.classList.remove("selected-mobile");
         projectsLinkMobile.classList.add("selected-mobile");
-        experiencesLinkMobile.classList.remove("selected-mobile");
+        experienceLinkMobile.classList.remove("selected-mobile");
         contactLinkMobile.classList.remove("selected-mobile");
     } else if (currentScrollPos >= contactOffset) {
         homeLink.classList.remove("selected");
         projectsLink.classList.remove("selected");
-        experiencesLink.classList.remove("selected");
+        experienceLink.classList.remove("selected");
         contactLink.classList.add("selected");
 
         homeLinkMobile.classList.remove("selected-mobile");
         projectsLinkMobile.classList.remove("selected-mobile");
-        experiencesLinkMobile.classList.remove("selected-mobile");
+        experienceLinkMobile.classList.remove("selected-mobile");
         contactLinkMobile.classList.add("selected-mobile");
     }
 }

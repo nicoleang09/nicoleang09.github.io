@@ -81,51 +81,106 @@
     </div>
 
     <div id="projects-top" class="section">
-      <div class="grid-container">
-        <div class="grid-x">
-          <div class="section-header">
+      <div class="grid-container-full">
+        <div class="grid-y">
+          <div class="section-header" style="padding: 0% 25%;">
             <img src="images/icons/coding filled.png"/>
             <p>Projects</p>
           </div>
 
-          <div class="cell card" onclick="showModal('#parentpal-modal')">
-            <div class="card-section icon">
-              <img src="images/portfolio/parentpal-logo.png">
-            </div>
-            <div class="card-section description">
-              <h3><b>ParentPal</b></h3>
-              <p class="date-text">Feb 2021 - Apr 2021</p>
-            </div>
-          </div>
+          <div class="grid-x grid-margin-x" style="padding: 1% 25%; background-color: #FAF7F5;">
 
-          <div class="cell card" onclick="showModal('#tabby-modal')">
-            <div class="card-section icon">
-              <img src="images/portfolio/tabby-logo.png">
-            </div>
-            <div class="card-section description">
-              <h3><b>Tabby the Task Bot</b></h3>
-              <p class="date-text">Jan 2021 - Feb 2021</p>
-            </div>
-          </div>
+            <!-- TODO: add life dashboard -->
+            <!-- TODO: uncomment out after adding logo -->
 
-          <!-- <div class="cell card" onclick="showModal('#budget-calc-modal')">
-            <div class="card-section icon">
-              <img src="images/portfolio/website icon.png">
-            </div>
-            <div class="card-section description">
-              <h3><b>Budget Estimator</b></h3>
-              <p class="date-text">Apr 2022 - Apr 2022</p>
-            </div>
-          </div> -->
+            <!-- <div class="cell card small-12 medium-6">
+              <div class="grid-x">
+                <div class="card-section icon">
+                  <img src="images/portfolio/parentpal-logo.png">
+                </div>
+                <div class="card-section description">
+                  <h3><b>PeerPrep</b></h3>
+                  <p class="date-text">React | NodeJS | Sequelize | SQLite | Socket.IO | Mocha/Chai</p>
+                </div>
+              </div>
+              <div class="card-section" style="margin: 1rem 0 1.5rem;">
+                <p>
+                  PeerPrep is an interview preparation platform and peer matching
+                  system , where students can find peers to practice whiteboard-style interview
+                  questions together.
+                </p>
+              </div>
+              <div class="grid-x grid-margin-x">
+                <a class="button xsprimary cell shrink small-12 medium-6" href="https://github.com/CS3219-AY2223S1/cs3219-project-ay2223s1-g37/" target="_BLANK">GitHub Repo</a>
+              </div>
+            </div> -->
 
-          <div class="cell card" onclick="showModal('#website-modal')">
-            <div class="card-section icon">
-              <img src="images/portfolio/website icon.png">
+            <div class="cell card small-12 medium-6">
+              <div class="grid-x">
+                <div class="card-section icon">
+                  <img src="images/portfolio/parentpal-logo.png">
+                </div>
+                <div class="card-section description">
+                  <h3><b>ParentPal</b></h3>
+                  <p class="date-text">Java | JavaFX | JUnit</p>
+                </div>
+              </div>
+              <div class="card-section" style="margin: 1rem 0 1.5rem;">
+                <p>
+                  ParentPal is a desktop app for managing your childrens' contacts and their related appointments, optimized
+                  for use via a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface
+                  (GUI).
+                </p>
+              </div>
+              <div class="grid-x grid-margin-x">
+                <a class="button xsprimary cell shrink small-12 medium-6" href="https://github.com/nicoleang09/tp/" target="_BLANK">GitHub Repo</a>
+                <a class="button xssecondary cell shrink small-12 medium-6" href="https://ay2021s2-cs2103t-w13-3.github.io/tp/" target="_BLANK">Documentation</a>
+              </div>
             </div>
-            <div class="card-section description">
-              <h3><b>Personal Website</b></h3>
-              <p class="date-text">Ongoing</p>
+
+            <div class="cell card small-12 medium-6">
+              <div class="grid-x">
+                <div class="card-section icon">
+                  <img src="images/portfolio/tabby-logo.png">
+                </div>
+                <div class="card-section description">
+                  <h3><b>Tabby the Task Bot</b></h3>
+                  <p class="date-text">Java | JavaFX | JUnit</p>
+                </div>
+              </div>
+              <div class="card-section" style="margin: 1rem 0 1.5rem;">
+                <p>
+                  Tabby is a command line task bot written in Java. It is used to maintain a task list consisting of various
+                  categories of tasks, such as to-dos, deadline and events.
+                </p>
+              </div>
+              <div class="grid-x grid-margin-x">
+                <a class="button xsprimary cell shrink small-12 medium-6" href="https://github.com/nicoleang09/ip/" target="_BLANK">GitHub Repo</a>
+                <a class="button xssecondary cell shrink small-12 medium-6" href="https://nicoleang09.github.io/ip/" target="_BLANK">User Guide</a>
+              </div>
             </div>
+
+            <div class="cell card small-12 medium-6">
+              <div class="grid-x">
+                <div class="card-section icon">
+                  <img src="images/portfolio/website icon.png">
+                </div>
+                <div class="card-section description">
+                  <h3><b>Personal Website</b></h3>
+                  <p class="date-text">HTML | CSS | JavaScript</p>
+                </div>
+              </div>
+              <div class="card-section" style="margin: 1rem 0 1.5rem;">
+                <p>
+                  This website is a personal portfolio page built to showcase my past
+                  work experience and projects done.
+                </p>
+              </div>
+              <div class="grid-x grid-margin-x">
+                <a class="button xsprimary cell shrink small-12 medium-6" href="https://nicoleang09.github.io/" target="_BLANK">Live Demo</a>
+              </div>
+            </div>
+            
           </div>
 
 
@@ -151,6 +206,7 @@
             </form>
           </div>
       </div>
+      <br/><br/>
     </div>
 
     <div id="attributions-btn">

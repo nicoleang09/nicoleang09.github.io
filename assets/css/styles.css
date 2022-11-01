@@ -67,6 +67,10 @@ a:hover {
     width: 50%;
 }
 
+.grid-container-full {
+    width: 99%;
+}
+
 @media only screen and (max-device-width: 768px) {
     .grid-container {
         width: 80%;
@@ -114,6 +118,47 @@ a:hover {
 }
 
 .button.secondary:focus {
+    border: transparent 2px solid;
+    background-color: var(--dark-brown);
+    color: var(--white);
+    transition: border 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.button.xsprimary {
+    font-size: 0.75rem;
+    border-radius: 8px;
+    padding: 8px 16px;
+    border: transparent 2px solid;
+    background-color: var(--dark-brown);
+    color: var(--white);
+    transition: border 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.button.xsprimary:hover {
+    border: var(--dark-brown) 2px solid;
+    background-color: var(--white);
+    color: var(--dark-brown);
+    transition: border 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.button.xssecondary {
+    font-size: 0.75rem;
+    border-radius: 8px;
+    padding: 8px 16px;
+    border: var(--dark-brown) 2px solid;
+    background-color: var(--white);
+    color: var(--dark-brown);
+    transition: border 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.button.xssecondary:hover {
+    border: transparent 2px solid;
+    background-color: var(--dark-brown);
+    color: var(--white);
+    transition: border 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.button.xssecondary:focus {
     border: transparent 2px solid;
     background-color: var(--dark-brown);
     color: var(--white);
@@ -212,9 +257,9 @@ a:hover {
     position: relative;
     flex-grow: 100;
     text-align: left;
-    /* height: 100%; */
+    justify-self: center;
     /* border: 1px solid black; */
-    margin: 4px 24px;
+    margin: 4px 16px;
     /* margin-left: 24px; */
     color: var(--text-grey);
 }
@@ -222,7 +267,7 @@ a:hover {
 .card-section.description p {
     position: absolute;
     /* color: var(--dark-grey); */
-    margin-top: 8px;
+    /* margin-top: 8px; */
     /* bottom: 0px; */
 }
 
