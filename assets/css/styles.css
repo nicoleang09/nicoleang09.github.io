@@ -72,7 +72,7 @@ a:hover {
 }
 
 .grid-container-full-inner {
-    padding: 0% 25%;
+    padding: 0% 26%;
 }
 
 @media only screen and (max-device-width: 768px) {
@@ -81,7 +81,7 @@ a:hover {
     }
 
     .grid-container-full-inner {
-        padding: 0% 10%;
+        padding: 0% 11%;
     }
 }
 
