@@ -1,10 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import themeTypography from "./theme-typography";
+import ExperienceSection from "./sections/Experience";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <ThemeProvider theme={themeTypography}>
+        <CssBaseline />
+        <ExperienceSection />
+      </ThemeProvider>
+
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +25,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }

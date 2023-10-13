@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Anaheim&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,600;8..144,700&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Roboto Flex', sans-serif;
 }
 
 .App-logo {
@@ -35,4 +38,32 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.section-header {
+  display: flex;
+  height: 40px;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  /* border: 1px black solid; */
+}
+
+.section-header img {
+  height: 100%;
+  filter: invert(25%) sepia(3%) saturate(3596%) hue-rotate(344deg) brightness(95%) contrast(87%);
+  /* border: 1px black solid; */
+}
+
+.section-header p {
+  height: 100%;
+  margin: 0;
+  margin-left: 20px;
+  /* border: 1px black solid; */
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
 }
