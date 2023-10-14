@@ -4,7 +4,7 @@ import sectionIcon from "../images/icons/work filled.png";
 
 const ExperienceSection = () => {
   return (
-    <Grid container justifyContent="center">
+    <Grid container justifyContent="center" marginTop="56px">
       <Grid item md={6}>
         <Grid container spacing={2}>
           <Grid item xs={12}>

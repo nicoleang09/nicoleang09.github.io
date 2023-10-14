@@ -1,15 +1,23 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import themeTypography from "./theme-typography";
 import ExperienceSection from "./sections/Experience";
+import ProjectsSection from "./sections/Projects";
+import themeComponentStyling from "./theme-component-styling";
 
 function App() {
+  const mergedTheme = createTheme({
+    ...themeTypography,
+    ...themeComponentStyling,
+  });
+
   return (
     <div className="App">
-      <ThemeProvider theme={themeTypography}>
+      <ThemeProvider theme={mergedTheme}>
         <CssBaseline />
         <ExperienceSection />
+        <ProjectsSection />
       </ThemeProvider>
 
       {/* <header className="App-header">

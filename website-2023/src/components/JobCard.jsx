@@ -8,6 +8,7 @@ const cardStyles = {
     borderRadius: "0px",
     textAlign: "left",
     height: "100%",
+    padding: "8px",
   },
   jobTitle: {
     color: themeColors.textBlack,
@@ -17,6 +18,7 @@ const cardStyles = {
   },
   dates: {
     color: themeColors.darkGrey,
+    lineHeight: "1rem",
   },
   jobSummary: {
     // color: themeColors.textBlack,
