@@ -7,6 +7,11 @@ const themeComponentStyling = {
       styleOverrides: {
         root: {
           borderRadius: "8px",
+          boxShadow: "none",
+          textTransform: "none",
+          "&:hover": {
+            boxShadow: "none",
+          },
         },
         contained: {
           backgroundColor: themeColors.darkBrown,
@@ -22,6 +27,7 @@ const themeComponentStyling = {
           color: themeColors.darkBrown,
           border: "2px solid",
           borderColor: themeColors.darkBrown,
+          boxShadow: "none",
           "&:hover": {
             backgroundColor: themeColors.darkBrown,
             color: themeColors.pureWhite,
