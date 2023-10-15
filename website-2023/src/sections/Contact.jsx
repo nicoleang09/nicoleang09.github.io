@@ -158,41 +158,45 @@ const ContactSection = () => {
             </div>
           </Grid>
 
-          <FormControl fullWidth>
-            <CustomTextField
-              id="name"
-              label="Name"
-              onInput={handleChange}
-              value={formValues.name.value}
-              error={formValues.name.error}
-              helperText={formValues.name.error && formValues.name.errorMessage}
-            />
-            <CustomTextField
-              id="email"
-              label="Email"
-              onInput={handleChange}
-              value={formValues.email.value}
-              error={formValues.email.error}
-              helperText={
-                formValues.email.error && formValues.email.errorMessage
-              }
-            />
-            <CustomTextField
-              id="message"
-              label="Message"
-              multiline
-              minRows={10}
-              onInput={handleChange}
-              value={formValues.message.value}
-              error={formValues.message.error}
-              helperText={
-                formValues.message.error && formValues.message.errorMessage
-              }
-            />
-            <Button type="submit" variant="contained" onClick={handleSubmit}>
-              Submit
-            </Button>
-          </FormControl>
+          <Grid item xs={12}>
+            <FormControl fullWidth>
+              <CustomTextField
+                id="name"
+                label="Name"
+                onInput={handleChange}
+                value={formValues.name.value}
+                error={formValues.name.error}
+                helperText={
+                  formValues.name.error && formValues.name.errorMessage
+                }
+              />
+              <CustomTextField
+                id="email"
+                label="Email"
+                onInput={handleChange}
+                value={formValues.email.value}
+                error={formValues.email.error}
+                helperText={
+                  formValues.email.error && formValues.email.errorMessage
+                }
+              />
+              <CustomTextField
+                id="message"
+                label="Message"
+                multiline
+                minRows={10}
+                onInput={handleChange}
+                value={formValues.message.value}
+                error={formValues.message.error}
+                helperText={
+                  formValues.message.error && formValues.message.errorMessage
+                }
+              />
+              <Button type="submit" variant="contained" onClick={handleSubmit}>
+                Submit
+              </Button>
+            </FormControl>
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
