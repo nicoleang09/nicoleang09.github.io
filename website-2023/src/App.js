@@ -6,6 +6,7 @@ import ExperienceSection from "./sections/Experience";
 import ProjectsSection from "./sections/Projects";
 import themeComponentStyling from "./theme-component-styling";
 import ContactSection from "./sections/Contact";
+import HomeSection from "./sections/Home";
 
 function App() {
   const mergedTheme = createTheme({
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <ThemeProvider theme={mergedTheme}>
         <CssBaseline />
+        <HomeSection />
         <ExperienceSection />
         <ProjectsSection />
         <ContactSection />
