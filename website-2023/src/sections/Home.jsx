@@ -14,7 +14,7 @@ const homeStyles = {
     backgroundColor: themeColors.backgroundBrown,
   },
   homeImg: {
-    width: "30%",
+    width: "430px",
     height: "auto",
     float: "left",
     alignSelf: "flexStart",
@@ -52,8 +52,12 @@ const homeStyles = {
     margin: "0px auto",
     cursor: "pointer",
   },
+  scrollDownAnim: {
+    width: "50px",
+  },
   scrollDownText: {
     height: "1rem",
+    marginBottom: 0,
     alignSelf: "center",
   },
 };
@@ -90,7 +94,10 @@ const HomeSection = () => {
       </Grid>
       <Grid item>
         <div style={homeStyles.scrollDownBtn}>
-          <Lottie options={scrollDownAnimConfig} />
+          <Lottie
+            options={scrollDownAnimConfig}
+            style={homeStyles.scrollDownAnim}
+          />
           <Typography style={homeStyles.scrollDownText}>scroll down</Typography>
         </div>
       </Grid>
