@@ -1,6 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
+import {
+  CssBaseline,
+  IconButton,
+  ThemeProvider,
+  createTheme,
+} from "@mui/material";
 import themeTypography from "./theme-typography";
 import ExperienceSection from "./sections/Experience";
 import ProjectsSection from "./sections/Projects";
@@ -9,7 +14,9 @@ import ContactSection from "./sections/Contact";
 import HomeSection from "./sections/Home";
 import NavBar from "./components/NavBar";
 import { useEffect } from "react";
-import { initLinks, initOffsets } from "./components/main";
+import { initLinks, initOffsets, scrollToTop } from "./components/main";
+import Footer from "./components/Footer";
+import scrollToTopButton from "../src/images/icons/top-arrow.png";
 
 function App() {
   const mergedTheme = createTheme({
@@ -31,22 +38,21 @@ function App() {
         <ExperienceSection />
         <ProjectsSection />
         <ContactSection />
-      </ThemeProvider>
+        <Footer />
 
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <IconButton
+          sx={{ flexGrow: 0 }}
+          onClick={scrollToTop}
+          id="top-arrow-btn"
         >
-          Learn React
-        </a>
-      </header> */}
+          <img
+            src={scrollToTopButton}
+            style={{
+              height: "2.25rem",
+            }}
+          />
+        </IconButton>
+      </ThemeProvider>
     </div>
   );
 }

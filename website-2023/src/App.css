@@ -68,3 +68,11 @@
   text-transform: uppercase;
   letter-spacing: 1rem;
 }
+
+#top-arrow-btn {
+  height: 36px;
+  position: fixed;
+  bottom: 24px;
+  right: 48px;
+  filter: invert(51%) sepia(6%) saturate(2310%) hue-rotate(345deg) brightness(99%) contrast(79%);
+}

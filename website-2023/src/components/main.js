@@ -67,6 +67,10 @@ function scrollToSection(section) {
   window.scrollTo({ top: y, behavior: "smooth" });
 }
 
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 function setVisibility(currentScrollPos) {
   if (currentScrollPos > window.innerHeight - 120) {
     $("#nav").fadeIn();
@@ -132,4 +136,4 @@ function setSelectedPage(currentScrollPos) {
   }
 }
 
-export { initLinks, initOffsets, scrollToSection };
+export { initLinks, initOffsets, scrollToSection, scrollToTop };
