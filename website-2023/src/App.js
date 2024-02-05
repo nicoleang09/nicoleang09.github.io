@@ -16,7 +16,7 @@ import NavBar from "./components/NavBar";
 import { useEffect } from "react";
 import { initLinks, initOffsets, scrollToTop } from "./components/main";
 import Footer from "./components/Footer";
-import scrollToTopButton from "../src/images/icons/top-arrow.png";
+import scrollToTopButton from "./images/icons/top-arrow.png";
 
 function App() {
   const mergedTheme = createTheme({
