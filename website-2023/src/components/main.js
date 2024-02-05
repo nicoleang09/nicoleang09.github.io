@@ -1,7 +1,7 @@
 import $ from "jquery";
 
 var isModalOpen = false;
-var bodyRect = document.body.getBoundingClientRect();
+var bodyRect;
 var homeOffset, projectOffset, experienceOffset, contactOffset;
 
 var homeLink, projectsLink, experienceLink, contactLink;
@@ -29,6 +29,7 @@ function initLinks() {
 }
 
 function initOffsets() {
+  bodyRect = document.body.getBoundingClientRect();
   homeOffset =
     document.getElementById("home-top").getBoundingClientRect().top -
     bodyRect.top -
@@ -44,7 +45,7 @@ function initOffsets() {
   contactOffset =
     document.getElementById("contact-top").getBoundingClientRect().top -
     bodyRect.top -
-    200;
+    150;
 }
 
 window.onload = window.onscroll = function () {
@@ -52,7 +53,7 @@ window.onload = window.onscroll = function () {
   // var windowHeight = $(window).height();
   // homeSection.style.height = windowHeight + "px";
 
-  var currentScrollPos = window.pageYOffset;
+  var currentScrollPos = window.scrollY;
 
   // closeMenu();
   setVisibility(currentScrollPos);
@@ -62,7 +63,7 @@ window.onload = window.onscroll = function () {
 function scrollToSection(section) {
   const yOffset = -80;
   const element = document.getElementById(section);
-  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
 
   window.scrollTo({ top: y, behavior: "smooth" });
 }

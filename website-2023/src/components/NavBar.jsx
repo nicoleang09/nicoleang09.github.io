@@ -47,8 +47,10 @@ const NavBar = () => {
           </Button>
         </Box>
         <Box>
-          <IconButton sx={{ flexGrow: 0 }} to="https://github.com/nicoleang09">
-            <img src={githubIcon} style={{ height: "1.7rem" }} />
+          <IconButton sx={{ flexGrow: 0 }}>
+            <a href="https://github.com/nicoleang09" target="_BLANK">
+              <img src={githubIcon} style={{ height: "1.7rem" }} />
+            </a>
           </IconButton>
         </Box>
       </Toolbar>
