@@ -64,6 +64,16 @@ const themeComponentStyling = {
         },
       },
     },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          display: "block",
+          color: themeColors.darkBrown,
+          textDecoration: "none",
+          marginBottom: "8px",
+        },
+      },
+    },
   },
 };
 

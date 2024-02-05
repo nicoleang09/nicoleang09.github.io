@@ -44,7 +44,7 @@ function initOffsets() {
   contactOffset =
     document.getElementById("contact-top").getBoundingClientRect().top -
     bodyRect.top -
-    150;
+    200;
 }
 
 window.onload = window.onscroll = function () {
