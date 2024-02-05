@@ -148,11 +148,11 @@ const ContactSection = () => {
   };
 
   return (
-    <Grid container justifyContent="center" marginTop="56px">
+    <Grid container justifyContent="center" marginTop="56px" id="contact-top">
       <Grid item md={6}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <div class="section-header" style={{ marginBottom: "32px" }}>
+            <div className="section-header" style={{ marginBottom: "32px" }}>
               <img src={sectionIcon} />
               <p>Contact</p>
             </div>

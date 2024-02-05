@@ -2,6 +2,7 @@ import { Avatar, Grid, Typography } from "@mui/material";
 import homeSectionIcon from "../images/placeholder profile pic.png";
 import themeColors from "../theme-colors";
 import Lottie from "react-lottie";
+import { scrollToSection } from "../components/main";
 
 const homeStyles = {
   homeSection: {
@@ -76,6 +77,7 @@ const HomeSection = () => {
       justifyContent="center"
       direction="column"
       sx={homeStyles.homeSection}
+      id="home-top"
     >
       <Grid item>
         <Avatar src={homeSectionIcon} sx={homeStyles.homeImg} />
@@ -93,7 +95,10 @@ const HomeSection = () => {
         </div>
       </Grid>
       <Grid item>
-        <div style={homeStyles.scrollDownBtn}>
+        <div
+          style={homeStyles.scrollDownBtn}
+          onClick={() => scrollToSection("experience-top")}
+        >
           <Lottie
             options={scrollDownAnimConfig}
             style={homeStyles.scrollDownAnim}

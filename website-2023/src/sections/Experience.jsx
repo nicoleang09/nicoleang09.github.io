@@ -4,11 +4,16 @@ import sectionIcon from "../images/icons/work filled.png";
 
 const ExperienceSection = () => {
   return (
-    <Grid container justifyContent="center" marginTop="56px">
+    <Grid
+      container
+      justifyContent="center"
+      marginTop="56px"
+      id="experience-top"
+    >
       <Grid item md={6}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <div class="section-header">
+            <div className="section-header">
               <img src={sectionIcon} />
               <p>Experience</p>
             </div>

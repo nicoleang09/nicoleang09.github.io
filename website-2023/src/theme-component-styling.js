@@ -12,6 +12,34 @@ const themeComponentStyling = {
           "&:hover": {
             boxShadow: "none",
           },
+          "&.selected": {
+            padding: "12px",
+            color: themeColors.darkBrown,
+            fontWeight: "bold",
+            // textDecoration: "underline",
+            // textDecorationThickness: "2px",
+            // textUnderlineOffset: "4px",
+            // "&:after": {
+            //   content: "' '",
+            //   display: "block",
+            //   width: "100%",
+            //   height: "2px",
+            //   backgroundColor: themeColors.darkBrown,
+            //   borderRadius: "10px",
+            //   marginTop: "4px",
+            //   transition: "width 0.5s ease-in-out",
+            // },
+          },
+        },
+        text: {
+          color: themeColors.textGrey,
+          fontWeight: "bold",
+          fontSize: "0.9rem",
+          padding: "12px",
+          "&:hover": {
+            color: themeColors.darkBrown,
+            backgroundColor: "transparent",
+          },
         },
         contained: {
           backgroundColor: themeColors.darkBrown,

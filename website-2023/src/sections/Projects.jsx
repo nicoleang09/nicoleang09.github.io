@@ -14,6 +14,7 @@ const ProjectsSection = () => {
       justifyContent="center"
       backgroundColor={themeColors.backgroundBrown}
       marginTop="56px"
+      id="projects-top"
     >
       <Grid
         item
@@ -21,7 +22,7 @@ const ProjectsSection = () => {
         backgroundColor={themeColors.pureWhite}
         paddingLeft="25%"
       >
-        <div class="section-header">
+        <div className="section-header">
           <img src={sectionIcon} />
           <p>Projects</p>
         </div>

@@ -7,6 +7,9 @@ import ProjectsSection from "./sections/Projects";
 import themeComponentStyling from "./theme-component-styling";
 import ContactSection from "./sections/Contact";
 import HomeSection from "./sections/Home";
+import NavBar from "./components/NavBar";
+import { useEffect } from "react";
+import { initLinks, initOffsets } from "./components/main";
 
 function App() {
   const mergedTheme = createTheme({
@@ -14,10 +17,16 @@ function App() {
     ...themeComponentStyling,
   });
 
+  useEffect(() => {
+    initLinks();
+    initOffsets();
+  }, []);
+
   return (
     <div className="App">
       <ThemeProvider theme={mergedTheme}>
         <CssBaseline />
+        <NavBar />
         <HomeSection />
         <ExperienceSection />
         <ProjectsSection />
