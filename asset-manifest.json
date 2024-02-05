@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/nicoleang09.github.io/static/css/main.89f5c931.css",
-    "main.js": "/nicoleang09.github.io/static/js/main.83512e97.js",
-    "static/js/592.8b6056cd.chunk.js": "/nicoleang09.github.io/static/js/592.8b6056cd.chunk.js",
-    "static/media/placeholder profile pic.png": "/nicoleang09.github.io/static/media/placeholder profile pic.81624d06934d1d9d9dc8.png",
-    "static/media/website icon.png": "/nicoleang09.github.io/static/media/website icon.6ef00abfba4e43bcc398.png",
-    "static/media/parentpal-logo.png": "/nicoleang09.github.io/static/media/parentpal-logo.9165fa78c810b86acbe0.png",
-    "static/media/tabby-logo.png": "/nicoleang09.github.io/static/media/tabby-logo.de29f358994a98e8899c.png",
-    "static/media/github.png": "/nicoleang09.github.io/static/media/github.8fb52af1ce261f4b82d5.png",
-    "static/media/heart pink.png": "/nicoleang09.github.io/static/media/heart pink.13c6273d481fece60fb4.png",
-    "static/media/peerprep-logo.png": "/nicoleang09.github.io/static/media/peerprep-logo.5f44de276152978f7ed6.png",
-    "static/media/logo.svg": "/nicoleang09.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/nicoleang09.github.io/index.html",
-    "main.89f5c931.css.map": "/nicoleang09.github.io/static/css/main.89f5c931.css.map",
-    "main.83512e97.js.map": "/nicoleang09.github.io/static/js/main.83512e97.js.map",
-    "592.8b6056cd.chunk.js.map": "/nicoleang09.github.io/static/js/592.8b6056cd.chunk.js.map"
+    "main.css": "/personal-website/static/css/main.89f5c931.css",
+    "main.js": "/personal-website/static/js/main.c81a7538.js",
+    "static/js/592.8b6056cd.chunk.js": "/personal-website/static/js/592.8b6056cd.chunk.js",
+    "static/media/placeholder profile pic.png": "/personal-website/static/media/placeholder profile pic.81624d06934d1d9d9dc8.png",
+    "static/media/website icon.png": "/personal-website/static/media/website icon.6ef00abfba4e43bcc398.png",
+    "static/media/parentpal-logo.png": "/personal-website/static/media/parentpal-logo.9165fa78c810b86acbe0.png",
+    "static/media/tabby-logo.png": "/personal-website/static/media/tabby-logo.de29f358994a98e8899c.png",
+    "static/media/github.png": "/personal-website/static/media/github.8fb52af1ce261f4b82d5.png",
+    "static/media/heart pink.png": "/personal-website/static/media/heart pink.13c6273d481fece60fb4.png",
+    "static/media/peerprep-logo.png": "/personal-website/static/media/peerprep-logo.5f44de276152978f7ed6.png",
+    "static/media/logo.svg": "/personal-website/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/personal-website/index.html",
+    "main.89f5c931.css.map": "/personal-website/static/css/main.89f5c931.css.map",
+    "main.c81a7538.js.map": "/personal-website/static/js/main.c81a7538.js.map",
+    "592.8b6056cd.chunk.js.map": "/personal-website/static/js/592.8b6056cd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.89f5c931.css",
-    "static/js/main.83512e97.js"
+    "static/js/main.c81a7538.js"
   ]
 }
