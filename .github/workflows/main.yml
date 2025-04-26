@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: 22.x
           cache: 'npm'
+          cache-dependency-path: website-2023/package-lock.json
       - name: Install Dependencies
         working-directory: website-2023
         run: npm install
