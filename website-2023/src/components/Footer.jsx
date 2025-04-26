@@ -6,17 +6,23 @@ import {
   IconButton,
   Link,
   Tooltip,
-} from "@mui/material";
-import attributionsIcon from "../images/icons/heart pink.png";
-import { useState } from "react";
+} from '@mui/material';
+import attributionsIcon from '../images/icons/heart pink.png';
+import { useState } from 'react';
 
 const Footer = () => {
   const [isDialogOpen, setDialogOpen] = useState(false);
 
   return (
     <>
-      <Box textAlign="left" margin="80px 0px 24px 48px">
-        <Tooltip title="Resource Credits" placement="right">
+      <Box
+        textAlign="left"
+        margin="80px 0px 24px 48px"
+      >
+        <Tooltip
+          title="Resource Credits"
+          placement="right"
+        >
           <IconButton
             sx={{ flexGrow: 0 }}
             to="https://github.com/nicoleang09"
@@ -25,9 +31,9 @@ const Footer = () => {
             <img
               src={attributionsIcon}
               style={{
-                height: "2.25rem",
+                height: '2.25rem',
                 filter:
-                  "invert(50%) sepia(35%) saturate(360%) hue-rotate(345deg) brightness(95%) contrast(92%)",
+                  'invert(50%) sepia(35%) saturate(360%) hue-rotate(345deg) brightness(95%) contrast(92%)',
               }}
             />
           </IconButton>
@@ -37,10 +43,13 @@ const Footer = () => {
       <Dialog
         open={isDialogOpen}
         onClose={() => setDialogOpen(false)}
-        style={{ textAlign: "center" }}
+        style={{ textAlign: 'center' }}
       >
-        <DialogTitle className="section-header" height="auto">
-          <p>GIVING CREDIT WHERE CREDIT IS DUE...</p>
+        <DialogTitle
+          className="section-header"
+          height="auto"
+        >
+          <p>ATTRIBUTIONS</p>
         </DialogTitle>
         <DialogContent>
           <Link
@@ -127,7 +136,10 @@ const Footer = () => {
           >
             Heart Icon in Line Style by Piqo Design
           </Link>
-          <Link href="https://iconscout.com/icons/menu" target="_BLANK">
+          <Link
+            href="https://iconscout.com/icons/menu"
+            target="_BLANK"
+          >
             Menu Icon by Akveo
           </Link>
           <Link

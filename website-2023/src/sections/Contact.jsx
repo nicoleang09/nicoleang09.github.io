@@ -1,28 +1,28 @@
-import { Button, FormControl, Grid, TextField, styled } from "@mui/material";
-import sectionIcon from "../images/icons/send filled.png";
-import themeColors from "../theme-colors";
-import { useState } from "react";
+import { Button, FormControl, Grid, TextField, styled } from '@mui/material';
+import sectionIcon from '../images/icons/send filled.png';
+import themeColors from '../theme-colors';
+import { useState } from 'react';
 
 const CustomTextField = styled(TextField)({
-  "&.MuiTextField-root": {
-    marginBottom: "16px",
+  '&.MuiTextField-root': {
+    marginBottom: '16px',
   },
-  "& label.Mui-focused": {
+  '& label.Mui-focused': {
     color: themeColors.textGrey,
   },
-  "& .MuiFormHelperText-root": {
-    fontSize: "0.8rem",
+  '& .MuiFormHelperText-root': {
+    fontSize: '0.8rem',
   },
-  "& .MuiOutlinedInput-root": {
+  '& .MuiOutlinedInput-root': {
     marginBottom: 0,
-    "& fieldset": {
+    '& fieldset': {
       borderColor: themeColors.textGrey,
-      borderRadius: "8px",
+      borderRadius: '8px',
     },
-    "&:hover fieldset": {
+    '&:hover fieldset': {
       // borderColor: themeColors.textGrey,
     },
-    "&.Mui-focused fieldset": {
+    '&.Mui-focused fieldset': {
       borderColor: themeColors.textGrey,
     },
   },
@@ -31,19 +31,19 @@ const CustomTextField = styled(TextField)({
 const ContactSection = () => {
   const [formValues, setFormValues] = useState({
     name: {
-      value: "",
+      value: '',
       error: false,
-      errorMessage: "Please enter your name",
+      errorMessage: 'Please enter your name',
     },
     email: {
-      value: "",
+      value: '',
       error: false,
-      errorMessage: "Email should be in the format abc@example.com",
+      errorMessage: 'Email should be in the format abc@example.com',
     },
     message: {
-      value: "",
+      value: '',
       error: false,
-      errorMessage: "Please enter your message",
+      errorMessage: 'Please enter your message',
     },
   });
 
@@ -72,9 +72,9 @@ const ContactSection = () => {
       const currentValue = formValues[key].value;
 
       switch (key) {
-        case "name":
-        case "message":
-          if (!currentValue || currentValue === "") {
+        case 'name':
+        case 'message':
+          if (!currentValue || currentValue === '') {
             newFormValues = {
               ...newFormValues,
               [key]: {
@@ -85,7 +85,7 @@ const ContactSection = () => {
             isAllValid = false;
           }
           break;
-        case "email":
+        case 'email':
           var validEmailRegex =
             /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
           if (!currentValue.match(validEmailRegex)) {
@@ -100,18 +100,18 @@ const ContactSection = () => {
           }
           break;
         default:
-          console.log("invalid field??");
+          console.log('invalid field??');
       }
     }
 
     setFormValues(newFormValues);
 
     if (isAllValid) {
-      fetch("https://formsubmit.co/ajax/e2d41fd1578165051b657e0b88151f3b", {
-        method: "POST",
+      fetch('https://formsubmit.co/ajax/e2d41fd1578165051b657e0b88151f3b', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
         body: JSON.stringify({
           name: formValues.name.value,
@@ -125,18 +125,18 @@ const ContactSection = () => {
 
           setFormValues({
             name: {
-              ...formValues["name"],
-              value: "",
+              ...formValues['name'],
+              value: '',
               error: false,
             },
             email: {
               ...formValues.email,
-              value: "",
+              value: '',
               error: false,
             },
             message: {
               ...formValues.message,
-              value: "",
+              value: '',
               error: false,
             },
           });
@@ -148,17 +148,38 @@ const ContactSection = () => {
   };
 
   return (
-    <Grid container justifyContent="center" marginTop="56px" id="contact-top">
-      <Grid item md={6}>
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <div className="section-header" style={{ marginBottom: "32px" }}>
+    <Grid
+      container
+      justifyContent="center"
+      marginTop="56px"
+      id="contact-top"
+    >
+      <Grid
+        item
+        md={8}
+        xs={9}
+      >
+        <Grid
+          container
+          spacing={2}
+        >
+          <Grid
+            item
+            xs={12}
+          >
+            <div
+              className="section-header"
+              style={{ marginBottom: '32px' }}
+            >
               <img src={sectionIcon} />
               <p>Contact</p>
             </div>
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid
+            item
+            xs={12}
+          >
             <FormControl fullWidth>
               <CustomTextField
                 id="name"
@@ -192,7 +213,11 @@ const ContactSection = () => {
                   formValues.message.error && formValues.message.errorMessage
                 }
               />
-              <Button type="submit" variant="contained" onClick={handleSubmit}>
+              <Button
+                type="submit"
+                variant="contained"
+                onClick={handleSubmit}
+              >
                 Submit
               </Button>
             </FormControl>

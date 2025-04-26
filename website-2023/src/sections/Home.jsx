@@ -1,72 +1,57 @@
-import { Avatar, Grid, Typography } from "@mui/material";
-import homeSectionIcon from "../images/placeholder profile pic.png";
-import themeColors from "../theme-colors";
-import Lottie from "react-lottie";
-import { scrollToSection } from "../components/main";
+import { Avatar, Grid, Typography } from '@mui/material';
+import homeSectionIcon from '../images/placeholder profile pic.png';
+import themeColors from '../theme-colors';
+import Lottie from 'react-lottie';
+import { scrollToSection } from '../components/main';
 
 const homeStyles = {
   homeSection: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100vh",
-    padding: "12.5%",
+    height: '100vh',
+    width: '100%',
+    padding: '12.5%',
     backgroundColor: themeColors.backgroundBrown,
   },
   homeImg: {
-    width: "430px",
-    height: "auto",
-    float: "left",
-    alignSelf: "flexStart",
-    position: "absolute",
-    overflow: "hidden",
-    zIndex: 2,
-    marginTop: "-5%",
+    width: '100%',
+    height: 'auto',
   },
   homeDesc: {
-    display: "block",
-    position: "relative",
-    float: "right",
-    alignSelf: "flexEnd",
-    width: "70%",
     backgroundColor: themeColors.pureWhite,
-    padding: "52px 36px 52px 15%",
-    textAlign: "justify",
-    borderRadius: "8px",
-    zIndex: 1,
+    padding: '52px 36px',
+    textAlign: 'justify',
+    height: 'fit-content',
   },
   fancyHeading: {
     fontFamily: "'Sacramento', cursive, sans-serif",
-    fontSize: "4rem",
-    lineHeight: "80%",
-    textTransform: "lowercase",
+    fontSize: '4rem',
+    lineHeight: '80%',
+    textTransform: 'lowercase',
     color: themeColors.darkBrown,
   },
   scrollDownBtn: {
-    position: "absolute",
-    display: "flex",
-    height: "36px",
-    flexDirection: "row",
-    alignItems: "center",
-    bottom: "24px",
-    margin: "0px auto",
-    cursor: "pointer",
+    position: 'absolute',
+    display: 'flex',
+    height: '36px',
+    flexDirection: 'row',
+    alignItems: 'center',
+    bottom: '24px',
+    margin: '0px auto',
+    cursor: 'pointer',
   },
   scrollDownAnim: {
-    width: "50px",
+    width: '50px',
   },
   scrollDownText: {
-    height: "1rem",
+    height: '1rem',
     marginBottom: 0,
-    alignSelf: "center",
+    alignSelf: 'center',
   },
 };
 
 const HomeSection = () => {
   const scrollDownAnimConfig = {
-    path: "https://assets5.lottiefiles.com/packages/lf20_w5yx9nrk.json",
-    renderer: "svg",
+    path: 'https://assets5.lottiefiles.com/packages/lf20_w5yx9nrk.json',
+    renderer: 'svg',
     loop: true,
     autoplay: true,
   };
@@ -75,29 +60,50 @@ const HomeSection = () => {
     <Grid
       container
       justifyContent="center"
+      alignItems="center"
       direction="column"
       sx={homeStyles.homeSection}
       id="home-top"
     >
-      <Grid item>
-        <Avatar src={homeSectionIcon} sx={homeStyles.homeImg} />
-        <div style={homeStyles.homeDesc}>
+      <Grid
+        container
+        direction="row"
+        alignItems="center"
+        justifyContent="center"
+        gap={3}
+      >
+        <Grid
+          item
+          xs={6}
+          md={4}
+        >
+          <Avatar
+            src={homeSectionIcon}
+            sx={homeStyles.homeImg}
+          />
+        </Grid>
+        <Grid
+          item
+          xs
+          sx={homeStyles.homeDesc}
+        >
           <Typography style={homeStyles.fancyHeading}>
             hello, i'm nicole
           </Typography>
           <Typography>
-            I am currently a final year Computer Science student at the National
-            University of Singapore pursuing a focus area in Software
-            Engineering.
-            <br />I aspire to bring convenience to users’ lives through the
-            technology that I help to ideate and build.
+            I am currently a full-stack Application Developer at the Aon Centre
+            for Innovation and Analytics as part of the company's Graduate
+            Programme.
+            <br />I aspire to add value to users’ lives through the technology
+            that I help to ideate and build.
           </Typography>
-        </div>
+        </Grid>
       </Grid>
+
       <Grid item>
         <div
           style={homeStyles.scrollDownBtn}
-          onClick={() => scrollToSection("experience-top")}
+          onClick={() => scrollToSection('experience-top')}
         >
           <Lottie
             options={scrollDownAnimConfig}

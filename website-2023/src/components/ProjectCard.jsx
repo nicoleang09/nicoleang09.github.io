@@ -5,24 +5,27 @@ import {
   CardContent,
   Grid,
   Typography,
-} from "@mui/material";
-import themeColors from "../theme-colors";
+} from '@mui/material';
+import themeColors from '../theme-colors';
 
 const cardStyles = {
   cardContainer: {
-    borderRadius: "0px",
-    boxShadow: "none",
-    textAlign: "left",
-    height: "100%",
-    padding: "8px",
+    borderRadius: '0px',
+    boxShadow: 'none',
+    textAlign: 'left',
+    height: '100%',
+    padding: '8px',
+  },
+  cardContent: {
+    flexGrow: 1,
   },
   projectTitle: {
     color: themeColors.textBlack,
-    paddingTop: "4px",
+    paddingTop: '4px',
   },
   techStack: {
     color: themeColors.darkGrey,
-    lineHeight: "1rem",
+    lineHeight: '1rem',
   },
   projectSummary: {
     // color: themeColors.textBlack,
@@ -32,16 +35,30 @@ const cardStyles = {
 const ProjectCard = (props) => {
   return (
     <Card sx={{ ...cardStyles.cardContainer }}>
-      <CardContent>
-        <Grid container spacing={1.5}>
-          <Grid item xs={4} lg={3}>
+      <CardContent sx={{ ...cardStyles.cardContent }}>
+        <Grid
+          container
+          spacing={1.5}
+        >
+          <Grid
+            item
+            xs={4}
+            lg={3}
+          >
             <img
               src={props.projectIconSrc}
-              style={{ width: "100%", borderRadius: "50%" }}
+              style={{ width: '100%', borderRadius: '50%' }}
             />
           </Grid>
-          <Grid item xs={12} lg>
-            <Typography variant="h3" sx={{ ...cardStyles.projectTitle }}>
+          <Grid
+            item
+            xs={12}
+            lg
+          >
+            <Typography
+              variant="h3"
+              sx={{ ...cardStyles.projectTitle }}
+            >
               {props.projectTitle}
             </Typography>
             <Typography sx={{ ...cardStyles.techStack }}>
