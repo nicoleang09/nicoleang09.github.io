@@ -1,13 +1,13 @@
-import { AppBar, Box, Button, IconButton, Toolbar } from "@mui/material";
-import themeColors from "../theme-colors";
-import githubIcon from "../images/icons/github.png";
-import { scrollToSection } from "./main";
+import { AppBar, Box, Button, IconButton, Toolbar } from '@mui/material';
+import themeColors from '../theme-colors';
+import githubIcon from '../images/icons/github.png';
+import { scrollToSection } from './main';
 
 const navBarStyles = {
   topBar: {
     backgroundColor: themeColors.pureWhite,
-    boxShadow: "0px 2px 5px 0px hsla(0, 0%, 0%, 0.25)",
-    lineHeight: "1rem",
+    boxShadow: '0px 2px 5px 0px hsla(0, 0%, 0%, 0.25)',
+    lineHeight: '1rem',
     // visibility: "hidden",
     /* padding: 18px 48px; */
     // padding-left: 36px;
@@ -21,26 +21,33 @@ const navBarStyles = {
 
 const NavBar = () => {
   return (
-    <AppBar position="fixed" style={navBarStyles.topBar} id="nav">
+    <AppBar
+      position="fixed"
+      style={navBarStyles.topBar}
+      id="nav"
+    >
       <Toolbar>
-        <Box sx={{ flexGrow: 1, textAlign: "left" }}>
-          <Button onClick={() => scrollToSection("home-top")} id="nav-home">
+        <Box sx={{ flexGrow: 1, textAlign: 'left' }}>
+          <Button
+            onClick={() => scrollToSection('home-top')}
+            id="nav-home"
+          >
             Home
           </Button>
           <Button
-            onClick={() => scrollToSection("experience-top")}
+            onClick={() => scrollToSection('experience-top')}
             id="nav-experience"
           >
             Experience
           </Button>
           <Button
-            onClick={() => scrollToSection("projects-top")}
+            onClick={() => scrollToSection('projects-top')}
             id="nav-projects"
           >
             Projects
           </Button>
           <Button
-            onClick={() => scrollToSection("contact-top")}
+            onClick={() => scrollToSection('contact-top')}
             id="nav-contact"
           >
             Contact
@@ -48,8 +55,16 @@ const NavBar = () => {
         </Box>
         <Box>
           <IconButton sx={{ flexGrow: 0 }}>
-            <a href="https://github.com/nicoleang09" target="_BLANK">
-              <img src={githubIcon} style={{ height: "1.7rem" }} />
+            <a
+              href="https://github.com/nicoleang09"
+              target="_BLANK"
+              rel="noreferrer"
+            >
+              <img
+                src={githubIcon}
+                style={{ height: '1.7rem' }}
+                alt="Github"
+              />
             </a>
           </IconButton>
         </Box>
