@@ -1,5 +1,5 @@
 import { Avatar, Grid, Typography } from '@mui/material';
-import homeSectionIcon from '../images/placeholder profile pic.png';
+import homeSectionIcon from '../images/home-profile-pic.png';
 import themeColors from '../theme-colors';
 import Lottie from 'react-lottie';
 import { scrollToSection } from '../components/main';
@@ -8,7 +8,6 @@ const homeStyles = {
   homeSection: {
     height: '100vh',
     width: '100%',
-    padding: '12.5%',
     backgroundColor: themeColors.backgroundBrown,
   },
   homeImg: {
@@ -17,7 +16,7 @@ const homeStyles = {
   },
   homeDesc: {
     backgroundColor: themeColors.pureWhite,
-    padding: '52px 36px',
+    padding: '52px 36px 24px',
     textAlign: 'justify',
     height: 'fit-content',
   },
@@ -30,13 +29,10 @@ const homeStyles = {
     textAlign: 'left',
   },
   scrollDownBtn: {
-    position: 'absolute',
     display: 'flex',
     height: '36px',
     flexDirection: 'row',
     alignItems: 'center',
-    bottom: '24px',
-    margin: '0px auto',
     cursor: 'pointer',
   },
   scrollDownAnim: {
@@ -62,21 +58,26 @@ const HomeSection = () => {
       container
       justifyContent="center"
       alignItems="center"
-      direction="column"
+      direction="row"
       sx={homeStyles.homeSection}
       id="home-top"
     >
+      <Grid
+        item
+        xs={12}
+      ></Grid>
       <Grid
         container
         direction="row"
         alignItems="center"
         justifyContent="center"
         gap={3}
+        flexGrow={1}
       >
         <Grid
           item
           xs={6}
-          md={4}
+          md={2}
         >
           <Avatar
             src={homeSectionIcon}
@@ -85,10 +86,16 @@ const HomeSection = () => {
         </Grid>
         <Grid
           item
-          xs
+          xs={9}
+          md={4}
           sx={homeStyles.homeDesc}
         >
-          <Typography style={homeStyles.fancyHeading}>
+          <Typography
+            sx={(theme) => ({
+              ...homeStyles.fancyHeading,
+              [theme.breakpoints.down('md')]: { fontSize: '3rem' },
+            })}
+          >
             hello, i'm nicole
           </Typography>
           <Typography>
@@ -101,7 +108,11 @@ const HomeSection = () => {
         </Grid>
       </Grid>
 
-      <Grid item>
+      <Grid
+        item
+        alignSelf="flex-end"
+        marginBottom="24px"
+      >
         <div
           style={homeStyles.scrollDownBtn}
           onClick={() => scrollToSection('experience-top')}
