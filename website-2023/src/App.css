@@ -48,11 +48,16 @@
   align-items: flex-start;
   margin-bottom: 16px;
   /* border: 1px black solid; */
+
+  @media (width < 900px) {
+    height: 30px;
+  }
 }
 
 .section-header img {
   height: 100%;
-  filter: invert(25%) sepia(3%) saturate(3596%) hue-rotate(344deg) brightness(95%) contrast(87%);
+  filter: invert(25%) sepia(3%) saturate(3596%) hue-rotate(344deg)
+    brightness(95%) contrast(87%);
   /* border: 1px black solid; */
 }
 
@@ -67,6 +72,13 @@
   line-height: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 1rem;
+
+  @media (width < 900px) {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    line-height: 2rem;
+    margin-left: 10px;
+  }
 }
 
 #top-arrow-btn {
@@ -74,5 +86,6 @@
   position: fixed;
   bottom: 24px;
   right: 48px;
-  filter: invert(51%) sepia(6%) saturate(2310%) hue-rotate(345deg) brightness(99%) contrast(79%);
+  filter: invert(51%) sepia(6%) saturate(2310%) hue-rotate(345deg)
+    brightness(99%) contrast(79%);
 }

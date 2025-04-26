@@ -27,6 +27,7 @@ const homeStyles = {
     lineHeight: '80%',
     textTransform: 'lowercase',
     color: themeColors.darkBrown,
+    textAlign: 'left',
   },
   scrollDownBtn: {
     position: 'absolute',
