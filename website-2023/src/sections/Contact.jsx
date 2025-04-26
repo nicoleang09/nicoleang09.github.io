@@ -171,7 +171,10 @@ const ContactSection = () => {
               className="section-header"
               style={{ marginBottom: '32px' }}
             >
-              <img src={sectionIcon} />
+              <img
+                src={sectionIcon}
+                alt="Contact"
+              />
               <p>Contact</p>
             </div>
           </Grid>

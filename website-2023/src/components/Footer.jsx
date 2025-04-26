@@ -35,6 +35,7 @@ const Footer = () => {
                 filter:
                   'invert(50%) sepia(35%) saturate(360%) hue-rotate(345deg) brightness(95%) contrast(92%)',
               }}
+              alt="Attributions"
             />
           </IconButton>
         </Tooltip>

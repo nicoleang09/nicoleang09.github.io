@@ -41,7 +41,10 @@ const ProjectsSection = () => {
         backgroundColor={themeColors.pureWhite}
       >
         <div className="section-header">
-          <img src={sectionIcon} />
+          <img
+            src={sectionIcon}
+            alt="Projects"
+          />
           <p>Projects</p>
         </div>
       </Grid>

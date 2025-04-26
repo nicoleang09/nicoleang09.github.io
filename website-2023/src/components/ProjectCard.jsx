@@ -48,6 +48,7 @@ const ProjectCard = (props) => {
             <img
               src={props.projectIconSrc}
               style={{ width: '100%', borderRadius: '50%' }}
+              alt={props.projectTitle}
             />
           </Grid>
           <Grid

@@ -25,7 +25,10 @@ const ExperienceSection = () => {
             xs={12}
           >
             <div className="section-header">
-              <img src={sectionIcon} />
+              <img
+                src={sectionIcon}
+                alt="Experience"
+              />
               <p>Experience</p>
             </div>
           </Grid>
