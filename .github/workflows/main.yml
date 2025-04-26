@@ -20,6 +20,10 @@ jobs:
       - name: Install Dependencies
         working-directory: website-2023
         run: npm install
+      - name: Set Git Identity
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
       - name: Publish to GitHub Pages
         working-directory: website-2023
         run: npm run deploy
