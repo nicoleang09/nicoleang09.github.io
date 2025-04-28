@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.692375dc.css",
-    "main.js": "/static/js/main.3e0250fe.js",
+    "main.js": "/static/js/main.912a9e74.js",
     "static/js/592.8b6056cd.chunk.js": "/static/js/592.8b6056cd.chunk.js",
-    "static/media/home-profile-pic.png": "/static/media/home-profile-pic.b3bb3dff9526ad707a29.png",
+    "static/media/home-profile-pic-2.png": "/static/media/home-profile-pic-2.1a43d6a0728596d305e2.png",
     "static/media/website icon.png": "/static/media/website icon.6ef00abfba4e43bcc398.png",
     "static/media/dashboard-logo.png": "/static/media/dashboard-logo.5b47fc20fcabbe616a4d.png",
     "static/media/parentpal-logo.png": "/static/media/parentpal-logo.9165fa78c810b86acbe0.png",
@@ -14,11 +14,11 @@
     "static/media/tome-vault.png": "/static/media/tome-vault.67b09ebf35d45763c88c.png",
     "index.html": "/index.html",
     "main.692375dc.css.map": "/static/css/main.692375dc.css.map",
-    "main.3e0250fe.js.map": "/static/js/main.3e0250fe.js.map",
+    "main.912a9e74.js.map": "/static/js/main.912a9e74.js.map",
     "592.8b6056cd.chunk.js.map": "/static/js/592.8b6056cd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.692375dc.css",
-    "static/js/main.3e0250fe.js"
+    "static/js/main.912a9e74.js"
   ]
 }
