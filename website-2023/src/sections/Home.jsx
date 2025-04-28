@@ -1,5 +1,5 @@
 import { Avatar, Grid, Typography } from '@mui/material';
-import homeSectionIcon from '../images/home-profile-pic.png';
+import homeSectionIcon from '../images/home-profile-pic-2.png';
 import themeColors from '../theme-colors';
 import Lottie from 'react-lottie';
 import { scrollToSection } from '../components/main';
