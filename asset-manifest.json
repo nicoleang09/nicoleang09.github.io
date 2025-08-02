@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.692375dc.css",
-    "main.js": "/static/js/main.d8e1614b.js",
+    "main.js": "/static/js/main.36eabe9e.js",
     "static/js/592.8b6056cd.chunk.js": "/static/js/592.8b6056cd.chunk.js",
     "static/media/home-profile-pic-2.png": "/static/media/home-profile-pic-2.1a43d6a0728596d305e2.png",
     "static/media/website icon.png": "/static/media/website icon.6ef00abfba4e43bcc398.png",
@@ -12,14 +12,13 @@
     "static/media/github.png": "/static/media/github.8fb52af1ce261f4b82d5.png",
     "static/media/heart pink.png": "/static/media/heart pink.13c6273d481fece60fb4.png",
     "static/media/peerprep-logo.png": "/static/media/peerprep-logo.5f44de276152978f7ed6.png",
-    "static/media/tome-vault.png": "/static/media/tome-vault.67b09ebf35d45763c88c.png",
     "index.html": "/index.html",
     "main.692375dc.css.map": "/static/css/main.692375dc.css.map",
-    "main.d8e1614b.js.map": "/static/js/main.d8e1614b.js.map",
+    "main.36eabe9e.js.map": "/static/js/main.36eabe9e.js.map",
     "592.8b6056cd.chunk.js.map": "/static/js/592.8b6056cd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.692375dc.css",
-    "static/js/main.d8e1614b.js"
+    "static/js/main.36eabe9e.js"
   ]
 }
