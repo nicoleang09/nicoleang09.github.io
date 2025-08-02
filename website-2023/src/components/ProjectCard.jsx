@@ -10,7 +10,7 @@ import themeColors from '../theme-colors';
 
 const cardStyles = {
   cardContainer: {
-    borderRadius: '0px',
+    borderRadius: '8px',
     boxShadow: 'none',
     textAlign: 'left',
     height: '100%',

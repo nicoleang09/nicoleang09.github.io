@@ -1,7 +1,7 @@
 export const projects = [
   {
     projectTitle: 'Tome Vault',
-    techStack: 'React | Node.js | MongoDB | Html5-QRCode',
+    techStack: 'React | Node.js | PostgreSQL | Html5-QRCode',
     projectSummary:
       'Tome Vault acts as a shelf catalogue where users can add physical books they own, mark them as read, and mark them to be unhauled. Books can be added to the catalogue by keying in the ISBN 10 or ISBN 13 codes, or by scanning the ISBN 13 barcode.',
     link1: 'https://tome-vault.netlify.app',

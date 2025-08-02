@@ -69,6 +69,7 @@ const themeComponentStyling = {
         root: {
           display: 'flex',
           flexDirection: 'column',
+          boxSizing: 'border-box',
         },
       },
     },

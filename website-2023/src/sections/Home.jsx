@@ -3,12 +3,17 @@ import homeSectionIcon from '../images/home-profile-pic-2.png';
 import themeColors from '../theme-colors';
 import Lottie from 'react-lottie';
 import { scrollToSection } from '../components/main';
+import backgroundImg from '../images/brown-background.png';
 
 const homeStyles = {
   homeSection: {
     height: '100vh',
     width: '100%',
     backgroundColor: themeColors.backgroundBrown,
+    backgroundImage: `url(${backgroundImg})`,
+    backgroundSize: '100% 100%',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
   },
   homeImg: {
     width: '100%',
@@ -100,8 +105,7 @@ const HomeSection = () => {
           </Typography>
           <Typography>
             I am currently a full-stack Application Developer at the Aon Centre
-            for Innovation and Analytics as part of the company's Graduate
-            Programme.
+            for Innovation and Analytics as part of the Health Solutions team.
             <br />I aspire to add value to users’ lives through the technology
             that I help to ideate and build.
           </Typography>

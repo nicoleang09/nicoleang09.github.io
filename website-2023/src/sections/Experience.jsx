@@ -33,11 +33,12 @@ const ExperienceSection = () => {
             </div>
           </Grid>
 
-          {workExperience.map((experience) => (
+          {workExperience.map((experience, idx) => (
             <Grid
               item
               lg={4}
               md={6}
+              key={idx}
             >
               <JobCard
                 jobTitle={experience.jobTitle}

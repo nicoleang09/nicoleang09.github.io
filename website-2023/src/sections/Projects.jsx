@@ -69,6 +69,7 @@ const ProjectsSection = () => {
               item
               lg={4}
               md={6}
+              key={project.projectTitle}
             >
               <ProjectCard
                 projectIconSrc={icons[project.projectTitle]}

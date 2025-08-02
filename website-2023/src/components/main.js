@@ -7,7 +7,7 @@ var homeOffset, projectOffset, experienceOffset, contactOffset;
 var homeLink, projectsLink, experienceLink, contactLink;
 
 function initLinks() {
-  console.log('initialising links...');
+  // console.log('initialising links...');
 
   homeLink = document.getElementById('nav-home');
   projectsLink = document.getElementById('nav-projects');

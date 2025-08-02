@@ -1,10 +1,17 @@
 export const workExperience = [
   {
     companyName: 'Aon Centre for Innovation and Analytics (ACIA)',
-    jobTitle: 'Graduate (Application Development)',
-    dates: 'Aug 2023 - Current',
+    jobTitle: 'Associate Application Developer',
+    dates: 'Aug 2025 - Present',
     jobSummary:
-      'Rotated across teams within the ACIA every 6 months, focusing on full-stack development of applications that add value to other Aon colleagues. Contributed to Storybook component libraries used in our projects. Upheld code quality and enhanced stability of applications through expanding on our unit test suites.',
+      'Support the Health Solutions team in building data visualization tools and enhancing our health analytics platform. Participate in the technical discussions for new features, full-stack development to meet user needs, and deployment processes using Azure DevOps.',
+  },
+  {
+    companyName: 'Aon Centre for Innovation and Analytics (ACIA)',
+    jobTitle: 'Graduate (Application Developer)',
+    dates: 'Aug 2023 - Jul 2025',
+    jobSummary:
+      'Rotated across teams within the ACIA every 6 months, including 1 year in the Health Solutions team. Focused on full-stack development of internal and external applications and contributed to Storybook component libraries used in our projects. Upheld code quality and enhanced stability of applications through expanding on our unit test suites.',
   },
   {
     companyName: 'Neurowyzr',
