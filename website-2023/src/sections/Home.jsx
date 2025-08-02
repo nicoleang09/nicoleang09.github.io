@@ -24,6 +24,7 @@ const homeStyles = {
     padding: '52px 36px 24px',
     textAlign: 'justify',
     height: 'fit-content',
+    borderRadius: '8px',
   },
   fancyHeading: {
     fontFamily: "'Sacramento', cursive, sans-serif",
