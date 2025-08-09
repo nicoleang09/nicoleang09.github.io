@@ -7,14 +7,14 @@ export const projects = [
     link1: 'https://tome-vault.netlify.app',
     link1Label: 'Live Site',
   },
-  // {
-  //   projectTitle: 'Li.',
-  //   techStack: 'React | Node.js | PostgreSQL | React Beautiful DnD',
-  //   projectSummary:
-  //     'Li. is a web application that allows for an improved and more seamless time scheduling process. Users can view their weekly and daily agendas, among other features.',
-  //   link1: 'https://life-dashboard.netlify.app',
-  //   link1Label: 'Live Site',
-  // },
+  {
+    projectTitle: 'Intent: Live Intentionally',
+    techStack: 'React | Node.js | PostgreSQL | React Beautiful DnD',
+    projectSummary:
+      'Intent allows for a seamless weekly and daily time scheduling process. Users can view and add tasks to their agendas, among other features.',
+    link1: 'https://intentapp.netlify.app',
+    link1Label: 'Live Site',
+  },
   {
     projectTitle: 'PeerPrep',
     techStack: 'React | Node.js | Sequelize | SQLite | Socket.IO | Mocha/Chai',
