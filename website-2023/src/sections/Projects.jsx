@@ -17,7 +17,7 @@ const ProjectsSection = () => {
     'Tabby the Task Bot': tabbyIcon,
     'Personal Website': websiteIcon,
     'Tome Vault': tomeVaultIcon,
-    'Li.': liIcon,
+    'Intent: Live Intentionally': liIcon,
   };
 
   return (
