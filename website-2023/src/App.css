@@ -93,4 +93,6 @@
 .nav-icon {
   height: 1.5rem;
   width: auto;
+  filter: brightness(0) saturate(100%) invert(25%) sepia(29%) saturate(338%)
+    hue-rotate(344deg) brightness(96%) contrast(93%);
 }

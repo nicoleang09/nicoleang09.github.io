@@ -54,20 +54,13 @@ const Footer = () => {
         </DialogTitle>
         <DialogContent>
           <Link
-            href="https://www.flaticon.com/premium-icon/coding_2822611"
-            target="_BLANK"
-            title="coding icons"
-          >
-            Coding icons created by Freepik - Flaticon
-          </Link>
-          <Link
             href="https://www.flaticon.com/premium-icon/coding_2822445"
             target="_BLANK"
             title="coding icons"
           >
             Coding icons created by Freepik - Flaticon
           </Link>
-          <Link
+          {/* <Link
             href="https://www.flaticon.com/free-icon/send_736161"
             target="_BLANK"
             title="send icon"
@@ -80,6 +73,13 @@ const Footer = () => {
             title="send icon"
           >
             Send icon created by Freepik - Flaticon
+          </Link> */}
+          <Link
+            href="https://www.flaticon.com/free-icon/email_542689"
+            target="_BLANK"
+            title="email icons"
+          >
+            Email icons created by Freepik - Flaticon
           </Link>
           <Link
             href="https://iconscout.com/icon/home-2456658"

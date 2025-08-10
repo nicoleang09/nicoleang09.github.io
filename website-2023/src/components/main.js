@@ -73,7 +73,7 @@ function scrollToTop() {
 }
 
 function setVisibility(currentScrollPos) {
-  if (currentScrollPos > window.innerHeight - 120) {
+  if (currentScrollPos > experienceOffset) {
     $('#nav').fadeIn();
     $('#nav-bottom').fadeIn();
     $('#top-arrow-btn').fadeIn();
