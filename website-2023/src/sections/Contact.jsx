@@ -1,4 +1,11 @@
-import { Button, FormControl, Grid, TextField, styled } from '@mui/material';
+import {
+  Button,
+  CircularProgress,
+  FormControl,
+  Grid,
+  TextField,
+  styled,
+} from '@mui/material';
 import sectionIcon from '../images/icons/email filled.png';
 import themeColors from '../theme-colors';
 import { useState } from 'react';
@@ -46,6 +53,7 @@ const ContactSection = () => {
       errorMessage: 'Please enter your message',
     },
   });
+  const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -63,7 +71,7 @@ const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // console.log("the values are now " + JSON.stringify(formValues));
+    // console.log('the values are now ' + JSON.stringify(formValues));
 
     let isAllValid = true;
     let newFormValues = { ...formValues };
@@ -107,6 +115,7 @@ const ContactSection = () => {
     setFormValues(newFormValues);
 
     if (isAllValid) {
+      setSubmitting(true);
       fetch('https://formsubmit.co/ajax/e2d41fd1578165051b657e0b88151f3b', {
         method: 'POST',
         headers: {
@@ -140,6 +149,8 @@ const ContactSection = () => {
               error: false,
             },
           });
+
+          setSubmitting(false);
 
           // console.log("reset form values are " + JSON.stringify(formValues));
         })
@@ -221,8 +232,16 @@ const ContactSection = () => {
                 type="submit"
                 variant="contained"
                 onClick={handleSubmit}
+                disabled={submitting}
               >
-                Submit
+                {submitting ? (
+                  <CircularProgress
+                    size={32}
+                    color="inherit"
+                  />
+                ) : (
+                  'Submit'
+                )}
               </Button>
             </FormControl>
           </Grid>
