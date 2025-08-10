@@ -60,6 +60,12 @@ window.onload = window.onscroll = function () {
   setSelectedPage(currentScrollPos);
 };
 
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    setVisibility(window.scrollY);
+  }, 200);
+});
+
 function scrollToSection(section) {
   const yOffset = -80;
   const element = document.getElementById(section);
