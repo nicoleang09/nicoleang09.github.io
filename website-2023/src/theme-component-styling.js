@@ -54,6 +54,33 @@ const themeComponentStyling = {
         },
       },
     },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          p: {
+            display: 'none',
+            marginBottom: 0,
+            marginLeft: '4px',
+            color: themeColors.darkBrown,
+          },
+          '&.selected-mobile': {
+            color: themeColors.darkBrown,
+            textDecoration: 'underline',
+            textDecorationThickness: '2px',
+            textUnderlineOffset: '10px',
+            transition: 'filter 0.5s ease-in-out',
+            img: {
+              filter:
+                'invert(51%) sepia(6%) saturate(2310%) hue-rotate(345deg) brightness(99%) contrast(79%)',
+            },
+            p: {
+              display: 'inline',
+              fontWeight: 'bold',
+            },
+          },
+        },
+      },
+    },
     MuiLink: {
       styleOverrides: {
         root: {

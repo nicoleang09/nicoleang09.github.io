@@ -1,5 +1,5 @@
 import { Button, FormControl, Grid, TextField, styled } from '@mui/material';
-import sectionIcon from '../images/icons/send filled.png';
+import sectionIcon from '../images/icons/email filled.png';
 import themeColors from '../theme-colors';
 import { useState } from 'react';
 
@@ -153,6 +153,7 @@ const ContactSection = () => {
       justifyContent="center"
       marginTop="56px"
       id="contact-top"
+      minHeight="90vh"
     >
       <Grid
         item

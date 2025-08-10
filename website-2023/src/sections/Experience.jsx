@@ -17,22 +17,23 @@ const ExperienceSection = () => {
         md={8}
       >
         <Grid
-          container
-          spacing={2}
+          item
+          xs={12}
+          marginBottom="2rem"
         >
-          <Grid
-            item
-            xs={12}
-          >
-            <div className="section-header">
-              <img
-                src={sectionIcon}
-                alt="Experience"
-              />
-              <p>Experience</p>
-            </div>
-          </Grid>
+          <div className="section-header">
+            <img
+              src={sectionIcon}
+              alt="Experience"
+            />
+            <p>Experience</p>
+          </div>
+        </Grid>
 
+        <Grid
+          container
+          spacing={3}
+        >
           {workExperience.map((experience, idx) => (
             <Grid
               item

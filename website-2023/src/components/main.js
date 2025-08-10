@@ -5,6 +5,7 @@ var bodyRect;
 var homeOffset, projectOffset, experienceOffset, contactOffset;
 
 var homeLink, projectsLink, experienceLink, contactLink;
+var homeLinkMobile, projectsLinkMobile, experienceLinkMobile, contactLinkMobile;
 
 function initLinks() {
   // console.log('initialising links...');
@@ -14,10 +15,10 @@ function initLinks() {
   experienceLink = document.getElementById('nav-experience');
   contactLink = document.getElementById('nav-contact');
 
-  // homeLinkMobile = document.getElementById('nav-home-mobile');
-  // projectsLinkMobile = document.getElementById('nav-projects-mobile');
-  // experienceLinkMobile = document.getElementById('nav-experience-mobile');
-  // contactLinkMobile = document.getElementById('nav-contact-mobile');
+  homeLinkMobile = document.getElementById('nav-home-mobile');
+  projectsLinkMobile = document.getElementById('nav-projects-mobile');
+  experienceLinkMobile = document.getElementById('nav-experience-mobile');
+  contactLinkMobile = document.getElementById('nav-contact-mobile');
 
   // console.log(
   //   `links are null? ${homeLink}, ${projectsLink}, ${experienceLink}, ${contactLink}`
@@ -93,10 +94,10 @@ function setSelectedPage(currentScrollPos) {
     experienceLink.classList.remove('selected');
     contactLink.classList.remove('selected');
 
-    // homeLinkMobile.classList.add("selected-mobile");
-    // projectsLinkMobile.classList.remove("selected-mobile");
-    // experienceLinkMobile.classList.remove("selected-mobile");
-    // contactLinkMobile.classList.remove("selected-mobile");
+    homeLinkMobile.classList.add('selected-mobile');
+    projectsLinkMobile.classList.remove('selected-mobile');
+    experienceLinkMobile.classList.remove('selected-mobile');
+    contactLinkMobile.classList.remove('selected-mobile');
   } else if (
     currentScrollPos >= experienceOffset &&
     currentScrollPos < projectOffset
@@ -106,10 +107,10 @@ function setSelectedPage(currentScrollPos) {
     experienceLink.classList.add('selected');
     contactLink.classList.remove('selected');
 
-    // homeLinkMobile.classList.remove("selected-mobile");
-    // projectsLinkMobile.classList.remove("selected-mobile");
-    // experienceLinkMobile.classList.add("selected-mobile");
-    // contactLinkMobile.classList.remove("selected-mobile");
+    homeLinkMobile.classList.remove('selected-mobile');
+    projectsLinkMobile.classList.remove('selected-mobile');
+    experienceLinkMobile.classList.add('selected-mobile');
+    contactLinkMobile.classList.remove('selected-mobile');
   } else if (
     currentScrollPos >= projectOffset &&
     currentScrollPos < contactOffset
@@ -119,20 +120,20 @@ function setSelectedPage(currentScrollPos) {
     experienceLink.classList.remove('selected');
     contactLink.classList.remove('selected');
 
-    // homeLinkMobile.classList.remove("selected-mobile");
-    // projectsLinkMobile.classList.add("selected-mobile");
-    // experienceLinkMobile.classList.remove("selected-mobile");
-    // contactLinkMobile.classList.remove("selected-mobile");
+    homeLinkMobile.classList.remove('selected-mobile');
+    projectsLinkMobile.classList.add('selected-mobile');
+    experienceLinkMobile.classList.remove('selected-mobile');
+    contactLinkMobile.classList.remove('selected-mobile');
   } else if (currentScrollPos >= contactOffset) {
     homeLink.classList.remove('selected');
     projectsLink.classList.remove('selected');
     experienceLink.classList.remove('selected');
     contactLink.classList.add('selected');
 
-    // homeLinkMobile.classList.remove("selected-mobile");
-    // projectsLinkMobile.classList.remove("selected-mobile");
-    // experienceLinkMobile.classList.remove("selected-mobile");
-    // contactLinkMobile.classList.add("selected-mobile");
+    homeLinkMobile.classList.remove('selected-mobile');
+    projectsLinkMobile.classList.remove('selected-mobile');
+    experienceLinkMobile.classList.remove('selected-mobile');
+    contactLinkMobile.classList.add('selected-mobile');
   }
 }
 

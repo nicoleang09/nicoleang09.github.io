@@ -11,7 +11,7 @@ export const projects = [
     projectTitle: 'Intent: Live Intentionally',
     techStack: 'React | Node.js | PostgreSQL | Mantine | React Beautiful DnD',
     projectSummary:
-      'Intent allows for a seamless weekly and daily time scheduling process. Users can view and add tasks to their agendas, among other features.',
+      'Intent allows for a seamless weekly and daily time scheduling process. Users can view and add tasks across the week, mark tasks as completed, and perform time blocking.',
     link1: 'https://intentapp.netlify.app',
     link1Label: 'Live Site',
   },

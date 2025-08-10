@@ -66,7 +66,7 @@
   margin: 0;
   margin-left: 20px;
   /* border: 1px black solid; */
-  font-family: 'Roboto Flex', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
   font-size: 2rem;
   font-weight: 600;
   line-height: 2.5rem;
@@ -88,4 +88,9 @@
   right: 48px;
   filter: invert(51%) sepia(6%) saturate(2310%) hue-rotate(345deg)
     brightness(99%) contrast(79%);
+}
+
+.nav-icon {
+  height: 1.5rem;
+  width: auto;
 }

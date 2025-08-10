@@ -55,6 +55,7 @@ const ProjectCard = (props) => {
             item
             xs={12}
             lg
+            marginBottom="0.5rem"
           >
             <Typography
               variant="h3"

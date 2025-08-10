@@ -4,13 +4,17 @@ import themeColors from '../theme-colors';
 import Lottie from 'react-lottie';
 import { scrollToSection } from '../components/main';
 import backgroundImg from '../images/brown-background.png';
+import backgroundImgVertical from '../images/brown-background-vertical.png';
 
 const homeStyles = {
   homeSection: {
     height: '100vh',
     width: '100%',
     backgroundColor: themeColors.backgroundBrown,
-    backgroundImage: `url(${backgroundImg})`,
+    backgroundImage: {
+      xs: `url(${backgroundImgVertical})`,
+      md: `url(${backgroundImg})`,
+    },
     backgroundSize: '100% 100%',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',

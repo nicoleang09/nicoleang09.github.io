@@ -1,7 +1,18 @@
-import { AppBar, Box, Button, IconButton, Toolbar } from '@mui/material';
+import {
+  AppBar,
+  Box,
+  Button,
+  IconButton,
+  Toolbar,
+  Typography,
+} from '@mui/material';
 import themeColors from '../theme-colors';
 import githubIcon from '../images/icons/github.png';
 import { scrollToSection } from './main';
+import homeIcon from '../images/icons/home filled.png';
+import experienceIcon from '../images/icons/work filled.png';
+import projectsIcon from '../images/icons/coding filled.png';
+import contactIcon from '../images/icons/email filled.png';
 
 const navBarStyles = {
   topBar: {
@@ -27,7 +38,10 @@ const NavBar = () => {
       id="nav"
     >
       <Toolbar>
-        <Box sx={{ flexGrow: 1, textAlign: 'left' }}>
+        <Box
+          sx={{ flexGrow: 1, textAlign: 'left' }}
+          display={{ xs: 'none', md: 'block' }}
+        >
           <Button
             onClick={() => scrollToSection('home-top')}
             id="nav-home"
@@ -53,6 +67,57 @@ const NavBar = () => {
             Contact
           </Button>
         </Box>
+
+        <Box
+          sx={{ flexGrow: 1, textAlign: 'left' }}
+          display={{ xs: 'block', md: 'none' }}
+        >
+          <IconButton
+            onClick={() => scrollToSection('home-top')}
+            id="nav-home-mobile"
+          >
+            <img
+              src={homeIcon}
+              alt="Experience"
+              className="nav-icon"
+            />
+            <Typography>Home</Typography>
+          </IconButton>
+          <IconButton
+            onClick={() => scrollToSection('experience-top')}
+            id="nav-experience-mobile"
+          >
+            <img
+              src={experienceIcon}
+              alt="Experience"
+              className="nav-icon"
+            />
+            <Typography>Experience</Typography>
+          </IconButton>
+          <IconButton
+            onClick={() => scrollToSection('projects-top')}
+            id="nav-projects-mobile"
+          >
+            <img
+              src={projectsIcon}
+              alt="Projects"
+              className="nav-icon"
+            />
+            <Typography>Projects</Typography>
+          </IconButton>
+          <IconButton
+            onClick={() => scrollToSection('contact-top')}
+            id="nav-contact-mobile"
+          >
+            <img
+              src={contactIcon}
+              alt="Contact"
+              className="nav-icon"
+            />
+            <Typography>Contact</Typography>
+          </IconButton>
+        </Box>
+
         <Box>
           <IconButton sx={{ flexGrow: 0 }}>
             <a
