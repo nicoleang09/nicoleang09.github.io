@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.692375dc.css",
-    "main.js": "/static/js/main.67b0a268.js",
+    "main.css": "/static/css/main.a7612804.css",
+    "main.js": "/static/js/main.b57ba59c.js",
     "static/js/592.8b6056cd.chunk.js": "/static/js/592.8b6056cd.chunk.js",
     "static/media/home-profile-pic-2.png": "/static/media/home-profile-pic-2.1a43d6a0728596d305e2.png",
     "static/media/website icon.png": "/static/media/website icon.6ef00abfba4e43bcc398.png",
+    "static/media/brown-background-vertical.png": "/static/media/brown-background-vertical.587c90321fe048f2d0e1.png",
     "static/media/brown-background.png": "/static/media/brown-background.86c6d5cd49c35a8cd198.png",
     "static/media/dashboard-logo.png": "/static/media/dashboard-logo.5b47fc20fcabbe616a4d.png",
     "static/media/parentpal-logo.png": "/static/media/parentpal-logo.9165fa78c810b86acbe0.png",
@@ -12,13 +13,14 @@
     "static/media/github.png": "/static/media/github.8fb52af1ce261f4b82d5.png",
     "static/media/heart pink.png": "/static/media/heart pink.13c6273d481fece60fb4.png",
     "static/media/peerprep-logo.png": "/static/media/peerprep-logo.5f44de276152978f7ed6.png",
+    "static/media/email filled.png": "/static/media/email filled.51b08bcbb5af7a861c31.png",
     "index.html": "/index.html",
-    "main.692375dc.css.map": "/static/css/main.692375dc.css.map",
-    "main.67b0a268.js.map": "/static/js/main.67b0a268.js.map",
+    "main.a7612804.css.map": "/static/css/main.a7612804.css.map",
+    "main.b57ba59c.js.map": "/static/js/main.b57ba59c.js.map",
     "592.8b6056cd.chunk.js.map": "/static/js/592.8b6056cd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.692375dc.css",
-    "static/js/main.67b0a268.js"
+    "static/css/main.a7612804.css",
+    "static/js/main.b57ba59c.js"
   ]
 }
