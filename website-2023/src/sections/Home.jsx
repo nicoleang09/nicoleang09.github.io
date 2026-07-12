@@ -109,10 +109,10 @@ const HomeSection = () => {
             hello, i'm nicole
           </Typography>
           <Typography>
-            I am currently a full-stack Application Developer at the Aon Centre
-            for Innovation and Analytics as part of the Health Solutions team.
-            <br />I aspire to add value to users’ lives through the technology
-            that I help to ideate and build.
+            I'm a full-stack software developer who enjoys building thoughtful,
+            reliable applications that solve real-world problems. Whether I'm
+            improving enterprise software or working on personal projects, I
+            enjoy turning ideas into intuitive and maintainable solutions.
           </Typography>
         </Grid>
       </Grid>

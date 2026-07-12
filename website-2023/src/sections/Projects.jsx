@@ -8,6 +8,7 @@ import tabbyIcon from '../images/portfolio/tabby-logo.png';
 import websiteIcon from '../images/portfolio/website icon.png';
 import tomeVaultIcon from '../images/portfolio/tome-vault.png';
 import liIcon from '../images/portfolio/dashboard-logo.png';
+import onHandIcon from '../images/portfolio/onhand-logo.png';
 import { projects } from '../data/projects';
 
 const ProjectsSection = () => {
@@ -18,6 +19,7 @@ const ProjectsSection = () => {
     'Personal Website': websiteIcon,
     'Tome Vault': tomeVaultIcon,
     'Intent: Live Intentionally': liIcon,
+    onHand: onHandIcon,
   };
 
   return (
